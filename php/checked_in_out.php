@@ -3,8 +3,6 @@
 // Handles user CHECK-IN and CHECK-OUT at specific location
 require_once "functions.php";
 
-// checkedInAndOut.php - ANNA
-
 //Checking that the method is PATCH, if it's not, send an error. 
 if($request_method != "PATCH"){
     $error = ["error" => "The method must be PATCH"]; 

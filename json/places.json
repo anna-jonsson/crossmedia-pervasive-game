@@ -1,1 +1,58 @@
-{}
+[
+	{
+		"id": 1,
+		"password": "123321",
+		"current_balance": "150", 
+		"location_name": "knarkrondellen", 
+		"location_url": "test/knarkrondellen", 
+		"intro_text": "välkommen",
+		"riddle_text": "verm är jag?",
+		"task_text": "gör det",
+		"background_picture": "./pics/213",
+		"QR_handling": "", 
+		"checked_in": false,
+		"checked_out": false
+	},
+	{
+		"id": 2,
+		"password": "123321",
+		"current_balance": "150", 
+		"location_name": "knarkrondellen", 
+		"location_url": "test/knarkrondellen", 
+		"intro_text": "välkommen",
+		"riddle_text": "verm är jag?",
+		"task_text": "gör det",
+		"background_picture": "./pics/213",
+		"QR_handling": "", 
+		"checked_in": false,
+		"checked_out": false
+	},
+	{
+		"id": 3,
+		"password": "123321",
+		"current_balance": "150", 
+		"location_name": "knarkrondellen", 
+		"location_url": "test/knarkrondellen", 
+		"intro_text": "välkommen",
+		"riddle_text": "verm är jag?",
+		"task_text": "gör det",
+		"background_picture": "./pics/213",
+		"QR_handling": "", 
+		"checked_in": false,
+		"checked_out": false
+	},
+	{
+		"id": 4,
+		"password": "123321",
+		"current_balance": "150", 
+		"location_name": "knarkrondellen", 
+		"location_url": "test/knarkrondellen", 
+		"intro_text": "välkommen",
+		"riddle_text": "verm är jag?",
+		"task_text": "gör det",
+		"background_picture": "./pics/213",
+		"QR_handling": "", 
+		"checked_in": false,
+		"checked_out": false
+	}
+]

@@ -3,8 +3,6 @@
 // Handles user CHECK-IN and CHECK-OUT at specific location
 require_once "functions.php";
 
-// checkedInAndOut.php - ANNA
-
 //Checking that the method is PATCH, if it's not, send an error. 
 if($request_method != "PATCH"){
     $error = ["error" => "The method must be PATCH"]; 
@@ -14,6 +12,7 @@ if($request_method != "PATCH"){
 foreach($places as $place) {
 
 // if requested place matches place in JSON & has NOT been checked in to before, set checked_in to true.
+
     if(isset($r_data["checked_in"])) {
         if($place["location_name"] == $r_data["location_name"] and $place["checked_in"] == false) {
             $place["checked_in"] == true; 
@@ -29,6 +28,7 @@ foreach($places as $place) {
             sendJSON($place);
         }
     }
+
 }
 
 ?>

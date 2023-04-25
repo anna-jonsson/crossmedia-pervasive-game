@@ -12,16 +12,16 @@ if($request_method != "PATCH"){
 }
 
 // if requested place matches place in JSON & has NOT been checked in to before, set checked_in to true.
-if($place["location_name"] == $request_data["location_name"] and    
+if($place["location_name"] == $r_data["location_name"] and    
 $place["checked_in"] == false) {
 	$place["checked_in"] == true; 
     sendJSON($place);
 }
 
 // if requested place matches place in JSON & has NOT been checked out, set checked_out to true.
-if($place["location_name"] == $request_data["location_name"] and    
+if($place["location_name"] == $r_data["location_name"] and    
 $place["checked_out"] == false) {
-	place["checked_out"] == true; 
+	$place["checked_out"] == true; 
     sendJSON($place);
 }
 

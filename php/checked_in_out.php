@@ -46,13 +46,11 @@ foreach($places as $placeIndex => $place) {
         
             sendJSON($updatedPlace);
         }
-    }
-
-    
-    $error = ["error" => "Required parameters ('Checked in' OR 'Checked out' are not set OR 'Location_name' does not match."]; 
-    sendJSON($error, 400);
-    
+    }  
 
 }
+
+$error = ["error" => "Required parameters ('Checked in' OR 'Checked out' are not set OR 'Location_name' does not match."]; 
+sendJSON($error, 400);
 
 ?>

@@ -22,6 +22,12 @@ if(file_exists($placeDatabase)){
     $places = json_decode($places_json, true);
 }
 
+
+//Allows all methods, Origins and Methods to acess the API  
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: *");
+
 //General function for sending the data + statusCode (default 200). Run the exit() method in the end so this doesn't have to be done in the other code. 
 function sendJSON($data, $statusCode = 200) {
    header('Content-Type: application/json');

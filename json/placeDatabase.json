@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "triangeln", 
 		"location_url": "test/triangeln", 
 		"intro_text": "välkommen",
@@ -16,7 +16,7 @@
 	{
 		"id": 2,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "knarkrondellen", 
 		"location_url": "test/knarkrondellen", 
 		"intro_text": "välkommen",
@@ -30,7 +30,7 @@
 	{
 		"id": 3,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "möllan", 
 		"location_url": "test/möllan", 
 		"intro_text": "välkommen",
@@ -44,7 +44,7 @@
 	{
 		"id": 4,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "friisgatan", 
 		"location_url": "test/friisgatan", 
 		"intro_text": "välkommen",
@@ -58,7 +58,7 @@
 	{
 		"id": 5,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "folkets park", 
 		"location_url": "test/folkets_park", 
 		"intro_text": "välkommen",
@@ -72,7 +72,7 @@
 	{
 		"id": 6,
 		"password": "123321",
-		"current_balance": "150", 
+		"current_balance": 150, 
 		"location_name": "magisterparken", 
 		"location_url": "test/magisterparken", 
 		"intro_text": "välkommen",

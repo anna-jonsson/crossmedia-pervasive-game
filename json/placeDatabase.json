@@ -1,7 +1,16 @@
 [
     {
+        "id": 0,
+        "password": "blabla",
+        "location_name": "introduction",
+        "intro_text": "v\u00e4lkommen",
+        "background_picture": ".\/pics\/213",
+        "checked_in": false,
+        "checked_out": false
+    },
+    {
         "id": 1,
-        "password": "123321",
+        "password": "1234",
         "current_balance": 350,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",

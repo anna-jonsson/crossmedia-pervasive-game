@@ -1,6 +1,6 @@
-
-
 <?php
+
+require_once "functions.php";
 
 //Checking that the request method is GET
 if($request_method != "GET"){
@@ -26,7 +26,7 @@ foreach($places as $place){
 }
 
     //Else send error 
-    $error = ["error" => "No user found."];
+    $error = ["error" => "Incorrect password"];
     sendJSON($error, 400);
 
     ?>

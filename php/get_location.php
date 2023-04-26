@@ -8,18 +8,18 @@ if($request_method != "GET"){
     sendJSON($error, 400);
 }
 
-//Checking that the request data includes location name, also checking that the data isn't empty
-if(isset($r_data["location_name"])){
+//Checking that the request data includes location, also checking that the data isn't empty
+if(isset($_GET["location_name"])){
     //The r_data can't be empty
-    if(empty($r_data["location_name"])){
+    if(empty($_GET["location_name"])){
         $error = ["error" => "Please fill in all of the information."];
         sendJSON($error, 404);
     }
 
-//Looping the places and verifying the location name in the dataBase is the same as the requested data location. 
+//Looping the places and verifying the location name in the dataBase is the same as the requested data password. 
 
     foreach($places as $place){
-        if($place["location_name"] == $r_data["location_name"])
+        if($place["location_name"] == $_GET["location_name"])
             sendJSON($place);
         }
 }

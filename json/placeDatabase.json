@@ -11,7 +11,7 @@
     {
         "id": 1,
         "password": "1234",
-        "current_balance": 350,
+        "current_balance": 150,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",
         "intro_text": "v\u00e4lkommen",

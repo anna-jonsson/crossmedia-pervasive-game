@@ -12,15 +12,18 @@ async function place_request(placeName) {
     //     .then((rsc) => console.log(rsc));
 }
 //Function for check_password with the placeName and password as parameter.
-function check_password(placeName, password) {
+async function check_password(placeName, password) {
     const passwordRequest = new Request(
         "../php/passwords.php?password=" + password + "&location_name=" + placeName
     );
+    const passwordResp = await fetch(passwordRequest);
+    // const passwordRsc = await passwordResp.json();
+    return passwordResp.status;
 
-    fetch(passwordRequest)
-        .then((resp) => resp.json())
-        // TODO: switch console.log to actual action
-        .then((rsc) => console.log(rsc));
+    // fetch(passwordRequest)
+    //     .then((resp) => resp.json())
+    //     // TODO: switch console.log to actual action
+    //     .then((rsc) => console.log(rsc));
 }
 
 //PATCH

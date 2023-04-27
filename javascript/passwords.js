@@ -1,2 +1,2 @@
 // a correct password check
-check_password("triangeln", "1234");
+// check_password("triangeln", "1234");

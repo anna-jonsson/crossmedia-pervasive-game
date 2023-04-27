@@ -1,12 +1,15 @@
 //GET
 //Function for place_request with the placeName as parameter.
-function place_request(placeName) {
+async function place_request(placeName) {
     const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
+    const placeResp = await fetch(placeRequest);
+    const placeRsc = await placeResp.json();
+    return placeRsc;
 
-    fetch(placeRequest)
-        .then((resp) => resp.json())
-        // TODO: switch console.log to actual action
-        .then((rsc) => console.log(rsc));
+    // fetch(placeRequest)
+    //     .then((resp) => resp.json())
+    //     // TODO: switch console.log to actual action
+    //     .then((rsc) => console.log(rsc));
 }
 //Function for check_password with the placeName and password as parameter.
 function check_password(placeName, password) {

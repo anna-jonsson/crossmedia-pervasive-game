@@ -28,34 +28,42 @@ async function check_password(placeName, password) {
 
 //PATCH
 //Function checking in - PATCH method
-function checked_in(placeName, checked_status) {
-    const checked_inRequest = new Request("../php/checked_in_out.php");
-    fetch(checked_inRequest, {
+async function checked_in(placeName, checked_status) {
+    const checked_in_request = new Request("../php/checked_in_out.php");
+    const checked_in_resp = await fetch(checked_in_request, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             location_name: placeName,
             checked_in: checked_status,
         }),
-    })
-        .then((r) => r.json())
-        // TODO: switch console.log to actual action
-        .then((rsc) => console.log(rsc));
+    });
+    return checked_in_resp;
 }
+//     fetch(checked_inRequest, {
+//         method: "PATCH",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({
+//             location_name: placeName,
+//             checked_in: checked_status,
+//         }),
+//     })
+//         .then((r) => r.json())
+//         // TODO: switch console.log to actual action
+//         .then((rsc) => console.log(rsc));
+// }
 //Function for checking out - PATCH method
-function checked_out(placeName, checked_status) {
-    const checked_outRequest = new Request("../php/checked_in_out.php");
-    fetch(checked_outRequest, {
+async function checked_out(placeName, checked_status) {
+    const checked_out_request = new Request("../php/checked_in_out.php");
+    const checked_out_resp = await fetch(checked_out_request, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             location_name: placeName,
             checked_out: checked_status,
         }),
-    })
-        .then((r) => r.json())
-        // TODO: switch console.log to actual action
-        .then((rsc) => console.log(rsc));
+    });
+    return checked_out_resp;
 }
 
 //FUNDERING!!! - ska inte checked status vara nyckeln så att det är den som ändras och inte out och in som olika??

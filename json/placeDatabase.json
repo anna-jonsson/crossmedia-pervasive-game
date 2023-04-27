@@ -4,7 +4,8 @@
         "password": "blabla",
         "location_name": "introduction",
         "intro_text": "v\u00e4lkommen",
-        "background_picture": ".\/pics\/213",
+        "task_text": "Fyll i lösenordet för att starta spelet.",
+        "background_picture": "../images/startpage.jpeg",
         "checked_in": false,
         "checked_out": false
     },
@@ -14,10 +15,10 @@
         "current_balance": 150,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",
-        "intro_text": "v\u00e4lkommen",
-        "riddle_text": "verm \u00e4r jag?",
-        "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "intro_text": "Välkommen till Triangeln! Butiksbiträdet väntar på dig vid dörren.",
+        "riddle_text": "Jag går och går och kommer aldrig till dörren. Vem är jag?",
+        "task_text": "Fyll i svaret på gåtan här.",
+        "background_picture": "../images/triangeln_butiksbitrade.png",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false
@@ -31,7 +32,7 @@
         "intro_text": "v\u00e4lkommen",
         "riddle_text": "verm \u00e4r jag?",
         "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false
@@ -45,7 +46,7 @@
         "intro_text": "v\u00e4lkommen",
         "riddle_text": "verm \u00e4r jag?",
         "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false
@@ -59,7 +60,7 @@
         "intro_text": "v\u00e4lkommen",
         "riddle_text": "verm \u00e4r jag?",
         "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false
@@ -73,7 +74,7 @@
         "intro_text": "v\u00e4lkommen",
         "riddle_text": "verm \u00e4r jag?",
         "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false
@@ -87,7 +88,7 @@
         "intro_text": "v\u00e4lkommen",
         "riddle_text": "verm \u00e4r jag?",
         "task_text": "g\u00f6r det",
-        "background_picture": ".\/pics\/213",
+        "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": false,
         "checked_out": false

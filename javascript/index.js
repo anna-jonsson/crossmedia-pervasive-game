@@ -36,7 +36,7 @@ async function fill_content(placeName, div_id, type) {
             btnPassword.addEventListener('click', async function () {
                 let password = document.querySelector('.pw_input').value;
                 let passwordCheck = await check_password(placeName, password);
-                user_feedback(passwordCheck);
+                user_feedback(passwordCheck, placeName);
 
             });
         });
@@ -45,7 +45,7 @@ async function fill_content(placeName, div_id, type) {
 
 }
 
-function user_feedback(response) {
+function user_feedback(response, location_name) {
 
     let wrong_input = "Det är fel lösenord. Vänligen försök igen";
     let server_error, default_error = "Ooops! Något gick fel, prova igen!";
@@ -59,6 +59,7 @@ function user_feedback(response) {
         alert(wrong_input);
     } else if (response == 200) {
         alert(correct_input);
+        checked_out(location_name, true);
     } else {
         alert(default_error);
     }

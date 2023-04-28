@@ -1,95 +1,73 @@
 //GET
-//Function for place_request with the placeName as parameter.
+//PLACE REQUEST
 async function place_request(placeName) {
-    const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
-    const placeResp = await fetch(placeRequest);
-    const placeRsc = await placeResp.json();
-    return placeRsc;
-
-    // fetch(placeRequest)
-    //     .then((resp) => resp.json())
-    //     // TODO: switch console.log to actual action
-    //     .then((rsc) => console.log(rsc));
+  const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
+  const placeResp = await fetch(placeRequest);
+  const placeRsc = await placeResp.json();
+  return placeRsc;
 }
-//Function for check_password with the placeName and password as parameter.
-async function check_password(placeName, password) {
-    const passwordRequest = new Request(
-        "../php/passwords.php?password=" + password + "&location_name=" + placeName
-    );
-    const passwordResp = await fetch(passwordRequest);
-    // const passwordRsc = await passwordResp.json();
-    return passwordResp.status;
 
-    // fetch(passwordRequest)
-    //     .then((resp) => resp.json())
-    //     // TODO: switch console.log to actual action
-    //     .then((rsc) => console.log(rsc));
+//CHECK PASSWORD
+async function check_password(placeName, password) {
+  const passwordRequest = new Request(
+    "../php/passwords.php?password=" + password + "&location_name=" + placeName
+  );
+  const passwordResp = await fetch(passwordRequest);
+
+  return passwordResp.status;
 }
 
 //PATCH
-//Function checking in - PATCH method
+//CHECKING IN
 async function checked_in(placeName, checked_status) {
-    const checked_in_request = new Request("../php/checked_in_out.php");
-    const checked_in_resp = await fetch(checked_in_request, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            location_name: placeName,
-            checked_in: checked_status,
-        }),
-    });
-    return checked_in_resp;
+  const checked_in_request = new Request("../php/checked_in_out.php");
+  const checked_in_resp = await fetch(checked_in_request, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      location_name: placeName,
+      checked_in: checked_status,
+    }),
+  });
+  return checked_in_resp;
 }
-//     fetch(checked_inRequest, {
-//         method: "PATCH",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({
-//             location_name: placeName,
-//             checked_in: checked_status,
-//         }),
-//     })
-//         .then((r) => r.json())
-//         // TODO: switch console.log to actual action
-//         .then((rsc) => console.log(rsc));
-// }
-//Function for checking out - PATCH method
+
+//CHECKING OUT
 async function checked_out(placeName, checked_status) {
-    const checked_out_request = new Request("../php/checked_in_out.php");
-    const checked_out_resp = await fetch(checked_out_request, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            location_name: placeName,
-            checked_out: checked_status,
-        }),
-    });
-    return checked_out_resp;
+  const checked_out_request = new Request("../php/checked_in_out.php");
+  const checked_out_resp = await fetch(checked_out_request, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      location_name: placeName,
+      checked_out: checked_status,
+    }),
+  });
+  return checked_out_resp;
 }
 
-//FUNDERING!!! - ska inte checked status vara nyckeln så att det är den som ändras och inte out och in som olika??
-
-//Function for balance request
+//ADD BALANCE
 function patch_balance(placeName, balance) {
-    const balanceRequest = new Request("../php/balance.php");
-    fetch(balanceRequest, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            location_name: placeName,
-            current_balance: balance,
-        }),
-    })
-        .then((r) => r.json())
-        // TODO: switch console.log to actual action
-        .then((rsc) => console.log(rsc));
+  const balanceRequest = new Request("../php/balance.php");
+  fetch(balanceRequest, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      location_name: placeName,
+      current_balance: balance,
+    }),
+  })
+    .then((r) => r.json())
+    // TODO: switch console.log to actual action
+    .then((rsc) => console.log(rsc));
 }
 
 // CURRENT BALANCE
 function get_current_balance(placeName) {
-    const balanceRequest = new Request("../php/balance.php?location_name=" + placeName);
+  const balanceRequest = new Request("../php/balance.php?location_name=" + placeName);
 
-    fetch(balanceRequest)
-        .then(resp => resp.json())
-        // TODO: switch console.log to actual action
-        .then(rsc => console.log(rsc));
+  fetch(balanceRequest)
+    .then((resp) => resp.json())
+    // TODO: switch console.log to actual action
+    .then((rsc) => console.log(rsc));
 }

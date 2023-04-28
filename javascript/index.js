@@ -2,7 +2,10 @@
 async function fill_content(placeName, div_id, type) {
 
     let location = await place_request(placeName);
+    checked_in(placeName, true);
+
     let wrapper = document.getElementById(div_id);
+
     wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
     wrapper.style.backgroundSize = 'cover';
     wrapper.style.width = '400px';

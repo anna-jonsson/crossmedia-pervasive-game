@@ -48,6 +48,20 @@ if($request_method == "GET") {
     }
 }
 
+//ALL LOCATIONS FOR COUNTING TOTAL BALANCE 
+
+if($request_method == "GET") {
+    if(isset($_GET["all_locations"])) {
+        sendJSON($places);
+       
+    }
+}
+
+
+
+
+
+
 $error = ["error" => "Did not work."];  
     sendJSON($error, 500);
 ?>

@@ -24,7 +24,6 @@ async function createPin(placeName, parent) {
 //for each location using the createPin function
 async function get_all_locations() {
   let all_places = await all_places_request();
-  //all_places.map(place => { if (place.location_name != "introduction") { console.log(place.location_name); } });
 
   all_places.forEach((place) => {
     if (place.location_name !== "introduction") {
@@ -34,24 +33,14 @@ async function get_all_locations() {
 
   let all_pins = document.querySelectorAll(".location_pin");
   all_pins.forEach(pin => {
-    pin.addEventListener('click', function (event) {
+    pin.querySelector('img').addEventListener('click', function (event) {
       if (event.target == this) {
-        let placeName = this.querySelector('p').innerText;
-        create_pop_up(placeName, this);
+        let placeName = this.nextElementSibling.innerText;
+        create_pop_up(placeName, this.parentNode);
       }
     });
   });
 }
-
-// input.addEventListener('change', function () {
-//   if (this.checked == true) {
-//     check_status();
-//     inputs.forEach(box => {
-//       if (box != this) {
-//         box.disabled = true;
-//         box.classList.add('opt_blocked');
-//       }
-//     }
 
 //Creates the pop_up for the location.
 function create_pop_up(placeName, parent) {
@@ -60,13 +49,11 @@ function create_pop_up(placeName, parent) {
                 <p>${placeName}</p>
                 <button class='check_in'>Jag är här!</button>
             `;
-  //TO DO : add this.
-  parent.addEventListener("click", function () {
-    // NOTE: change type with switch or if on location name depending on location
-    parent.append(overlay);
-    overlay.querySelector('button').addEventListener('click', function () {
-      console.log(overlay.querySelector('p').innerText);
-      fill_content(overlay.querySelector('p').innerText, "mainContent", "password");
-    });
+
+  // NOTE: change type with switch or if on location name depending on location
+  parent.append(overlay); // TODO: this creates multiple overlays if clicked more than once!
+  overlay.querySelector('button').addEventListener('click', function () {
+    console.log(overlay.querySelector('p').innerText);
+    fill_content(overlay.querySelector('p').innerText, "mainContent", "password");
   });
 };

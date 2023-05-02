@@ -18,9 +18,6 @@ async function createPin(placeName, parent) {
 
   parent.append(div);
 
-  document
-    .querySelector(".location_pin")
-    .addEventListener("click", create_pop_up(placeName, document.querySelector(".location_pin")));
 }
 
 //Function for getting all of the locations and creates a pin
@@ -30,9 +27,31 @@ async function get_all_locations() {
   //all_places.map(place => { if (place.location_name != "introduction") { console.log(place.location_name); } });
 
   all_places.forEach((place) => {
-    createPin(place.location_name, document.querySelector("#mainContent"));
+    if (place.location_name !== "introduction") {
+      createPin(place.location_name, document.getElementById("mainContent"));
+    }
+  });
+
+  let all_pins = document.querySelectorAll(".location_pin");
+  all_pins.forEach(pin => {
+    pin.addEventListener('click', function (event) {
+      if (event.target == this) {
+        let placeName = this.querySelector('p').innerText;
+        create_pop_up(placeName, this);
+      }
+    });
   });
 }
+
+// input.addEventListener('change', function () {
+//   if (this.checked == true) {
+//     check_status();
+//     inputs.forEach(box => {
+//       if (box != this) {
+//         box.disabled = true;
+//         box.classList.add('opt_blocked');
+//       }
+//     }
 
 //Creates the pop_up for the location.
 function create_pop_up(placeName, parent) {
@@ -45,6 +64,9 @@ function create_pop_up(placeName, parent) {
   parent.addEventListener("click", function () {
     // NOTE: change type with switch or if on location name depending on location
     parent.append(overlay);
-    fill_content(placeName, "#mainContent", "password");
+    overlay.querySelector('button').addEventListener('click', function () {
+      console.log(overlay.querySelector('p').innerText);
+      fill_content(overlay.querySelector('p').innerText, "mainContent", "password");
+    });
   });
-}
+};

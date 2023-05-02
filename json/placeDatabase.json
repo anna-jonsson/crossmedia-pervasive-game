@@ -6,7 +6,7 @@
         "intro_text": "v\u00e4lkommen",
         "task_text": "Fyll i l\u00f6senordet f\u00f6r att starta spelet.",
         "background_picture": "..\/images\/startpage.jpeg",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
@@ -34,7 +34,7 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
@@ -48,7 +48,7 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {

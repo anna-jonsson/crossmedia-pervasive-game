@@ -23,6 +23,8 @@ async function createPin(placeName, parent) {
     .addEventListener("click", create_pop_up(placeName, document.querySelector(".location_pin")));
 }
 
+//Function for getting all of the locations and creates a pin
+//for each location using the createPin function
 async function get_all_locations() {
   let all_places = await all_places_request();
   //all_places.map(place => { if (place.location_name != "introduction") { console.log(place.location_name); } });
@@ -32,6 +34,7 @@ async function get_all_locations() {
   });
 }
 
+//Creates the pop_up for the location.
 function create_pop_up(placeName, parent) {
   let overlay = document.createElement("div");
   overlay.innerHTML = `

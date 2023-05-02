@@ -1,5 +1,6 @@
 //GET
 //PLACE REQUEST
+//Getter for all of the places in the array (all objects)
 async function all_places_request() {
   const placesRequest = new Request("../php/get_location.php?all_locations");
   const placesResp = await fetch(placesRequest);
@@ -7,6 +8,7 @@ async function all_places_request() {
   return placesRsc;
 }
 
+//Getter for one place baserd on the location name.
 async function place_request(placeName) {
   const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
   const placeResp = await fetch(placeRequest);
@@ -15,6 +17,7 @@ async function place_request(placeName) {
 }
 
 //CHECK PASSWORD
+//getter for the password for the location.
 async function check_password(placeName, password) {
   const passwordRequest = new Request(
     "../php/passwords.php?password=" + password + "&location_name=" + placeName
@@ -54,18 +57,16 @@ async function checked_out(placeName, checked_status) {
 }
 
 //ADD BALANCE
-function patch_balance(placeName, balance) {
+async function patch_balance(placeName, balance) {
   const balanceRequest = new Request("../php/balance.php");
-  fetch(balanceRequest, {
+  const balance_response = await fetch(balanceRequest, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       location_name: placeName,
       current_balance: balance,
     }),
-  })
-    .then((r) => r.json())
-    // TODO: switch console.log to actual action
-    //add_to_balance(placeName, balance);
-    .then((rsc) => console.log(rsc));
+  });
+  const balance_resource = await balance_response.json();
+  return balance_resource;
 }

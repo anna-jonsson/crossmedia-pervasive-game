@@ -6,13 +6,13 @@
         "intro_text": "v\u00e4lkommen",
         "task_text": "Fyll i l\u00f6senordet f\u00f6r att starta spelet.",
         "background_picture": "..\/images\/startpage.jpeg",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 1,
         "password": "1234",
-        "current_balance": 800,
+        "current_balance": 0,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",
         "intro_text": "V\u00e4lkommen till Triangeln! Butiksbitr\u00e4det v\u00e4ntar p\u00e5 dig vid d\u00f6rren.",
@@ -20,13 +20,13 @@
         "task_text": "Fyll i svaret p\u00e5 g\u00e5tan h\u00e4r.",
         "background_picture": "..\/images\/triangeln_butiksbitrade.png",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 2,
         "password": "123321",
-        "current_balance": 700,
+        "current_balance": 0,
         "location_name": "knarkrondellen",
         "location_url": "test\/knarkrondellen",
         "intro_text": "v\u00e4lkommen",
@@ -34,13 +34,13 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 3,
         "password": "123321",
-        "current_balance": 150,
+        "current_balance": 0,
         "location_name": "m\u00f6llan",
         "location_url": "test\/m\u00f6llan",
         "intro_text": "v\u00e4lkommen",
@@ -48,13 +48,13 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 4,
         "password": "123321",
-        "current_balance": 150,
+        "current_balance": 0,
         "location_name": "friisgatan",
         "location_url": "test\/friisgatan",
         "intro_text": "v\u00e4lkommen",
@@ -62,13 +62,13 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 5,
         "password": "123321",
-        "current_balance": 150,
+        "current_balance": 0,
         "location_name": "folkets park",
         "location_url": "test\/folkets_park",
         "intro_text": "v\u00e4lkommen",
@@ -76,13 +76,13 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
         "id": 6,
         "password": "123321",
-        "current_balance": 150,
+        "current_balance": 0,
         "location_name": "magisterparken",
         "location_url": "test\/magisterparken",
         "intro_text": "v\u00e4lkommen",
@@ -90,7 +90,7 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     }
 ]

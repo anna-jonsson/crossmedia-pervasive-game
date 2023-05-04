@@ -28,10 +28,10 @@ async function add_to_balance(placeName, password) {
     show_current_balance();
     //Returns the updatedObjectBalance (place current_balance)
     return updateObjectBalance;
-  } else {
+  }// else {
     //Sends error incase the input is wrong.
-    user_feedback(400, placeName);
-  }
+  //  user_feedback(400, placeName);
+  //}
 }
 
 //DIRECT CODE

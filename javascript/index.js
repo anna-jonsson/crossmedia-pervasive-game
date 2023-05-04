@@ -41,7 +41,7 @@ async function fill_content(placeName, div_id, type) {
         let passwordCheck = await check_password(placeName, password);
         //Sending feedback to the user based on the input (correct/incorrect)
         user_feedback(passwordCheck, placeName);
-
+        console.log("fill_content");
         await add_to_balance(placeName, password);
       });
     });
@@ -50,19 +50,51 @@ async function fill_content(placeName, div_id, type) {
 
 //Function for user feedback based on the response status connected to the location name.
 function user_feedback(response, location_name) {
+ 
   let wrong_input = "Det är fel lösenord. Vänligen försök igen";
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
 
-  if (response == 500) {
-    alert(server_error);
-  } else if (response == 400) {
-    alert(wrong_input);
-  } else if (response == 200) {
-    alert(correct_input);
-    checked_out(location_name, true);
-  } else {
-    alert(default_error);
-  }
+  let newDiv = document.createElement('div');
+  let newSpan = document.createElement("span")
+  let p = document.createElement("p")
+  newDiv.classList.add('feedbackPopup');
+  newSpan.classList.add("close")
+ newDiv.appendChild(newSpan)
+ newSpan.textContent = "x";
+  newDiv.appendChild(p) 
+  p.textContent = response == 200 ? correct_input : (response == 400 ? wrong_input : (response == 500 ? server_error : default_error));
+
+  console.log(response)
+  console.log("user_feedback");
+
+  // When the user clicks on <span> (x), close the modal
+newSpan.onclick = function() {
+  newDiv.style.display = "none";
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == document.querySelector("#main")) {
+    newDiv.style.display = "none";
+  }
+} 
+
+  document.body.appendChild(newDiv);
+
+  if (response == 200) {
+    let mapButton = document.createElement("button");
+mapButton.innerHTML = "Tillbaka till kartan";
+mapButton.addEventListener("click", function () {
+  fill_content('introduction', 'mainContent', 'text')
+
+  show_map();
+  newDiv.style.display = "none";
+});
+newDiv.appendChild(mapButton);
+    checked_out(location_name, true);
+  }
+
+}
+

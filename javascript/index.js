@@ -1,3 +1,4 @@
+
 // re-useable fn to fill div content based on the location_name, div id and type ("text, password, checkbox etc ")
 async function fill_content(placeName, div_id, type) {
   let location = await place_request(placeName);
@@ -34,6 +35,10 @@ async function fill_content(placeName, div_id, type) {
                 <button class='pwBtn'>Skicka svar</button>
             </div>
             `;
+      if (placeName == "triangeln") {
+        document.querySelector('#mainContent').classList.add('snakeContain');
+        init_snake_game();
+      }
       //Checking that the password for the task is correct with funciton check_password.
       let btnPassword = document.querySelector(".pwBtn");
       btnPassword.addEventListener("click", async function () {

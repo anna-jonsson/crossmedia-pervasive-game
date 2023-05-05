@@ -35,6 +35,10 @@ async function fill_content(placeName, div_id, type) {
                 <button class='pwBtn'>Skicka svar</button>
             </div>
             `;
+      // *** TODO: bug fixes & fixes ***
+      // -- user gets sent back to start screen if gameover
+      // -- password fix? how to proceed (max score adds password?)
+      // -- read score and add to balance
       if (placeName == "triangeln") {
         document.querySelector('#mainContent').classList.add('snakeContain');
         init_snake_game();
@@ -55,49 +59,49 @@ async function fill_content(placeName, div_id, type) {
 
 //Function for user feedback based on the response status connected to the location name.
 function user_feedback(response, location_name) {
- 
+
   let wrong_input = "Det är fel lösenord. Vänligen försök igen";
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
 
   let newDiv = document.createElement('div');
-  let newSpan = document.createElement("span")
-  let p = document.createElement("p")
+  let newSpan = document.createElement("span");
+  let p = document.createElement("p");
   newDiv.classList.add('feedbackPopup');
-  newSpan.classList.add("close")
- newDiv.appendChild(newSpan)
- newSpan.textContent = "x";
-  newDiv.appendChild(p) 
+  newSpan.classList.add("close");
+  newDiv.appendChild(newSpan);
+  newSpan.textContent = "x";
+  newDiv.appendChild(p);
   p.textContent = response == 200 ? correct_input : (response == 400 ? wrong_input : (response == 500 ? server_error : default_error));
 
-  console.log(response)
+  console.log(response);
   console.log("user_feedback");
 
   // When the user clicks on <span> (x), close the modal
-newSpan.onclick = function() {
-  newDiv.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == document.querySelector("#main")) {
+  newSpan.onclick = function () {
     newDiv.style.display = "none";
-  }
-} 
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == document.querySelector("#main")) {
+      newDiv.style.display = "none";
+    }
+  };
 
   document.body.appendChild(newDiv);
 
   if (response == 200) {
     let mapButton = document.createElement("button");
-mapButton.innerHTML = "Tillbaka till kartan";
-mapButton.addEventListener("click", function () {
-  fill_content('introduction', 'mainContent', 'text')
+    mapButton.innerHTML = "Tillbaka till kartan";
+    mapButton.addEventListener("click", function () {
+      fill_content('introduction', 'mainContent', 'text');
 
-  show_map();
-  newDiv.style.display = "none";
-});
-newDiv.appendChild(mapButton);
+      show_map();
+      newDiv.style.display = "none";
+    });
+    newDiv.appendChild(mapButton);
     checked_out(location_name, true);
   }
 

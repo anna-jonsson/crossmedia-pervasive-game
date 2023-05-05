@@ -34,22 +34,22 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {
         "id": 3,
-        "password": "123321",
-        "current_balance": 0,
+        "password": "morot",
+        "current_balance": 1000,
         "location_name": "m\u00f6llan",
         "location_url": "test\/m\u00f6llan",
-        "intro_text": "v\u00e4lkommen",
-        "riddle_text": "verm \u00e4r jag?",
-        "task_text": "g\u00f6r det",
+        "intro_text": "V\u00e4lkommen till M\u00f6llev\u00e5ngstorget",
+        "riddle_text": "Vi st\u00e5r h\u00e4r \u00e5r efter \u00e5r i alla v\u00e4der utan att r\u00f6ra en fena, vi har f\u00f6tter kn\u00e4n t\u00e5r och l\u00e5r men vi r\u00f6r \u00e4nd\u00e5 aldrig p\u00e5 bena.",
+        "task_text": "L\u00f6s wordle",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": true,
-        "checked_out": false
+        "checked_out": true
     },
     {
         "id": 4,

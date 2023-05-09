@@ -1,24 +1,24 @@
-// await function Knark_pw(password) {
+async function createInputs() {
+  let Inputwrapper = document.createElement("div");
 
-//     const password_knarkrondellen = await check_password("knarkrondellen", password);
+  Inputwrapper.id = "input_wrapper";
+  Inputwrapper.innerHTML = ` 
+        <form>
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
+        </form>
+        `;
+  document.querySelector("#mainContent").appendChild(Inputwrapper);
+}
 
-// };
-
-function input_fields() {
+async function input_fields() {
+  //   createInputs();
   let PW = [];
-
-  let wrapper = document.querySelector("#mainContent");
-  wrapper.innerHTML = ` 
-      <form>
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
-      </form>
-      <button>Submit</button>`;
-
+  console.log(document.querySelectorAll(".inputs"));
   document.querySelectorAll(".inputs").forEach((input) => {
     input.addEventListener("keyup", function (e) {
       if (this.value.length == this.maxLength) {
@@ -27,6 +27,7 @@ function input_fields() {
         if (PW.length != 6) {
           console.log(PW.push(input.value));
         }
+
         if (this.nextElementSibling != null) {
           this.nextElementSibling.focus();
         }
@@ -56,15 +57,9 @@ function input_fields() {
       if (input.value === "" || input.value == " ") {
         return;
       }
+      let password = PW.join("");
+
+      localStorage.setItem("knarkrondellen", password);
     });
-
-    return PW;
-  });
-
-  document.querySelector("button").addEventListener("click", function () {
-    console.log(PW);
-    //Add a password check for the right pw for this location.
   });
 }
-
-input_fields();

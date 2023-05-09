@@ -34,6 +34,8 @@ async function fill_content(placeName, div_id, type) {
       } else if (placeName == "triangeln") {
         document.querySelector("#mainContent").classList.add("snakeContain");
         init_snake_game();
+      }  else if (placeName == "friisgatan") {
+        window.location.href ="../html/pattern.html";
       } else {
         wrapper.innerHTML = ` 
               <div class='task'>

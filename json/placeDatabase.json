@@ -53,8 +53,8 @@
     },
     {
         "id": 4,
-        "password": "123321",
-        "current_balance": 0,
+        "password": "67510",
+        "current_balance": 26000,
         "location_name": "friisgatan",
         "location_url": "test\/friisgatan",
         "intro_text": "v\u00e4lkommen",
@@ -63,7 +63,7 @@
         "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": true,
-        "checked_out": false
+        "checked_out": true
     },
     {
         "id": 5,

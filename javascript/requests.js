@@ -1,3 +1,5 @@
+// export {test}
+
 //GET
 //PLACE REQUEST
 //Getter for all of the places in the array (all objects)
@@ -69,4 +71,9 @@ async function patch_balance(placeName, balance) {
   });
   const balance_resource = await balance_response.json();
   return balance_resource;
+}
+
+//test
+function test(){
+  console.log("hejeje");
 }

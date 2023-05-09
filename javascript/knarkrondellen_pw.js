@@ -1,14 +1,8 @@
-// await function Knark_pw(password) {
-
-//     const password_knarkrondellen = await check_password("knarkrondellen", password);
-
-// };
-
 function input_fields() {
   let PW = [];
 
-  let wrapper = document.querySelector("#mainContent");
-  wrapper.innerHTML = ` 
+  let Inputwrapper = document.createElement("div");
+  Inputwrapper.innerHTML = ` 
       <form>
       <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
       <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
@@ -17,8 +11,8 @@ function input_fields() {
       <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
       <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
       </form>
-      <button>Submit</button>`;
-
+      `;
+  document.querySelector("#mainContent").appendChild(Inputwrapper);
   document.querySelectorAll(".inputs").forEach((input) => {
     input.addEventListener("keyup", function (e) {
       if (this.value.length == this.maxLength) {
@@ -57,14 +51,6 @@ function input_fields() {
         return;
       }
     });
-
     return PW;
   });
-
-  document.querySelector("button").addEventListener("click", function () {
-    console.log(PW);
-    //Add a password check for the right pw for this location.
-  });
 }
-
-input_fields();

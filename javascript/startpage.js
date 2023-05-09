@@ -28,6 +28,11 @@ async function startpage(placeName, div_id) {
       await show_map();
     });
   });
+
+  if (localStorage.getItem('friisgatan') !== null){
+    localStorage.clear();
+    await show_map();
+  }
 }
 
 startpage("introduction", "mainContent");

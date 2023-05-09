@@ -43,6 +43,11 @@ async function fill_content(placeName, div_id, type) {
         document.querySelector('#mainContent').classList.add('snakeContain');
         init_snake_game();
       }
+
+      if (placeName == "friisgatan") {
+        window.location.href ="../html/pattern.html";
+      }
+
       //Checking that the password for the task is correct with funciton check_password.
       let btnPassword = document.querySelector(".pwBtn");
       btnPassword.addEventListener("click", async function () {
@@ -95,10 +100,11 @@ function user_feedback(response, location_name) {
   if (response == 200) {
     let mapButton = document.createElement("button");
     mapButton.innerHTML = "Tillbaka till kartan";
-    mapButton.addEventListener("click", function () {
-      fill_content('introduction', 'mainContent', 'text');
+    mapButton.addEventListener("click", async function () {
+     
+      // fill_content('introduction', 'mainContent', 'text');
 
-      show_map();
+      await show_map();
       newDiv.style.display = "none";
     });
     newDiv.appendChild(mapButton);

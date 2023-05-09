@@ -34,7 +34,7 @@
         "task_text": "g\u00f6r det",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {

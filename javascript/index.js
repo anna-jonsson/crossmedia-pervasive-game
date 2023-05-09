@@ -1,4 +1,3 @@
-
 // re-useable fn to fill div content based on the location_name, div id and type ("text, password, checkbox etc ")
 async function fill_content(placeName, div_id, type) {
   let location = await place_request(placeName);
@@ -40,8 +39,15 @@ async function fill_content(placeName, div_id, type) {
       // -- password fix? how to proceed (max score adds password?)
       // -- read score and add to balance
       if (placeName == "triangeln") {
-        document.querySelector('#mainContent').classList.add('snakeContain');
+        document.querySelector("#mainContent").classList.add("snakeContain");
         init_snake_game();
+      }
+
+      //for placename "knarkrondellen"
+      if (placeName == "knarkrondellen") {
+        document.querySelector(".pw_input").style.display = "none";
+        document.querySelector("#mainContent");
+        input_fields();
       }
       //Checking that the password for the task is correct with funciton check_password.
       let btnPassword = document.querySelector(".pwBtn");
@@ -59,21 +65,27 @@ async function fill_content(placeName, div_id, type) {
 
 //Function for user feedback based on the response status connected to the location name.
 function user_feedback(response, location_name) {
-
   let wrong_input = "Det är fel lösenord. Vänligen försök igen";
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
 
-  let newDiv = document.createElement('div');
+  let newDiv = document.createElement("div");
   let newSpan = document.createElement("span");
   let p = document.createElement("p");
-  newDiv.classList.add('feedbackPopup');
+  newDiv.classList.add("feedbackPopup");
   newSpan.classList.add("close");
   newDiv.appendChild(newSpan);
   newSpan.textContent = "x";
   newDiv.appendChild(p);
-  p.textContent = response == 200 ? correct_input : (response == 400 ? wrong_input : (response == 500 ? server_error : default_error));
+  p.textContent =
+    response == 200
+      ? correct_input
+      : response == 400
+      ? wrong_input
+      : response == 500
+      ? server_error
+      : default_error;
 
   console.log(response);
   console.log("user_feedback");
@@ -96,7 +108,7 @@ function user_feedback(response, location_name) {
     let mapButton = document.createElement("button");
     mapButton.innerHTML = "Tillbaka till kartan";
     mapButton.addEventListener("click", function () {
-      fill_content('introduction', 'mainContent', 'text');
+      fill_content("introduction", "mainContent", "text");
 
       show_map();
       newDiv.style.display = "none";
@@ -104,6 +116,4 @@ function user_feedback(response, location_name) {
     newDiv.appendChild(mapButton);
     checked_out(location_name, true);
   }
-
 }
-

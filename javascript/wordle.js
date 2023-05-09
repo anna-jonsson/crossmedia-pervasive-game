@@ -1,11 +1,14 @@
 // import { testDictionary, realDictionary } from './dictionary.js';
 // export default startup;
+
+// import {test} from 'requests.js'
+
 const realDictionary = [
-  "gurka", "morot", "pumpa", "tomat", "guava", "dadel", "fikon", "banan", "mango","äpple","päron"
+  "gurka", "morot", "pumpa", "tomat", "guava", "dadel", "fikon", "banan", "mango","äpple","päron","melon"
     ];
 // for testing purposes, make sure to use the test dictionary
 // console.log('test dictionary:', testDictionary);
-console.log('real dictionary:', realDictionary);
+// console.log('real dictionary:', realDictionary);
 
 
 
@@ -143,12 +146,20 @@ function revealWord(guess) {
   const isWinner = state.secret === guess;
   const isGameOver = state.currentRow === 5;
 
-  setTimeout(() => {
+  setTimeout(async  () => {
     if (isWinner) {
-      alert('Congratulations!');
       console.log(guess);
+
+      // checked_out("möllan", true)
+      // alert('Grattis du gissade ordet!');
+
+      let passwordCheck = await check_password("möllan", guess);
+              //Sending feedback to the user based on the input (correct/incorrect)
+              user_feedback(passwordCheck, "möllan");
+  
+              await add_to_balance("möllan", guess);
     } else if (isGameOver) {
-      alert(`Better luck next time! The word was ${state.secret}.`);
+      alert(`Ajdå! Ordet var: ${state.secret}`);
     }
   }, 3 * animation_duration);
 }
@@ -180,6 +191,5 @@ let div = document.createElement("div");
   const game = document.getElementById('game');
   drawGrid(game);
 }
-console.log(state.secret);
 
 

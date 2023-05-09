@@ -18,6 +18,7 @@
     display: grid;
     grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(5, auto);
+    background-color: black;
   }
   
   .box {

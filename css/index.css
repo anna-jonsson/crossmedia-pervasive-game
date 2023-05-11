@@ -4,6 +4,12 @@
   --wheat: #f5deb3;
   --white: #d9d9d9;
 }
+*{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body {
   background-color: var(--brown);
 }
@@ -11,11 +17,29 @@ body {
 .pin_img {
   height: 20px;
 }
-.locationText {
-  color: var(--wheat);
+
+.location{
+  background-color: #543e3e7a;
+  margin: 20px; 
 }
+
+.locationText {
+  color: var(--white);
+  padding: 30px;
+}
+
+.task{
+  background-color: #543e3e7a;
+  margin: 20px; 
+}
+
+.taskText{
+  color: var(--white);
+  padding: 30px;
+}
+
 .location_pin {
-  color: var(--wheat);
+  color: var(--white);
 }
 
 .feedbackPopup {
@@ -47,6 +71,7 @@ body {
 
 input {
   padding: 6px 12px;
+  margin-bottom: 10px;
   background: rgb(31, 32, 35);
   border: 1px solid rgb(60, 63, 68);
   border-radius: 4px;
@@ -67,6 +92,14 @@ input:focus {
   top: 40%;
   left: 30%;
   transform: translate(-100%, -80%);
+}
+
+button.nextBtn{
+  margin-bottom: 20px;
+}
+
+.taskBtn{
+  margin-bottom: 10px;
 }
 
 button {

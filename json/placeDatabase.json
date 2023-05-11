@@ -3,8 +3,8 @@
         "id": 0,
         "password": "blabla",
         "location_name": "introduction",
-        "intro_text": "v\u00e4lkommen",
-        "task_text": "Fyll i l\u00f6senordet f\u00f6r att starta spelet.",
+        "intro_text": "Klockan har precis slagit 04:47 och det knackar aggressivt på dörren till familjen B0065X2. BAAM BAAM BAAM. Pappan i familjen öppnar och det är tydligt att det är en general från imperiet som står i dörren. Samtalet avslutas och pappan berättar för familjen att de kräver en stor summa pengar av familjen, annars skickas de vuxna till arbetslägren och barnen till fabrikerna. Därför måste föräldrarna ge sig ut leta efter jobb. Ni i syskonskaran bestämmer er för att försöka hjälpa familjen att klara sig från detta mörka öde och ger er ut för att leta rätt på arbete som kan generera mer pengar till familjekassan. För att få reda på var dagens arbetsmöjligheter finns måste ni ta er till arbetsledaren Car Digan som befinner sig ... ",
+        "task_text": "Regler: Spelet går ut på att arbeta ihop tillräckligt mycket pengar för att kunna rädda familjen från sitt öde. Efter att ha mottagit ett kuvert med dagens arbetsmöjligheter öppnas kartan upp och ni måste ta er till de olika platserna för att utföra jobben. Väl på plats stöter ni på gåtor som tar er till en mindre del av området där en uppgift måste lösas. Löser ni denna uppgift tilldelas ni en viss summa pengar och kan gå vidare till nästa plats. Men märk väl - det kommer vara av största vikt att vara uppmärksam på sin omgivning på de olika platserna, då detta kan komma att gynna er längre fram under dagen. Regler och beskrivningar för de olika uppgifterna presenteras på vardera plats.",
         "background_picture": "..\/images\/startpage.jpeg",
         "checked_in": false,
         "checked_out": false

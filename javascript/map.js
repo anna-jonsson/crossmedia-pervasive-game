@@ -17,12 +17,21 @@ async function createPin(placeName, parent) {
     `;
 
   parent.append(div);
-
 }
 
 //Function for getting all of the locations and creates a pin
 //for each location using the createPin function
 async function get_all_locations() {
+  //Clears the mainContent befor filling it again.
+  let mainContent = document.getElementById("mainContent");
+  mainContent.innerHTML = "";
+  mainContent.style.backgroundImage = "url('../images/Map3.png')";
+  mainContent.style.backgroundSize = "107% 114%";
+  mainContent.style.backgroundRepeat = "no-repeat";
+
+  mainContent.style.backgroundPositionX = "-17px";
+  mainContent.style.backgroundPositionY = "-20px";
+  //<img  src = "../images/Map3.png">
   let all_places = await all_places_request();
 
   all_places.forEach((place) => {
@@ -32,8 +41,8 @@ async function get_all_locations() {
   });
 
   let all_pins = document.querySelectorAll(".location_pin");
-  all_pins.forEach(pin => {
-    pin.querySelector('img').addEventListener('click', function (event) {
+  all_pins.forEach((pin) => {
+    pin.querySelector("img").addEventListener("click", function (event) {
       if (event.target == this) {
         let placeName = this.nextElementSibling.innerText;
         create_pop_up(placeName, this.parentNode);
@@ -52,8 +61,8 @@ function create_pop_up(placeName, parent) {
 
   // NOTE: change type with switch or if on location name depending on location
   parent.append(overlay); // TODO: this creates multiple overlays if clicked more than once!
-  overlay.querySelector('button').addEventListener('click', function () {
-    console.log(overlay.querySelector('p').innerText);
-    fill_content(overlay.querySelector('p').innerText, "mainContent", "password");
+  overlay.querySelector("button").addEventListener("click", function () {
+    console.log(overlay.querySelector("p").innerText);
+    fill_content(overlay.querySelector("p").innerText, "mainContent", "password");
   });
-};
+}

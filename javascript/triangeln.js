@@ -1,5 +1,10 @@
 "use strict";
 
+// NOTE: The following bugs are present at this time: 
+
+// * Game over when playing from a previous game over can generate game over pop ups in the middle of the game, even if the game was not lost
+// * On the second play turn, the speed from last score (e.g. speed increase from score 5) starts from the beginning of next turn (incorrect)
+
 function init_snake_game() {
     console.log("Game started");
 

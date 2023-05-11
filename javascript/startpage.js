@@ -29,7 +29,7 @@ async function startpage(placeName, div_id) {
     });
   });
 
-  if (localStorage.getItem('friisgatan') !== null){
+  if (localStorage.getItem("friisgatan") !== null) {
     localStorage.clear();
     await show_map();
   }

@@ -4,13 +4,18 @@
   --wheat: #f5deb3;
   --white: #d9d9d9;
 }
-*{
+* {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body {
+  background-color: #543e3e;
+}
+#balance {
+  margin-top: 15px;
+  color: red;
   background-color: var(--brown);
 }
 
@@ -18,9 +23,9 @@ body {
   height: 20px;
 }
 
-.location{
+.location {
   background-color: #543e3e7a;
-  margin: 20px; 
+  margin: 20px;
 }
 
 .locationText {
@@ -28,12 +33,12 @@ body {
   padding: 30px;
 }
 
-.task{
+.task {
   background-color: #543e3e7a;
-  margin: 20px; 
+  margin: 20px;
 }
 
-.taskText{
+.taskText {
   color: var(--white);
   padding: 30px;
 }
@@ -94,11 +99,11 @@ input:focus {
   transform: translate(-100%, -80%);
 }
 
-button.nextBtn{
+button.nextBtn {
   margin-bottom: 20px;
 }
 
-.taskBtn{
+.taskBtn {
   margin-bottom: 10px;
 }
 

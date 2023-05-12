@@ -10,7 +10,7 @@ async function createPin(placeName, parent) {
   let div = document.createElement("div");
   div.classList.add("pin");
   div.innerHTML = `
-        <div class='location_pin'>
+        <div id='pin_${placeName}' class='location_pin'>
             <img class='pin_img' src='../images/pin.png'>
             <p>${placeName}</p>
         </div>

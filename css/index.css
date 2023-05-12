@@ -54,7 +54,31 @@ body {
 .location_pin p {
   font-size: small;
 }
+
+.check_in {
+  font-size: smaller;
+}
+
 #pop_up_div {
+  padding: 30px;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  gap: 15%;
+  border-radius: 5%;
+  transform: translate(-50%, -50%);
+  background: rgba(62, 84, 84, 0.8);
+  color: var(--white);
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  font-size: smaller;
+}
+
+#pop_up_div {
+  font-size: smaller;
   padding: 30px;
   height: 200px;
   width: 200px;
@@ -129,6 +153,7 @@ body {
 }
 
 .feedbackPopup {
+  font-size: smaller;
   position: fixed;
   top: 50%;
   left: 50%;

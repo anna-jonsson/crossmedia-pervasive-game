@@ -3,13 +3,21 @@ form {
   margin: 100px auto;
   text-align: center;
 }
-.inputs [type="text"] {
+.inputs {
   color: white;
   border: none;
   border-bottom: 2px solid white;
   display: inline-block;
   font-size: 20px;
-  margin: 0 5px;
   width: 3rem;
   text-align: center;
+}
+
+.pwBtn {
+  position: fixed;
+  top: 75%;
+}
+
+#knaskStyle {
+  display: contents;
 }

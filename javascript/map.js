@@ -28,6 +28,7 @@ async function get_all_locations() {
   mainContent.style.backgroundImage = "url('../images/Map3.png')";
   mainContent.style.backgroundSize = "107% 114%";
   mainContent.style.backgroundRepeat = "no-repeat";
+  mainContent.style.position = "relative";
 
   mainContent.style.backgroundPositionX = "-17px";
   mainContent.style.backgroundPositionY = "-20px";

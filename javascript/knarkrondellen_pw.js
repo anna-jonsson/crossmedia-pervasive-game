@@ -12,7 +12,9 @@ async function createInputs() {
         <input class="inputs" type="text" pattern="[0-9]" maxlength="1" />
         </form>
         `;
-  document.querySelector("#mainContent").appendChild(Inputwrapper);
+  let knark_wrapper = document.querySelector(".task");
+  knark_wrapper.id = "knarkStyle";
+  knark_wrapper.appendChild(Inputwrapper);
 }
 
 async function input_fields() {

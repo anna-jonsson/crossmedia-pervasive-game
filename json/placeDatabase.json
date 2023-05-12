@@ -40,7 +40,7 @@
     {
         "id": 3,
         "password": "morot",
-        "current_balance": 0,
+        "current_balance": 1000,
         "location_name": "m\u00f6llan",
         "location_url": "test\/m\u00f6llan",
         "intro_text": "V\u00e4lkommen till M\u00f6llev\u00e5ngstorget",
@@ -48,13 +48,13 @@
         "task_text": "L\u00f6s Wordle f\u00f6r att s\u00e4lja s\u00e5 m\u00e5nga gr\u00f6nsaker och frukter som m\u00f6jligt.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
-        "checked_out": false
+        "checked_in": true,
+        "checked_out": true
     },
     {
         "id": 4,
         "password": "67510",
-        "current_balance": 0,
+        "current_balance": 2000,
         "location_name": "friisgatan",
         "location_url": "test\/friisgatan",
         "intro_text": "V\u00e4lkommen till Friisgatan!",
@@ -63,7 +63,7 @@
         "background_picture": ".\/images\/213",
         "QR_handling": "",
         "checked_in": true,
-        "checked_out": false
+        "checked_out": true
     },
     {
         "id": 5,

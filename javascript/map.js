@@ -55,7 +55,7 @@ async function get_all_locations() {
 function create_pop_up(placeName, parent) {
   let overlay = document.createElement("div");
   overlay.id = "pop_up_div";
-  placeName = placeName.toUpperCase();
+
   overlay.innerHTML = `
                 <p>${placeName}</p>
                 <button class='check_in'>Jag är här!</button>

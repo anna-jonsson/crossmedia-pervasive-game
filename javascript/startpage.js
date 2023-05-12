@@ -30,8 +30,6 @@ async function startpage(placeName, div_id, response) {
 
       if (response != 200) {
         user_feedback(passwordCheck, placeName);
-      } else {
-        await show_map();
       }
     });
   });

@@ -11,7 +11,7 @@ async function fill_content(placeName, div_id, type) {
   wrapper.style.height = "600px";
 
   wrapper.innerHTML = `
-        <div class='location'>
+        <div class='location' id='styling_${placeName}'>
             <div class='locationText'>${location.intro_text}</div>
             <button class='nextBtn'>Gå vidare</button>
         </div>
@@ -34,11 +34,11 @@ async function fill_content(placeName, div_id, type) {
       } else if (placeName == "triangeln") {
         document.querySelector("#mainContent").classList.add("snakeContain");
         init_snake_game();
-      }  else if (placeName == "friisgatan") {
-        window.location.href ="../html/pattern.html";
+      } else if (placeName == "friisgatan") {
+        window.location.href = "../html/pattern.html";
       } else {
         wrapper.innerHTML = ` 
-              <div class='task'>
+              <div class='task' >
                   <div class='taskText'>${location.task_text}</div>
                   <input class='pw_input' type=${type}></input>
                   <button class='pwBtn'>Skicka svar</button>
@@ -89,6 +89,7 @@ function user_feedback(response, location_name) {
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
+  let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
 
   let newDiv = document.createElement("div");
   let newSpan = document.createElement("span");
@@ -125,15 +126,20 @@ function user_feedback(response, location_name) {
   document.body.appendChild(newDiv);
 
   if (response == 200) {
-    let mapButton = document.createElement("button");
-    mapButton.innerHTML = "Tillbaka till kartan";
-    mapButton.addEventListener("click", function () {
-      fill_content("introduction", "mainContent", "text");
-
+    if (location_name == "introduction") {
       show_map();
-      newDiv.style.display = "none";
-    });
-    newDiv.appendChild(mapButton);
-    checked_out(location_name, true);
+      p.textContent = intro;
+    } else {
+      let mapButton = document.createElement("button");
+      mapButton.innerHTML = "Tillbaka till kartan";
+      mapButton.addEventListener("click", function () {
+        fill_content("introduction", "mainContent", "text");
+
+        show_map();
+        newDiv.style.display = "none";
+      });
+      newDiv.appendChild(mapButton);
+      checked_out(location_name, true);
+    }
   }
 }

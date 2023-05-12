@@ -19,6 +19,10 @@ body {
   background-color: var(--brown);
 }
 
+#mainContent {
+  font-size: smaller;
+}
+
 .pin_img {
   height: 20px;
 }
@@ -45,6 +49,50 @@ body {
 
 .location_pin {
   color: var(--white);
+}
+
+.location_pin p {
+  font-size: small;
+}
+
+#pin_knarkrondellen {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 17%;
+  left: 84%;
+}
+
+#pin_möllan {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 29%;
+  left: 90%;
+}
+
+#pin_folkets_park {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 6%;
+  left: 60%;
+}
+
+#pin_friisgatan {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 37%;
+  left: 37%;
+}
+
+#pin_magisterparken {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 82%;
+  left: 10%;
 }
 
 .feedbackPopup {

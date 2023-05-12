@@ -14,9 +14,12 @@ body {
   background-color: #543e3e;
 }
 #balance {
-  margin-top: 15px;
   color: red;
   background-color: var(--brown);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mainContent {
@@ -42,11 +45,20 @@ body {
   margin: 20px;
 }
 
-.taskText {
+.taskTextIntro {
   color: var(--white);
   padding: 30px;
 }
 
+.taskText {
+  width: 68%;
+  padding: 5%;
+  color: white;
+  gap: 25px;
+  text-align: left;
+  background-color: rgba(62, 84, 84, 0.7);
+  border-radius: 5%;
+}
 .location_pin {
   color: var(--white);
 }
@@ -105,6 +117,7 @@ body {
   border: solid 0.5px var(--white);
 }
 #pin_knarkrondellen {
+  margin: 0 auto;
   position: absolute;
   width: 30px;
   height: auto;
@@ -140,7 +153,7 @@ body {
   position: absolute;
   width: 30px;
   height: auto;
-  top: 82%;
+  top: 88%;
   left: 10%;
 }
 
@@ -148,7 +161,7 @@ body {
   position: absolute;
   width: 30px;
   height: auto;
-  top: 70%;
+  top: 75%;
   left: 38%;
 }
 
@@ -158,13 +171,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 3%;
+  padding: 5%;
   border-radius: 5%;
   background: rgba(62, 84, 84, 0.8);
   color: var(--white);
-  border: 1px solid black;
+  border: solid 0.3px black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  gap: 20px;
 }
 
 .close {
@@ -185,7 +199,7 @@ input {
   padding: 6px 12px;
   margin-bottom: 10px;
   background: rgb(31, 32, 35);
-  border: 1px solid rgb(60, 63, 68);
+  border: 0.3px solid rgb(60, 63, 68);
   border-radius: 4px;
   font-size: 13px;
   color: var(--white);
@@ -198,50 +212,63 @@ input:focus {
   box-shadow: none;
   border-color: rgb(100, 153, 255);
 }
-
+/* 
 .pw_input {
   position: fixed;
   top: 40%;
   left: 30%;
   transform: translate(-100%, -80%);
-}
+} */
 
 button.nextBtn {
   margin-bottom: 20px;
+  font-size: smaller;
 }
 
 .taskBtn {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: smaller;
 }
 
 button {
   display: inline-block;
   outline: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: smaller;
+  border: solid 0.3px var(--white);
   line-height: 0;
-  border-radius: 400px;
+  border-radius: 5%;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 1px solid transparent;
+
   letter-spacing: 2px;
   min-width: 130px;
   text-transform: uppercase;
   white-space: normal;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
   padding: 16px 14px 18px;
   color: var(--white);
   background-color: var(--green);
-  height: 20px;
+  height: 35px;
 }
 button:hover {
   background-color: rgba(62, 84, 84, 0.6);
 }
 
-.pwBtn {
+/* .pwBtn {
   position: fixed;
   top: 50%;
   left: 28%;
   transform: translate(-100%, -80%);
+} */
+
+.riddle {
+  width: 68%;
+  padding: 5%;
+  color: white;
+  gap: 25px;
+  text-align: left;
+  background-color: rgba(62, 84, 84, 0.7);
+  border-radius: 5%;
 }

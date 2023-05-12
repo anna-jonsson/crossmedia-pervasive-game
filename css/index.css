@@ -114,9 +114,11 @@ body {
   border: 1px solid black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  font-size: smaller;
 }
 #pop_up_div p {
-  color: red;
+  color: floralwhite;
+  font-weight: bolder;
   font-size: large;
 }
 
@@ -124,6 +126,7 @@ body {
   border: solid 0.5px var(--white);
 }
 .feedbackPopup {
+  font-size: smaller;
   position: fixed;
   border-radius: 5%;
   top: 50%;

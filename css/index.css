@@ -2,6 +2,7 @@
   --green: rgb(62, 84, 84);
   --brown:  #543e3e;
   --wheat: #f5deb3;
+<<<<<<< Updated upstream
   --white: #D9D9D9
   }
   body {
@@ -104,3 +105,276 @@
       transform: translate(-100%, -80%);
       }
   
+=======
+  --white: #d9d9d9;
+}
+* :not(.snake_game) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #543e3e;
+}
+#balance {
+  color: red;
+  background-color: var(--brown);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainContent {
+  font-size: smaller;
+}
+
+.pin_img {
+  height: 20px;
+}
+
+.location {
+  background-color: #543e3e7a;
+  margin: 20px;
+}
+
+.locationText {
+  color: var(--white);
+  padding: 30px;
+}
+
+.task {
+  background-color: #543e3e7a;
+  margin: 20px;
+}
+
+.taskTextIntro {
+  color: var(--white);
+  padding: 30px;
+}
+
+.taskText {
+  width: 68%;
+  padding: 5%;
+  color: white;
+  gap: 25px;
+  text-align: left;
+  background-color: rgba(62, 84, 84, 0.7);
+  border-radius: 5%;
+}
+.location_pin {
+  color: var(--white);
+}
+
+.location_pin p {
+  font-size: small;
+}
+
+.check_in {
+  font-size: smaller;
+}
+
+#pop_up_div {
+  padding: 30px;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  gap: 15%;
+  border-radius: 5%;
+  transform: translate(-50%, -50%);
+  background: rgba(62, 84, 84, 0.8);
+  color: var(--white);
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  font-size: smaller;
+}
+
+#pop_up_div {
+  font-size: smaller;
+  padding: 30px;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  gap: 15%;
+  border-radius: 5%;
+  transform: translate(-50%, -50%);
+  background: rgba(62, 84, 84, 0.8);
+  color: var(--white);
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#pop_up_div p {
+  color: floralwhite;
+  font-size: large;
+  font-weight: bold;
+}
+
+#pop_up_div button {
+  border: solid 0.5px var(--white);
+}
+#pin_knarkrondellen {
+  margin: 0 auto;
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 17%;
+  left: 84%;
+}
+
+#pin_möllan {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 35%;
+  left: 90%;
+}
+
+#pin_folkets_park {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 6%;
+  left: 60%;
+}
+
+#pin_friisgatan {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 37%;
+  left: 37%;
+}
+
+#pin_magisterparken {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 88%;
+  left: 10%;
+}
+
+#pin_triangeln {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  top: 75%;
+  left: 38%;
+}
+
+.feedbackPopup {
+  font-size: smaller;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  border-radius: 5%;
+  background: rgba(62, 84, 84, 0.8);
+  color: var(--white);
+  border: solid 0.3px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  gap: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input {
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  background: rgb(31, 32, 35);
+  border: 0.3px solid rgb(60, 63, 68);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--white);
+  height: 46px;
+  appearance: none;
+  transition: border 0.15s ease 0s;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(100, 153, 255);
+}
+/* 
+.pw_input {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  transform: translate(-100%, -80%);
+} */
+
+button.nextBtn {
+  margin-bottom: 20px;
+  font-size: smaller;
+}
+
+.taskBtn {
+  margin-bottom: 20px;
+  font-size: smaller;
+}
+
+button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: smaller;
+  border: solid 0.3px var(--white);
+  line-height: 0;
+  border-radius: 5%;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+
+  letter-spacing: 2px;
+  min-width: 130px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: var(--white);
+  background-color: var(--green);
+  height: 35px;
+}
+button:hover {
+  background-color: rgba(62, 84, 84, 0.6);
+}
+
+/* .pwBtn {
+  position: fixed;
+  top: 50%;
+  left: 28%;
+  transform: translate(-100%, -80%);
+} */
+
+.riddle {
+  width: 68%;
+  padding: 5%;
+  color: white;
+  gap: 25px;
+  text-align: left;
+  background-color: rgba(62, 84, 84, 0.7);
+  border-radius: 5%;
+}
+>>>>>>> Stashed changes

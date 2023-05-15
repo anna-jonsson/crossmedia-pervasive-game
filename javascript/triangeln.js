@@ -4,13 +4,13 @@ function init_snake_game() {
     console.log("Game started");
 
     document.querySelector('#mainContent').innerHTML = `
-    <div class="wrapper">
-        <div class="game-details">
+    <div class="wrapper snake_game">
+        <div class="game-details snake_game">
             <span class="score">Score: 0</span>
             <span class="high-score">High Score: 0</span>
         </div>
-        <div class="play-board"></div>
-        <div class="controls">
+        <div class="play-board snake_game"></div>
+        <div class="controls snake_game">
             <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
             <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
             <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>

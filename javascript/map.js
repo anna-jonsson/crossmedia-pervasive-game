@@ -6,7 +6,7 @@ async function show_map() {
 
 //Function for creating the pins on the map and eventListners   on the pins
 // TODO: hitta sätt att placera ut pins på ett bra sätt
-async function createPin(placeName, parent) {
+async function createPin(placeName, parent, state) {
   let div = document.createElement("div");
   div.classList.add("pin");
   div.innerHTML = `
@@ -17,6 +17,12 @@ async function createPin(placeName, parent) {
     `;
 
   parent.append(div);
+
+  if (state == true) {
+    div.querySelector('.pin_img').classList.add('done');
+  }
+
+
 }
 
 //Function for getting all of the locations and creates a pin
@@ -37,7 +43,11 @@ async function get_all_locations() {
 
   all_places.forEach((place) => {
     if (place.location_name !== "introduction") {
-      createPin(place.location_name, document.getElementById("mainContent"));
+      if (place.checked_out == true) {
+        createPin(place.location_name, document.getElementById("mainContent"), true);
+      } else {
+        createPin(place.location_name, document.getElementById("mainContent"), false);
+      }
     }
   });
 

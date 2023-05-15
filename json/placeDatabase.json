@@ -6,8 +6,8 @@
         "intro_text": "Klockan har precis slagit 04:47 och det knackar aggressivt p\u00e5 d\u00f6rren till familjen B0065X2. BAAM BAAM BAAM. Pappan i familjen \u00f6ppnar och det \u00e4r tydligt att det \u00e4r en general fr\u00e5n imperiet som st\u00e5r i d\u00f6rren. Samtalet avslutas och pappan ber\u00e4ttar f\u00f6r familjen att de kr\u00e4ver en stor summa pengar av familjen, annars skickas de vuxna till arbetsl\u00e4gren och barnen till fabrikerna. D\u00e4rf\u00f6r m\u00e5ste f\u00f6r\u00e4ldrarna ge sig ut leta efter jobb. Ni i syskonskaran best\u00e4mmer er f\u00f6r att f\u00f6rs\u00f6ka hj\u00e4lpa familjen att klara sig fr\u00e5n detta m\u00f6rka \u00f6de och ger er ut f\u00f6r att leta r\u00e4tt p\u00e5 arbete som kan generera mer pengar till familjekassan. F\u00f6r att f\u00e5 reda p\u00e5 var dagens arbetsm\u00f6jligheter finns m\u00e5ste ni ta er till arbetsledaren Car Digan som befinner sig ... ",
         "task_text": "Regler: Spelet g\u00e5r ut p\u00e5 att arbeta ihop tillr\u00e4ckligt mycket pengar f\u00f6r att kunna r\u00e4dda familjen fr\u00e5n sitt \u00f6de. Efter att ha mottagit ett kuvert med dagens arbetsm\u00f6jligheter \u00f6ppnas kartan upp och ni m\u00e5ste ta er till de olika platserna f\u00f6r att utf\u00f6ra jobben. V\u00e4l p\u00e5 plats st\u00f6ter ni p\u00e5 g\u00e5tor som tar er till en mindre del av omr\u00e5det d\u00e4r en uppgift m\u00e5ste l\u00f6sas. L\u00f6ser ni denna uppgift tilldelas ni en viss summa pengar och kan g\u00e5 vidare till n\u00e4sta plats. Men m\u00e4rk v\u00e4l - det kommer vara av st\u00f6rsta vikt att vara uppm\u00e4rksam p\u00e5 sin omgivning p\u00e5 de olika platserna, d\u00e5 detta kan komma att gynna er l\u00e4ngre fram under dagen. Regler och beskrivningar f\u00f6r de olika uppgifterna presenteras p\u00e5 vardera plats.",
         "background_picture": "..\/images\/startpage.jpeg",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 1,
@@ -48,8 +48,8 @@
         "task_text": "L\u00f6s Wordle f\u00f6r att s\u00e4lja s\u00e5 m\u00e5nga gr\u00f6nsaker och frukter som m\u00f6jligt.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 4,
@@ -62,8 +62,8 @@
         "task_text": "Anv\u00e4nda en analog mall f\u00f6r att hitta \u201cC\u201d p\u00e5 mosaik-objektets tr\u00f6ja. C-et \u00e4r sedan den r\u00f6relsen som beh\u00f6ver utf\u00f6ras p\u00e5 lock-upen.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 5,
@@ -76,7 +76,7 @@
         "task_text": "Golfbanan borde beh\u00f6va lite renovering, ert uppdrag \u00e4r att uppdatera golfbanan med nya st\u00e4llen. Vissa st\u00e4llen kommer dock beh\u00f6va l\u00e4mnas kvar, s\u00e5 det kan vara en bra id\u00e9 att kolla runt p\u00e5 golfbanan f\u00f6rst. I kuvertet finner ni det som beh\u00f6vs f\u00f6r att l\u00f6sa uppgiften.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     },
     {
@@ -90,7 +90,7 @@
         "task_text": "\u201cHidden in plain sight\u201d. Hitta de g\u00f6mda objekten som alla har en bokstav p\u00e5 sig. Anv\u00e4nd bokst\u00e4verna till att sammanst\u00e4lla l\u00f6senordet.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
+        "checked_in": false,
         "checked_out": false
     }
 ]

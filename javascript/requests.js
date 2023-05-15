@@ -18,6 +18,15 @@ async function place_request(placeName) {
   return placeRsc;
 }
 
+//Getter function for all final questions
+async function get_finale_questions() {
+  const questionsRequest = new Request("../php/finale.php?all_questions");
+  const questionResponse = await fetch(questionsRequest);
+  const questionResource = await questionResponse.json();
+
+  return questionResource;
+}
+
 //CHECK PASSWORD
 //getter for the password for the location.
 async function check_password(placeName, password) {
@@ -71,9 +80,4 @@ async function patch_balance(placeName, balance) {
   });
   const balance_resource = await balance_response.json();
   return balance_resource;
-}
-
-//test
-function test(){
-  console.log("hejeje");
 }

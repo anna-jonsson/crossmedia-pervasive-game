@@ -12,16 +12,26 @@ $r_data = json_decode($r_json, true);
 //Array of places 
 $places = [];
 
+//Array of finale questions
+$finale_questions = [];
+
 //The database for locations/places, and their information 
 $placeDatabase = "../json/placeDatabase.json";
 
+//Database for the finale questions and their information
+$finale_questions_json= "../json/finale.json";
 //If the placeDatabase.json exists update and decode it
 
 if(file_exists($placeDatabase)){
     $places_json = file_get_contents($placeDatabase);
     $places = json_decode($places_json, true);
 }
-
+//If the finale.json exists update and decode it
+if (file_exists($finale_questions_json)) {
+    $questions_json = file_get_contents($finale_questions_json);
+    $finale_questions = json_decode($questions_json, true);
+    
+}
 
 //Allows all methods, Origins and Methods to acess the API  
 header("Access-Control-Allow-Origin: *");

@@ -54,7 +54,7 @@
     {
         "id": 4,
         "password": "67510",
-        "current_balance": 2000,
+        "current_balance": 3000,
         "location_name": "friisgatan",
         "location_url": "test\/friisgatan",
         "intro_text": "V\u00e4lkommen till Friisgatan!",

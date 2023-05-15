@@ -13,7 +13,7 @@
   /* min-height: 100vh; */
   background: #E3F2FD;
 }
-.wrapper {
+.wrapper.snake_game {
   width: 350px;
   height: 470px;
   display: flex;
@@ -24,7 +24,8 @@
   background: #293447;
   box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
-.game-details {
+.game-details.snake_game {
+  display: flex;
   color: #B8C6DC;
   font-weight: 500;
   font-size: 1.2rem;
@@ -32,7 +33,7 @@
   display: flex;
   justify-content: space-between;
 }
-.play-board {
+.play-board.snake_game {
   height: 100%;
   width: 100%;
   display: grid;
@@ -62,7 +63,7 @@
     font-size: 1rem;
     padding: 15px 27px;
   } */
-  .controls {
+  .controls.snake_game {
     display: flex;
     justify-content: space-between;
   }

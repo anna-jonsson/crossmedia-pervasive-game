@@ -6,15 +6,26 @@
   <title>Pattern Box || Code Village</title>
 </head>
 <body>
+  
     <h2>Rita det korrekta mönstret:</h2>
    <div class="lockBox box">
      <svg>
        <path d=""></path>
      </svg>
    </div>
+   <div id="balance"></div>
+   <button id="goToMap">Tillbaka till kartan</button>
+
+
+   <script src="../javascript/requests.js"></script>
+   <script src="../javascript/balance.js"></script>
+   <script src="../javascript/index.js"></script>
+   <script src="../javascript/map.js"></script>
+
 
    <!-- Now Scripting......  -->
    <script>
+    document.querySelector('#goToMap').style.display = "none";
     var log=console.log;
     function op(elem){return document.querySelector(elem)}
     function opp(elem){return document.querySelectorAll(elem)}
@@ -37,23 +48,40 @@
     svgPath=op('svg path'),
     inputData="",
     correctData="67510";
-// "inpitData" för att spara värdet på det korrekta mönstret
+// "inputData" för att spara värdet på det korrekta mönstret
+
     function end(){
+      localStorage.clear();
       document.body.style.setProperty('--baseCol',(inputData==correctData)?"#0f0":"#f00");
         log(inputData);
       startDot=undefined;
       lineData="M";
-      inputData="";
+      // inputData="";
       tempLineData=undefined;
 
-      setTimeout(()=>{
-        opp('.dot.active').forEach(val=>{val.classList.remove('active')})
-        svgPath.setAttribute("d",'');
-        document.body.style.setProperty('--baseCol',"#00cbff");
-      },500)
+      if (inputData == correctData){
+        log("hej");
+        localStorage.setItem("friisgatan", correctData);
+        
+        let btn = document.querySelector('#goToMap');
+        btn.style.display = "block";
+        btn.addEventListener('click', async function () {
+          let passwordCheck = await check_password("friisgatan", correctData);
+
+          checked_out("friisgatan", true);
+          await add_to_balance("friisgatan", correctData);
+          window.location.href = "../html/index.html";
+        })
+
+      }
+      // setTimeout(()=>{
+      //   opp('.dot.active').forEach(val=>{val.classList.remove('active')})
+      //   svgPath.setAttribute("d",'');
+      //   document.body.style.setProperty('--baseCol',"#00cbff");
+      // },500)
     }
 
-    function down(elem){
+     function down(elem){
         log(elem.innerText);
       startDot=elem;
       lockBox.addEventListener('mousemove',moving)
@@ -62,7 +90,7 @@
       makeLine();
       startDot.classList.add("active")
     }
-    document.onmouseup=function (){
+    document.onmouseup= function (){
       lockBox.removeEventListener('mousemove',moving)
       removeEvToMouseEnter();
       tempLineData=''

@@ -1,3 +1,5 @@
+// export {test}
+
 //GET
 //PLACE REQUEST
 //Getter for all of the places in the array (all objects)
@@ -14,6 +16,15 @@ async function place_request(placeName) {
   const placeResp = await fetch(placeRequest);
   const placeRsc = await placeResp.json();
   return placeRsc;
+}
+
+//Getter function for all final questions
+async function get_finale_questions() {
+  const questionsRequest = new Request("../php/finale.php?all_questions");
+  const questionResponse = await fetch(questionsRequest);
+  const questionResource = await questionResponse.json();
+
+  return questionResource;
 }
 
 //CHECK PASSWORD

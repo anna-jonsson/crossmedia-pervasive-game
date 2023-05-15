@@ -1,7 +1,7 @@
 // fill_content('introduction', 'mainContent', 'text')
 
 // re-useable fn to fill content with
-async function startpage(placeName, div_id) {
+async function startpage(placeName, div_id, response) {
   let location = await place_request(placeName);
   let wrapper = document.getElementById(div_id);
   wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
@@ -19,15 +19,25 @@ async function startpage(placeName, div_id) {
   document.querySelector(".nextBtn").addEventListener("click", function () {
     wrapper.innerHTML = `
         <div class='task'>
-            <div class='taskText'>${location.task_text}</div>
+            <div class='taskTextIntro'>${location.task_text}</div>
             <input type=password></input>
             <button class='taskBtn'>Skicka svar</button>
         </div>
     `;
     document.querySelector(".taskBtn").addEventListener("click", async function () {
-      await show_map();
+      let password = document.querySelector("input").value;
+      let passwordCheck = await check_password(placeName, password);
+
+      if (response != 200) {
+        user_feedback(passwordCheck, placeName);
+      }
     });
   });
+
+  if (localStorage.getItem("friisgatan") !== null) {
+    localStorage.clear();
+    await show_map();
+  }
 }
 
 startpage("introduction", "mainContent");

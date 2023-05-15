@@ -136,5 +136,11 @@
     margin: 0 2px;
     cursor: pointer;
     text-transform: uppercase;
-    min-width: 30px;
+    min-width: 32px;
+    min-height: 38px;
+    border-radius: 10px;
+  }
+
+  .keyboard-button:active{
+    background-color: rgb(38, 50, 50);
   }

@@ -53,10 +53,14 @@ async function get_all_locations() {
 
   let all_pins = document.querySelectorAll(".location_pin");
   all_pins.forEach((pin) => {
-    pin.querySelector("img").addEventListener("click", function (event) {
+    pin.querySelector("img").addEventListener("click", function checkPin(event) {
       if (event.target == this) {
-        let placeName = this.nextElementSibling.innerText;
-        create_pop_up(placeName, this.parentNode);
+        if (this.classList.contains('done')) {
+          pin.removeEventListener("click", checkPin, true);
+        } else {
+          let placeName = this.nextElementSibling.innerText;
+          create_pop_up(placeName, this.parentNode);
+        }
       }
     });
   });

@@ -12,6 +12,9 @@ $r_data = json_decode($r_json, true);
 //Array of places 
 $places = [];
 
+//Array of users 
+$users = [];
+
 //Array of finale questions
 $finale_questions = [];
 

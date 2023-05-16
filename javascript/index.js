@@ -120,8 +120,6 @@ function user_feedback(response, location_name) {
 
   newDiv.appendChild(p);
   document.body.appendChild(newDiv);
-  console.log(response);
-  console.log("user_feedback");
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {

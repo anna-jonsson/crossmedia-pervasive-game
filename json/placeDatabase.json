@@ -12,7 +12,7 @@
     {
         "id": 1,
         "password": "1234",
-        "current_balance": 0,
+        "current_balance": 1200,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",
         "intro_text": "V\u00e4lkommen till Triangeln! ",
@@ -21,7 +21,7 @@
         "background_picture": "..\/images\/triangeln_butiksbitrade.png",
         "QR_handling": "",
         "checked_in": true,
-        "checked_out": false
+        "checked_out": true
     },
     {
         "id": 2,

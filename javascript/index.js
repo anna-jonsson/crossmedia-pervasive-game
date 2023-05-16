@@ -136,7 +136,6 @@ function user_feedback(response, location_name) {
       ? server_error
       : default_error;
 
-
   if (
     response == 400 ||
     response == 500 ||

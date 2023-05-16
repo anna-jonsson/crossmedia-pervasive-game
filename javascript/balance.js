@@ -29,11 +29,27 @@ async function add_to_balance(placeName, password) {
     //Returns the updatedObjectBalance (place current_balance)
     return updateObjectBalance;
   }// else {
-    //Sends error incase the input is wrong.
+  //Sends error incase the input is wrong.
   //  user_feedback(400, placeName);
   //}
 }
 
+async function add_custom_balance(placeName, amount) {
+  //awaits the place_request
+  let place = await place_request(placeName);
+
+  //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places
+
+  let placeBalance = (place.current_balance = amount);
+  let updateObjectBalance = await patch_balance(placeName, placeBalance);
+  show_current_balance();
+  //Returns the updatedObjectBalance (place current_balance)
+  return updateObjectBalance;
+  // else {
+  //Sends error incase the input is wrong.
+  //  user_feedback(400, placeName);
+  //}
+}
 //DIRECT CODE
 //Running the function to show the current balance all the time.
 show_current_balance();

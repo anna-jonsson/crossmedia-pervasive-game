@@ -51,30 +51,45 @@ function init_snake_game() {
         if (score % 5 == 0 && score >= 4) {
             // setInterval(initGame, this.interval);
             // clearInterval(setIntervalId);
-            t = (t - 5);
-            setIntervalId = setInterval(initGame, t);
+            if (!gameOver) {
+                t = (t - 5);
+                setIntervalId = setInterval(initGame, t);
+            } else {
+                clearInterval(setIntervalId);
+                return;
+            }
         }
     };
 
+    // function reset_game() {
+    //     gameOver = false;
+    //     foodX, foodY;
+    //     snakeX = 5, snakeY = 5;
+    //     velocityX = 0, velocityY = 0;
+    //     snakeBody = [];
+    //     score = 0;
+    //     t = 150;
+    //     init_snake_game();
+
+
+    //     updateFoodPosition();
+    //     setIntervalId = setInterval(initGame, t);
+    // }
+
     const handleGameOver = () => {
         // Clearing the timer and reloading the page on game over
-        alert("Game Over! Press OK to replay...");
-        gameOver = false;
+        clearInterval(setIntervalId);
+        console.log("Game over: " + gameOver);
+        reset_game();
+        return;
+        // alert("Game Over! Press OK to replay...");
+        // score = 0;
+        // t = 150;
+        // gameOver = false;
         // location.reload();
-        if (confirm) {
-            console.log("Confirmed pressed");
-            clearInterval(setIntervalId);
-            gameOver = false;
-            foodX, foodY;
-            snakeX = 5, snakeY = 5;
-            velocityX = 0, velocityY = 0;
-            snakeBody = [];
-            score = 0;
-            t = 150;
-
-            updateFoodPosition();
-            setIntervalId = setInterval(initGame, t);
-        }
+        // if (confirm) {
+        //     console.log("Confirmed pressed");
+        // }
     };
 
     const changeDirection = e => {
@@ -99,7 +114,10 @@ function init_snake_game() {
     controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
 
     const initGame = () => {
-        if (gameOver) return handleGameOver();
+        if (gameOver) {
+            handleGameOver();
+            return;
+        }
 
         let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
 
@@ -144,3 +162,7 @@ function init_snake_game() {
     setIntervalId = setInterval(initGame, t);
     document.addEventListener("keyup", changeDirection);
 };
+
+function reset_game() {
+    init_snake_game();
+}

@@ -96,15 +96,10 @@ function user_feedback(response, location_name) {
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
-
+  let p = document.createElement("p");
   let newDiv = document.createElement("div");
   let newSpan = document.createElement("span");
-  let p = document.createElement("p");
   newDiv.classList.add("feedbackPopup");
-  newSpan.classList.add("close");
-  newDiv.appendChild(newSpan);
-  newSpan.textContent = "x";
-  newDiv.appendChild(p);
   p.textContent =
     response == 200
       ? correct_input
@@ -114,13 +109,25 @@ function user_feedback(response, location_name) {
       ? server_error
       : default_error;
 
-  console.log(response);
-  console.log("user_feedback");
+  if (
+    response == 400 ||
+    response == 500 ||
+    response == default_error ||
+    location_name == "introduction"
+  ) {
+    newSpan.classList.add("close");
+    newDiv.appendChild(newSpan);
+    newSpan.textContent = "x";
 
-  // When the user clicks on <span> (x), close the modal
-  newSpan.onclick = function () {
-    newDiv.style.display = "none";
-  };
+    // When the user clicks on <span> (x), close the modal
+    newSpan.onclick = function () {
+      newDiv.style.display = "none";
+    };
+  }
+
+
+  newDiv.appendChild(p);
+  document.body.appendChild(newDiv);
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
@@ -129,15 +136,13 @@ function user_feedback(response, location_name) {
     }
   };
 
-  document.body.appendChild(newDiv);
-
   if (response == 200) {
     if (location_name == "introduction") {
       show_map();
       p.textContent = intro;
     } else {
       let mapButton = document.createElement("button");
-      mapButton.innerHTML = "Tillbaka till kartan";
+      mapButton.innerHTML = "Till kartan";
       mapButton.addEventListener("click", function () {
         show_map();
         newDiv.style.display = "none";

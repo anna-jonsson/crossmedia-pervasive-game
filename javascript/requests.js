@@ -81,3 +81,20 @@ async function patch_balance(placeName, balance) {
   const balance_resource = await balance_response.json();
   return balance_resource;
 }
+
+//POST
+//Post_request for logIn
+async function logIn_request(username, password) {
+  const logInRequest = new Request("../php/logIn.php");
+  const logInResponse = await fetch(logInRequest, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: username,
+      password: password,
+    }),
+  });
+  const logInResource = await logInResponse.json();
+  console.log(logInResource);
+  return logInResource;
+}

@@ -13,7 +13,7 @@ if($request_method !== "POST"){
 }
 
 //The r_data must include username and password 
-if(!isset($r_data["username"], $r_data["password"])){
+if(isset($r_data["username"], $r_data["password"])){
     //if the r_data is correct, loop through the database of 
     //users and check that the user exists
     foreach($users as $user){
@@ -23,11 +23,14 @@ if(!isset($r_data["username"], $r_data["password"])){
 
         }
     }
-}else{
+} 
+else{
     //If the user is not in the database, send error message and don't allow to login. 
     $error = ["error" => "The user doesn't exist."]; 
     sendJSON($error, 400);
+
 }
+
 
 ?>
 

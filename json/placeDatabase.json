@@ -12,7 +12,7 @@
     {
         "id": 1,
         "password": "1234",
-        "current_balance": 0,
+        "current_balance": 1200,
         "location_name": "triangeln",
         "location_url": "test\/triangeln",
         "intro_text": "V\u00e4lkommen till Triangeln! ",
@@ -21,7 +21,7 @@
         "background_picture": "..\/images\/triangeln_butiksbitrade.png",
         "QR_handling": "",
         "checked_in": true,
-        "checked_out": false
+        "checked_out": true
     },
     {
         "id": 2,
@@ -34,7 +34,7 @@
         "task_text": "Totalen av oss p\u00e5 de viktiga pelarna ger er koden f\u00f6r att klara uppgiften. R\u00e4kna oss och t\u00e4nk p\u00e5 att \u00e5ldern inte \u00e4r relevant f\u00f6r att r\u00e4knas.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {
@@ -62,6 +62,7 @@
         "task_text": "Anv\u00e4nda en analog mall f\u00f6r att hitta \u201cC\u201d p\u00e5 mosaik-objektets tr\u00f6ja. C-et \u00e4r sedan den r\u00f6relsen som beh\u00f6ver utf\u00f6ras p\u00e5 lock-upen.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
+
         "checked_in": false,
         "checked_out": false
     },
@@ -74,9 +75,9 @@
         "intro_text": "V\u00e4lkommen till Folkets Park!",
         "riddle_text": "Plats d\u00e4r du kan resa genom stadens rika historia jag \u00e4r, utan att r\u00f6ra sig s\u00e4rskilt l\u00e5ngt uppt\u00e4ckt staden med varje slag kan du h\u00e4r.",
         "task_text": "Golfbanan borde beh\u00f6va lite renovering, ert uppdrag \u00e4r att uppdatera golfbanan med nya st\u00e4llen. Vissa st\u00e4llen kommer dock beh\u00f6va l\u00e4mnas kvar, s\u00e5 det kan vara en bra id\u00e9 att kolla runt p\u00e5 golfbanan f\u00f6rst. I kuvertet finner ni det som beh\u00f6vs f\u00f6r att l\u00f6sa uppgiften.",
-        "background_picture": ".\/images\/213",
+        "background_picture": "..\/images\/folketspark.png",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {

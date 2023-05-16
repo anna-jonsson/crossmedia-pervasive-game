@@ -116,6 +116,7 @@ function user_feedback(response, location_name) {
   let newDiv = document.createElement("div");
   let newSpan = document.createElement("span");
 
+
   if (response == 200 && location_name == "logIn") {
     startpage("introduction", "mainContent");
   } else {
@@ -129,6 +130,7 @@ function user_feedback(response, location_name) {
         ? server_error
         : default_error;
   }
+
 
   if (
     response == 400 ||

@@ -1,0 +1,38 @@
+[
+    {
+        "user_id": 0,
+        "username": "annaJ",
+        "password": "abc12345",
+        "current_balance": 0, 
+        "locations": {
+            "introduction": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "triangeln": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "knarkrondellen": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "möllan": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "friisgatan": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "folkets_park": {
+                "checked_in": false,
+                "checked_out": false
+            },
+            "magisterparken": {
+                "checked_in": false,
+                "checked_out": false
+            }
+        }
+    }
+]

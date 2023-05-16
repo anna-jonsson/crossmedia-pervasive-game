@@ -20,7 +20,7 @@
         "task_text": "Fyll i svaret p\u00e5 g\u00e5tan h\u00e4r.",
         "background_picture": "..\/images\/triangeln_butiksbitrade.png",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {
@@ -34,8 +34,8 @@
         "task_text": "Totalen av oss p\u00e5 de viktiga pelarna ger er koden f\u00f6r att klara uppgiften. R\u00e4kna oss och t\u00e4nk p\u00e5 att \u00e5ldern inte \u00e4r relevant f\u00f6r att r\u00e4knas.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 3,
@@ -76,8 +76,8 @@
         "task_text": "Golfbanan borde beh\u00f6va lite renovering, ert uppdrag \u00e4r att uppdatera golfbanan med nya st\u00e4llen. Vissa st\u00e4llen kommer dock beh\u00f6va l\u00e4mnas kvar, s\u00e5 det kan vara en bra id\u00e9 att kolla runt p\u00e5 golfbanan f\u00f6rst. I kuvertet finner ni det som beh\u00f6vs f\u00f6r att l\u00f6sa uppgiften.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 6,

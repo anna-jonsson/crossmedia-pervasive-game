@@ -94,7 +94,5 @@ async function logIn_request(username, password) {
       password: password,
     }),
   });
-  const logInResource = await logInResponse.json();
-  console.log(logInResource);
-  return logInResource;
+  return logInResponse.status;
 }

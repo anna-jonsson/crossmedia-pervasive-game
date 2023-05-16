@@ -10,34 +10,51 @@ async function startpage(placeName, div_id, response) {
   wrapper.style.height = "600px";
 
   wrapper.innerHTML = `
-        <div class='location'>
-            <div class='locationText'>${location.intro_text}</div>
-            <button class='nextBtn'>Gå vidare</button>
-        </div>
+    <div class='login'>
+    <div class='logInText locationText'><h2>VÄLKOMMEN!</h2>
+    <p>Använd ditt familjenamn och <br> lösenord för att logga in.</p></div>
+    <input class = "username_input" type=text placeholder = "username"></input>
+    <input class = "logIn_PW" type=password placeholder = "password"></input>
+    <button class='logInBtn'>Logga in</button>
+    </div>
     `;
 
-  document.querySelector(".nextBtn").addEventListener("click", function () {
+  document.querySelector(".logInBtn").addEventListener("click", async function () {
+    let username = document.querySelector(".username_input").value;
+    let logIn_PW = document.querySelector(".logIn_PW").value;
+    let logInCheck = await logIn_request(username, logIn_PW);
+
+    if (response != 200) {
+      user_feedback(logInCheck, "logIn");
+    }
     wrapper.innerHTML = `
-        <div class='task'>
-            <div class='taskTextIntro'>${location.task_text}</div>
-            <input type=password></input>
-            <button class='taskBtn'>Skicka svar</button>
+        <div class='location'>
+        <div class='locationText'>${location.intro_text}</div>
+        <button class='nextBtn'>Gå vidare</button>
         </div>
-    `;
-    document.querySelector(".taskBtn").addEventListener("click", async function () {
-      let password = document.querySelector("input").value;
-      let passwordCheck = await check_password(placeName, password);
+        `;
 
-      if (response != 200) {
-        user_feedback(passwordCheck, placeName);
-      }
+    document.querySelector(".nextBtn").addEventListener("click", function () {
+      wrapper.innerHTML = `
+        <div class='task'>
+          <div class='taskTextIntro'>${location.task_text}</div>
+          <input type=password></input>
+          <button class='taskBtn'>Skicka svar</button>
+        </div>
+        `;
+      document.querySelector(".taskBtn").addEventListener("click", async function () {
+        let password = document.querySelector("input").value;
+        let passwordCheck = await check_password(placeName, password);
+
+        if (response != 200) {
+          user_feedback(passwordCheck, placeName);
+        }
+        // if (localStorage.getItem("friisgatan") !== null) {
+        //   localStorage.clear(); ---Detta FUNKAR EJ ATT HA MED?!?!?
+        await show_map();
+      });
     });
   });
-
-  if (localStorage.getItem("friisgatan") !== null) {
-    localStorage.clear();
-    await show_map();
-  }
 }
 
-startpage("introduction", "mainContent");
+startpage("introduction", "mainContent", 200);

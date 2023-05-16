@@ -18,26 +18,32 @@ async function fill_content(placeName, div_id, type) {
     `;
 
   //Button for the riddle, showing the riddle text when clicking it
-  let btnRiddle = document.querySelector(".nextBtn").addEventListener("click", function () {
-    wrapper.innerHTML = `
+  let btnRiddle = document
+    .querySelector(".nextBtn")
+    .addEventListener("click", function () {
+      wrapper.innerHTML = `
             <div class='riddle'>
                 <div class='riddleText'>${location.riddle_text}</div>
                 <button class='taskBtn'>Jag har hittat dit!</button>
             </div>
         `;
 
-    //Button for showing the task text with the type (password, checkbox etc.)
-    let btnTask = document.querySelector(".taskBtn").addEventListener("click", async function () {
-      if (placeName == "möllan") {
-        wrapper.innerHTML = "";
-        startup();
-      } else if (placeName == "triangeln") {
-        document.querySelector("#mainContent").classList.add("snakeContain");
-        init_snake_game();
-      } else if (placeName == "friisgatan") {
-        window.location.href = "../html/pattern.html";
-      } else {
-        wrapper.innerHTML = ` 
+      //Button for showing the task text with the type (password, checkbox etc.)
+      let btnTask = document
+        .querySelector(".taskBtn")
+        .addEventListener("click", async function () {
+          if (placeName == "möllan") {
+            wrapper.innerHTML = "";
+            startup();
+          } else if (placeName == "triangeln") {
+            document
+              .querySelector("#mainContent")
+              .classList.add("snakeContain");
+            init_snake_game();
+          } else if (placeName == "friisgatan") {
+            window.location.href = "../html/pattern.html";
+          } else {
+            wrapper.innerHTML = ` 
               <div class='task' >
                   <div class='taskText'>${location.task_text}</div>
                   <input class='pw_input' type=${type}></input>
@@ -45,42 +51,42 @@ async function fill_content(placeName, div_id, type) {
               </div>
               `;
 
-        if (placeName != "knarkrondellen") {
-          //Checking that the password for the task is correct with funciton check_password.
-          let btnPassword = document.querySelector(".pwBtn");
-          btnPassword.addEventListener("click", async function () {
-            let password = document.querySelector(".pw_input").value;
+            if (placeName != "knarkrondellen") {
+              //Checking that the password for the task is correct with funciton check_password.
+              let btnPassword = document.querySelector(".pwBtn");
+              btnPassword.addEventListener("click", async function () {
+                let password = document.querySelector(".pw_input").value;
 
-            let passwordCheck = await check_password(placeName, password);
-            //Sending feedback to the user based on the input (correct/incorrect)
-            user_feedback(passwordCheck, placeName);
+                let passwordCheck = await check_password(placeName, password);
+                //Sending feedback to the user based on the input (correct/incorrect)
+                user_feedback(passwordCheck, placeName);
 
-            await add_to_balance(placeName, password);
-          });
-        } else {
-          document.querySelector("#mainContent");
-          // input_fields();
-          document.querySelector(".pw_input").style.display = "none";
-          await createInputs();
-          await input_fields();
+                await add_to_balance(placeName, password);
+              });
+            } else {
+              document.querySelector("#mainContent");
+              // input_fields();
+              document.querySelector(".pw_input").style.display = "none";
+              await createInputs();
+              await input_fields();
 
-          let btnPassword = document.querySelector(".pwBtn");
-          btnPassword.addEventListener("click", async function () {
-            // document.querySelector("#input_wrapper").innerHTML = "";
-            await input_fields();
+              let btnPassword = document.querySelector(".pwBtn");
+              btnPassword.addEventListener("click", async function () {
+                // document.querySelector("#input_wrapper").innerHTML = "";
+                await input_fields();
 
-            let password = localStorage.getItem("knarkrondellen");
-            console.log(password);
-            let passwordCheck = await check_password(placeName, password);
-            //Sending feedback to the user based on the input (correct/incorrect)
-            user_feedback(passwordCheck, placeName);
+                let password = localStorage.getItem("knarkrondellen");
+                console.log(password);
+                let passwordCheck = await check_password(placeName, password);
+                //Sending feedback to the user based on the input (correct/incorrect)
+                user_feedback(passwordCheck, placeName);
 
-            await add_to_balance(placeName, password);
-          });
-        }
-      }
+                await add_to_balance(placeName, password);
+              });
+            }
+          }
+        });
     });
-  });
 }
 
 //Function for user feedback based on the response status connected to the location name.
@@ -103,10 +109,10 @@ function user_feedback(response, location_name) {
     response == 200
       ? correct_input
       : response == 400
-        ? wrong_input
-        : response == 500
-          ? server_error
-          : default_error;
+      ? wrong_input
+      : response == 500
+      ? server_error
+      : default_error;
 
   console.log(response);
   console.log("user_feedback");

@@ -98,10 +98,10 @@ function user_feedback(response, location_name) {
     response == 200
       ? correct_input
       : response == 400
-      ? wrong_input
-      : response == 500
-      ? server_error
-      : default_error;
+        ? wrong_input
+        : response == 500
+          ? server_error
+          : default_error;
   if (
     response == 400 ||
     response == 500 ||

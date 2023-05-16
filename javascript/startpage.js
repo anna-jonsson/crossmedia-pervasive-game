@@ -10,7 +10,7 @@ async function startpage(placeName, div_id, response) {
   wrapper.style.height = "600px";
 
   wrapper.innerHTML = `
-  <div class='logInText locationText'>
+  <div id ="logInWrapper" class='locationText'>
   <h2>VÄLKOMMEN!</h2>
   <p>Använd ditt familjenamn och <br> lösenord för att logga in.</p>
   <input class = "username_input" type=text placeholder = "username"></input>

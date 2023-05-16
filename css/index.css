@@ -26,16 +26,25 @@ body {
   font-size: smaller;
 }
 
+#logInWrapper {
+  background-color: #543e3e7a;
+}
+#logInWrapper h2 {
+  padding: 10px;
+}
+#logInWrapper p {
+  padding: 10px;
+}
 .pin_img {
   height: 20px;
 }
 
-.pin_img:active{
+.pin_img:active {
   filter: brightness(70%);
 }
 
 .pin_img.done {
-  filter: grayscale(0.90);
+  filter: grayscale(0.9);
 }
 
 .location {
@@ -197,7 +206,7 @@ body {
   font-weight: bold;
 }
 
-.close:active{
+.close:active {
   color: black;
 }
 
@@ -279,7 +288,7 @@ button:active {
   border-radius: 5%;
 }
 
-.background{
+.background {
   background-color: rgba(217, 217, 217, 0.007);
   height: 600px;
   width: 400px;

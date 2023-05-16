@@ -19,10 +19,8 @@ async function createPin(placeName, parent, state) {
   parent.append(div);
 
   if (state == true) {
-    div.querySelector('.pin_img').classList.add('done');
+    div.querySelector(".pin_img").classList.add("done");
   }
-
-
 }
 
 //Function for getting all of the locations and creates a pin
@@ -44,25 +42,40 @@ async function get_all_locations() {
   all_places.forEach((place) => {
     if (place.location_name !== "introduction") {
       if (place.checked_out == true) {
-        createPin(place.location_name, document.getElementById("mainContent"), true);
+        createPin(
+          place.location_name,
+          document.getElementById("mainContent"),
+          true
+        );
       } else {
-        createPin(place.location_name, document.getElementById("mainContent"), false);
+        createPin(
+          place.location_name,
+          document.getElementById("mainContent"),
+          false
+        );
       }
     }
   });
 
+  let background = document.createElement("div");
+  background.classList.add("background");
+  document.getElementById("mainContent").appendChild(background);
+
   let all_pins = document.querySelectorAll(".location_pin");
   all_pins.forEach((pin) => {
-    pin.querySelector("img").addEventListener("click", function checkPin(event) {
-      if (event.target == this) {
-        if (this.classList.contains('done')) {
-          pin.removeEventListener("click", checkPin, true);
-        } else {
-          let placeName = this.nextElementSibling.innerText;
-          create_pop_up(placeName, this.parentNode);
+    pin
+      .querySelector("img")
+      .addEventListener("click", function checkPin(event) {
+        if (event.target == this) {
+          if (this.classList.contains("done")) {
+            pin.removeEventListener("click", checkPin, true);
+          } else {
+            // background.style.backgroundColor="red";
+            let placeName = this.nextElementSibling.innerText;
+            create_pop_up(placeName, this.parentNode);
+          }
         }
-      }
-    });
+      });
   });
 }
 
@@ -72,7 +85,7 @@ function create_pop_up(placeName, parent) {
   overlay.id = "pop_up_div";
 
   overlay.innerHTML = `
-                <p>${placeName}</p>
+                <p>${placeName.toUpperCase()}</p>
                 <button class='check_in'>Jag är här!</button>
             `;
 
@@ -80,6 +93,35 @@ function create_pop_up(placeName, parent) {
   parent.append(overlay); // TODO: this creates multiple overlays if clicked more than once!
   overlay.querySelector("button").addEventListener("click", function () {
     console.log(overlay.querySelector("p").innerText);
-    fill_content(overlay.querySelector("p").innerText, "mainContent", "password");
+    fill_content(
+      overlay.querySelector("p").innerText.toLocaleLowerCase(),
+      "mainContent",
+      "password"
+    );
   });
+
+  let newSpan = document.createElement("span");
+  newSpan.classList.add("close");
+  newSpan.textContent = "x";
+  overlay.appendChild(newSpan);
+  newSpan.onclick = function () {
+    overlay.style.display = "none";
+    // document.querySelector(".background").backgroundColor = "blue";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == document.querySelector("#main")) {
+      overlay.style.display = "none";
+    }
+  };
+
+  document.querySelector(".background").addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+
+  // window.onclick = function (event) {
+  //   if (event.target == document.querySelector("#main")) {
+  //     overlay.style.display = "none";
+  //   }
+  // };
 }

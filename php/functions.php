@@ -23,8 +23,15 @@ $placeDatabase = "../json/placeDatabase.json";
 
 //Database for the finale questions and their information
 $finale_questions_json= "../json/finale.json";
-//If the placeDatabase.json exists update and decode it
 
+$userDatabase = "../json/userDatabase.json";
+
+//If file of userdatabase exist update and decode it 
+if(file_exists($userDatabase)){
+    $user_json = file_get_contents($userDatabase);
+    $users = json_decode($user_json, true);
+}
+//If the placeDatabase.json exists update and decode it
 if(file_exists($placeDatabase)){
     $places_json = file_get_contents($placeDatabase);
     $places = json_decode($places_json, true);

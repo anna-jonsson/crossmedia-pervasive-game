@@ -1,14 +1,21 @@
 "use strict";
 
-const init_snake_game = () => {
+// NOTE: The following bugs are present at this time: 
+
+// * Game over when playing from a previous game over can generate game over pop ups in the middle of the game, even if the game was not lost
+// * On the second play turn, the speed from last score (e.g. speed increase from score 5) starts from the beginning of next turn (incorrect)
+
+function init_snake_game() {
+    console.log("Game started");
+
     document.querySelector('#mainContent').innerHTML = `
-    <div class="wrapper">
-        <div class="game-details">
+    <div class="wrapper snake_game" id="snakeWrapper">
+        <div class="game-details snake_game">
             <span class="score">Score: 0</span>
             <span class="high-score">High Score: 0</span>
         </div>
-        <div class="play-board"></div>
-        <div class="controls">
+        <div class="play-board snake_game"></div>
+        <div class="controls snake_game">
             <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
             <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
             <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
@@ -16,11 +23,6 @@ const init_snake_game = () => {
         </div>
     </div>
 `;
-
-    const playBoard = document.querySelector(".play-board");
-    const scoreElement = document.querySelector(".score");
-    const highScoreElement = document.querySelector(".high-score");
-    const controls = document.querySelectorAll(".controls i");
 
     let gameOver = false;
     let foodX, foodY;
@@ -31,29 +33,63 @@ const init_snake_game = () => {
     let score = 0;
     let t = 150;
 
+    const playBoard = document.querySelector(".play-board");
+    const scoreElement = document.querySelector(".score");
+    const highScoreElement = document.querySelector(".high-score");
+    const controls = document.querySelectorAll(".controls i");
+
     // Getting high score from the local storage
     let highScore = localStorage.getItem("high-score") || 0;
     highScoreElement.innerText = `High Score: ${highScore}`;
 
     const updateFoodPosition = () => {
+
         // Passing a random 1 - 30 value as food position
         foodX = Math.floor(Math.random() * 30) + 1;
         foodY = Math.floor(Math.random() * 30) + 1;
 
-        // NOTE: experiment with speed increase
-        if (snakeBody.length % 5 == 0 && snakeBody.length > 0) {
+        if (score % 5 == 0 && score >= 4) {
             // setInterval(initGame, this.interval);
-            t = (t - 5);
-            setInterval(initGame, t);
-            console.log(t);
+            // clearInterval(setIntervalId);
+            if (!gameOver) {
+                t = (t - 5);
+                setIntervalId = setInterval(initGame, t);
+            } else {
+                clearInterval(setIntervalId);
+                return;
+            }
         }
     };
+
+    // function reset_game() {
+    //     gameOver = false;
+    //     foodX, foodY;
+    //     snakeX = 5, snakeY = 5;
+    //     velocityX = 0, velocityY = 0;
+    //     snakeBody = [];
+    //     score = 0;
+    //     t = 150;
+    //     init_snake_game();
+
+
+    //     updateFoodPosition();
+    //     setIntervalId = setInterval(initGame, t);
+    // }
 
     const handleGameOver = () => {
         // Clearing the timer and reloading the page on game over
         clearInterval(setIntervalId);
-        alert("Game Over! Press OK to replay...");
-        location.reload();
+        console.log("Game over: " + gameOver);
+        reset_game();
+        return;
+        // alert("Game Over! Press OK to replay...");
+        // score = 0;
+        // t = 150;
+        // gameOver = false;
+        // location.reload();
+        // if (confirm) {
+        //     console.log("Confirmed pressed");
+        // }
     };
 
     const changeDirection = e => {
@@ -71,13 +107,18 @@ const init_snake_game = () => {
             velocityX = 1;
             velocityY = 0;
         }
+
     };
 
     // Calling changeDirection on each key click and passing key dataset value as an object
     controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
 
     const initGame = () => {
-        if (gameOver) return handleGameOver();
+        if (gameOver) {
+            handleGameOver();
+            return;
+        }
+
         let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
 
         // Checking if the snake hit the food
@@ -113,9 +154,15 @@ const init_snake_game = () => {
                 gameOver = true;
             }
         }
+
         playBoard.innerHTML = html;
     };
+
     updateFoodPosition();
     setIntervalId = setInterval(initGame, t);
     document.addEventListener("keyup", changeDirection);
 };
+
+function reset_game() {
+    init_snake_game();
+}

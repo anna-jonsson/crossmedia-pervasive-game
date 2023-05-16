@@ -35,13 +35,39 @@ async function fill_content(placeName, div_id, type) {
           if (placeName == "möllan") {
             wrapper.innerHTML = "";
             startup();
-          } else if (placeName == "triangeln") {
+
+
+            document.getElementById("wordleBtn").addEventListener("click", function () {
+                document.querySelector(".grid").style.backgroundColor = "black";
+                document.querySelector(".grid").style.backgroundImage = "none";
+
+                document.getElementById("keyboard-cont").style.display="flex";
+
+                document.getElementById("wordleBtn").style.display = "none";
+
+                document.getElementById("game").style.flexDirection="column-reverse";
+                
+
+                // document.getElementById("game").innerHTML =`
+                // <h1>Hej</h1>
+                // `;
+
+                const boxes = document.querySelectorAll(".box");
+                boxes.forEach((box) => {
+                  box.style.visibility = "visible";
+                });
+              });
+          }
+
+           else if (placeName == "triangeln") {
+
             document
               .querySelector("#mainContent")
               .classList.add("snakeContain");
             init_snake_game();
           } else if (placeName == "friisgatan") {
             window.location.href = "../html/pattern.html";
+
           } else {
             wrapper.innerHTML = ` 
               <div class='task' >
@@ -95,6 +121,7 @@ function user_feedback(response, location_name) {
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
+
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
   let p = document.createElement("p");
   let newDiv = document.createElement("div");
@@ -108,6 +135,7 @@ function user_feedback(response, location_name) {
       : response == 500
       ? server_error
       : default_error;
+
 
   if (
     response == 400 ||
@@ -137,6 +165,7 @@ function user_feedback(response, location_name) {
   };
 
   if (response == 200) {
+
     if (location_name == "introduction") {
       show_map();
       p.textContent = intro;

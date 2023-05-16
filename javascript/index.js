@@ -109,13 +109,11 @@ function user_feedback(response, location_name) {
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
-  let loggedIn = "Välkommen!";
 
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
   let p = document.createElement("p");
   let newDiv = document.createElement("div");
   let newSpan = document.createElement("span");
-
 
   if (response == 200 && location_name == "logIn") {
     startpage("introduction", "mainContent");
@@ -130,7 +128,6 @@ function user_feedback(response, location_name) {
         ? server_error
         : default_error;
   }
-
 
   if (
     response == 400 ||

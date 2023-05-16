@@ -9,7 +9,7 @@ function init_snake_game() {
     console.log("Game started");
 
     document.querySelector('#mainContent').innerHTML = `
-    <div class="wrapper snake_game">
+    <div class="wrapper snake_game" id="snakeWrapper">
         <div class="game-details snake_game">
             <span class="score">Score: 0</span>
             <span class="high-score">High Score: 0</span>

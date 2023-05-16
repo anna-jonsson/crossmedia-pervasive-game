@@ -103,10 +103,10 @@ function user_feedback(response, location_name) {
     response == 200
       ? correct_input
       : response == 400
-      ? wrong_input
-      : response == 500
-      ? server_error
-      : default_error;
+        ? wrong_input
+        : response == 500
+          ? server_error
+          : default_error;
 
   console.log(response);
   console.log("user_feedback");
@@ -133,8 +133,6 @@ function user_feedback(response, location_name) {
       let mapButton = document.createElement("button");
       mapButton.innerHTML = "Tillbaka till kartan";
       mapButton.addEventListener("click", function () {
-        fill_content("introduction", "mainContent", "text");
-
         show_map();
         newDiv.style.display = "none";
       });

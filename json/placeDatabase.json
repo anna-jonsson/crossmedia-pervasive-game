@@ -26,7 +26,7 @@
     {
         "id": 2,
         "password": "165664",
-        "current_balance": 1000,
+        "current_balance": 2000,
         "location_name": "knarkrondellen",
         "location_url": "test\/knarkrondellen",
         "intro_text": "V\u00e4lkommen till knarkrondellen!",
@@ -34,8 +34,8 @@
         "task_text": "Totalen av oss p\u00e5 de viktiga pelarna ger er koden f\u00f6r att klara uppgiften. R\u00e4kna oss och t\u00e4nk p\u00e5 att \u00e5ldern inte \u00e4r relevant f\u00f6r att r\u00e4knas.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
-        "checked_out": false
+        "checked_in": true,
+        "checked_out": true
     },
     {
         "id": 3,

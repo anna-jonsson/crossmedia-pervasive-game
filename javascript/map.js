@@ -9,10 +9,13 @@ async function show_map() {
 async function createPin(placeName, parent, state) {
   let div = document.createElement("div");
   div.classList.add("pin");
+  // if (placeName.includes("_")) {
+  //   ;
+  // }
   div.innerHTML = `
         <div id='pin_${placeName}' class='location_pin'>
             <img class='pin_img' src='../images/pin.png'>
-            <p>${placeName}</p>
+            <p>${placeName.replace("_", " ")}</p>
         </div>
     `;
 

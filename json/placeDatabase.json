@@ -62,8 +62,8 @@
         "task_text": "Anv\u00e4nda en analog mall f\u00f6r att hitta \u201cC\u201d p\u00e5 mosaik-objektets tr\u00f6ja. C-et \u00e4r sedan den r\u00f6relsen som beh\u00f6ver utf\u00f6ras p\u00e5 lock-upen.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": true,
-        "checked_out": true
+        "checked_in": false,
+        "checked_out": false
     },
     {
         "id": 5,

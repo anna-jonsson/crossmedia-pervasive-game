@@ -48,7 +48,7 @@
         "task_text": "L\u00f6s Wordle f\u00f6r att s\u00e4lja s\u00e5 m\u00e5nga gr\u00f6nsaker och frukter som m\u00f6jligt.",
         "background_picture": ".\/images\/213",
         "QR_handling": "",
-        "checked_in": false,
+        "checked_in": true,
         "checked_out": false
     },
     {
@@ -67,7 +67,7 @@
     },
     {
         "id": 5,
-        "password": "SKA L\u00c4GGAS TILL!",
+        "password": "malm\u00f6",
         "current_balance": 0,
         "location_name": "folkets_park",
         "location_url": "test\/folkets_park",

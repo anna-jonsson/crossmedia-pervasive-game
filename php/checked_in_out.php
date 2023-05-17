@@ -50,6 +50,9 @@ foreach ($users as $user_index => $user) {
         }
     }
 
+    $error = ["error" => "Required parameters ('Checked in' OR 'Checked out' are not set OR 'Location_name' does not match."]; 
+    sendJSON($error, 400);  
+
 }
 // foreach($places as $placeIndex => $place) {
 
@@ -92,7 +95,6 @@ foreach ($users as $user_index => $user) {
 
 // }
 
-$error = ["error" => "Required parameters ('Checked in' OR 'Checked out' are not set OR 'Location_name' does not match."]; 
-sendJSON($error, 400);
+
 
 ?>

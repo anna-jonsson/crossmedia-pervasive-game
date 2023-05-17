@@ -104,7 +104,7 @@ async function fill_content(userId, placeName, div_id, type) {
 }
 
 //Function for user feedback based on the response status connected to the location name.
-function user_feedback(userId, response, location_name) {
+function user_feedback(response, location_name) {
   let wrong_input = "Det är fel lösenord. Vänligen försök igen";
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
@@ -167,6 +167,7 @@ function user_feedback(userId, response, location_name) {
         newDiv.style.display = "none";
       });
       newDiv.appendChild(mapButton);
+      let userId = localStorage.getItem("user_id");
       checked_out(userId, location_name, true);
     }
   }

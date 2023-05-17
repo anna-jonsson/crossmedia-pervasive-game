@@ -17,19 +17,20 @@ if(isset($_GET["location_name"])){
     }
 
 //Looping the places and verifying the location name in the dataBase is the same as the requested data password. 
-
     foreach($places as $place){
-        if($place["location_name"] == $_GET["location_name"])
-            sendJSON($place);
+        if($place["location_name"] == $_GET["location_name"]){
+        sendJSON($place);
         }
+        
+    }
 }
 
-if(isset($_GET["all_locations"])) {
-    sendJSON($places);
-}
-
+    if(isset($_GET["all_locations"])) {
+        sendJSON($places);
+    }
 //Else send error 
 $error = ["error" => "Incorrect place request"];
 sendJSON($error, 400);
+
 
 ?>

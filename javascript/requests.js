@@ -99,13 +99,13 @@ async function checked_out(userId, placeName, checked_status) {
 }
 
 //ADD BALANCE
-async function patch_balance(placeName, balance) {
+async function patch_balance(userId, balance) {
   const balanceRequest = new Request("../php/balance.php");
   const balance_response = await fetch(balanceRequest, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      location_name: placeName,
+      user_id: userId,
       current_balance: balance,
     }),
   });

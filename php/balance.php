@@ -11,51 +11,51 @@ if($request_method != "PATCH" && $request_method != "GET") {
 
 if($request_method == "PATCH") {
     //Checking that the request data includes the parameter current balance
-    if(isset($r_data["current_balance"]) && isset($r_data["location_name"])) {
+    if(isset($r_data["current_balance"]) && isset($r_data["user_id"])) {
         //Loops through the array /json and using index 
-        foreach($places as $placeIndex => $place){
+        foreach($users as $userIndex => $user){
             //Checking if request data location is the same as the current location 
-            if ($r_data["location_name"] == $place["location_name"]) {
+            if ($r_data["user_id"] == $user["user_id"]) {
                 //Updates the current balance 
-                $sum = $place["current_balance"] + $r_data["current_balance"];
-                $place["current_balance"] = $sum;
+                $sum = $user["current_balance"] + $r_data["current_balance"];
+                $user["current_balance"] = $sum;
 
-                $updatedPlace = $place;
+                $updatedUser = $user;
 
                 //Deletes the old object in the array and replaces it with the new one
-                array_splice($places, $placeIndex, 1);
-                $places[] = $updatedPlace;
-                array_multisort($places);
+                array_splice($users, $userIndex, 1);
+                $users[] = $updatedUser;
+                array_multisort($users);
                 
                 //Encodes the json and writes to placesDatabase
-                $placeJSON = json_encode($places, JSON_PRETTY_PRINT);
-                $placesData = file_put_contents($placeDatabase, $placeJSON);
+                $UsJSON = json_encode($users, JSON_PRETTY_PRINT);
+                $UsData = file_put_contents($userDatabase, $UsJSON);
             
                 //Sends status 200, and data 
-                sendJSON($updatedPlace);
+                sendJSON($updatedUser);
             }
         }
     }
 }
 
-if($request_method == "GET") {
-    if(isset($_GET["location_name"])) {
-        foreach($places as $place) {
-            if($_GET["location_name"] == $place["location_name"]) {
-                sendJSON($place["current_balance"]);
-            }
-        }
-    }
-}
+// if($request_method == "GET") {
+//     if(isset($_GET["location_name"])) {
+//         foreach($places as $place) {
+//             if($_GET["location_name"] == $place["location_name"]) {
+//                 sendJSON($place["current_balance"]);
+//             }
+//         }
+//     }
+// }
 
-//ALL LOCATIONS FOR COUNTING TOTAL BALANCE 
+// //ALL LOCATIONS FOR COUNTING TOTAL BALANCE 
 
-if($request_method == "GET") {
-    if(isset($_GET["all_locations"])) {
-        sendJSON($places);
+// if($request_method == "GET") {
+//     if(isset($_GET["all_locations"])) {
+//         sendJSON($places);
        
-    }
-}
+//     }
+// }
 
 
 

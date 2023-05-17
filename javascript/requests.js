@@ -11,6 +11,16 @@ async function all_places_request() {
 }
 
 //Getter for one place baserd on the location name.
+async function place_user(placeName) {
+  let userID = localStorage.getItem("user_id");
+  const placeRequest = new Request(
+    "../php/location_user.php?location_name=" + placeName + "?user_id=" + userID
+  );
+  const placeResp = await fetch(placeRequest);
+  const placeRsc = await placeResp.json();
+  return placeRsc;
+}
+
 async function place_request(placeName) {
   const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
   const placeResp = await fetch(placeRequest);
@@ -55,14 +65,14 @@ async function check_password(placeName, password) {
 
 //PATCH
 //CHECKING IN
-async function checked_in(placeName, checked_status) {
-  let userID = localStorage.getItem("user_id");
+async function checked_in(userId, placeName, checked_status) {
+  // let userID = localStorage.getItem("user_id");
   const checked_in_request = new Request("../php/checked_in_out.php");
   const checked_in_resp = await fetch(checked_in_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      user_id: userID,
+      user_id: userId,
       location_name: placeName,
       checked_in: checked_status,
     }),
@@ -72,14 +82,14 @@ async function checked_in(placeName, checked_status) {
 }
 
 //CHECKING OUT
-async function checked_out(placeName, checked_status) {
-  let userID = localStorage.getItem("user_id");
+async function checked_out(userId, placeName, checked_status) {
+  // let userID = localStorage.getItem("user_id");
   const checked_out_request = new Request("../php/checked_in_out.php");
   const checked_out_resp = await fetch(checked_out_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      user_id: userID,
+      user_id: userId,
       location_name: placeName,
       checked_out: checked_status,
     }),

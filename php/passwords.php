@@ -23,10 +23,12 @@ foreach($places as $place){
     $place["password"] == $_GET["password"])
             sendJSON($place);
     }
+
+     //Else send error 
+     $error = ["error" => "Incorrect password"];
+     sendJSON($error, 400);
 }
 
-    //Else send error 
-    $error = ["error" => "Incorrect password"];
-    sendJSON($error, 400);
+   
 
     ?>

@@ -123,6 +123,7 @@
   
   #keyboard-cont div {
     display: flex;
+    flex-direction: row;
   }
   
   .second-row {

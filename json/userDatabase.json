@@ -33,8 +33,64 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        },
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
+        
+          
     },
+    
     {
         "user_id": 1,
         "username": "Hyperlund",
@@ -69,7 +125,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        }, 
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     },
     {
         "user_id": 2,
@@ -105,7 +214,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        }, 
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     },
     {
         "user_id": 3,
@@ -141,7 +303,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        },
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     },
     {
         "user_id": 4,
@@ -177,7 +392,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        }, 
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     },
     {
         "user_id": 5,
@@ -213,7 +481,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        },
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     },
     {
         "user_id": 6,
@@ -249,7 +570,60 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        }
+        },
+        "finale": [
+            {
+                "location_name": "möllevångstorget",
+                "question": "Hur många är det som håller upp statyn på möllevångstorget?",
+                "correctAnswer": "6",
+                "incorrectAnswer1": "8",
+                "incorrectAnswer2": "5",
+                "incorrectAnswer3": "10"
+            },
+        
+            {
+                "location_name": "knarkrondellen",
+                "question": "Vad är det som står i mitten av knarkrondellen?",
+                "correctAnswer": "En lyktstolpe",
+                "incorrectAnswer1": "En fontän",
+                "incorrectAnswer2": "En staty",
+                "incorrectAnswer3": "Ingenting"
+            },
+            {
+                "location_name": "triangeln",
+                "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            },
+            {
+                "location_name": "friisgatan",
+                "question": "Vilken accessoar bar den andra figuren på mosaikplattan där mallen inte passade?",
+                "correctAnswer": "Glasögon",
+                "incorrectAnswer1": "Ett halsband",
+                "incorrectAnswer2": "En hatt",
+                "incorrectAnswer3": "En klocka"
+            },
+            {
+                "location_name": "folkets_park",
+                "question": "Vilket Malmömonument har hål nummer 5?",
+                "correctAnswer": "Turning Torso",
+                "incorrectAnswer1": "Öresundsbron",
+                "incorrectAnswer2": "Malmö Arena",
+                "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        
+            },
+             {
+                "location_name": "magisterparken",
+                "question": "Inte lagt till något ännu!",
+                "correctAnswer": "",
+                "incorrectAnswer1": "",
+                "incorrectAnswer2": "",
+                "incorrectAnswer3": ""
+            }
+        
+        ]
     }
     
 ]

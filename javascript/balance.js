@@ -6,6 +6,8 @@ async function show_current_balance() {
     let saldo = user.current_balance;
 
     document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
+    
+    document.querySelector("#balance").appendChild(balanceElement);
   });
   //Deletes the first value in tha array with slice because it's undefined.
   //Then adding all of the values in the array to one with reduce()

@@ -51,7 +51,8 @@
         "riddle_text": "5 av mig \u00e4r viktigare \u00e4n de andra. P\u00e5 dessa finns b\u00e5de  tv\u00e5benta, fyrbenta och bevingade.",
         "task_text": "Totalen av oss p\u00e5 de viktiga pelarna ger er koden f\u00f6r att klara uppgiften. R\u00e4kna oss och t\u00e4nk p\u00e5 att \u00e5ldern inte \u00e4r relevant f\u00f6r att r\u00e4knas.",
         "background_picture": ".\/images\/213",
-        "checked_in": true
+        "checked_in": true,
+        "current_balance": 1000
     },
     {
         "id": 4,

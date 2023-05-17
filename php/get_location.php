@@ -21,16 +21,20 @@ if(isset($_GET["location_name"])){
         if($place["location_name"] == $_GET["location_name"]){
         sendJSON($place);
         }
+
+        
         
     }
+
+    //Else send error 
+    $error = ["error" => "Incorrect place request"];
+    sendJSON($error, 400);
+
 }
 
     if(isset($_GET["all_locations"])) {
         sendJSON($places);
     }
-//Else send error 
-$error = ["error" => "Incorrect place request"];
-sendJSON($error, 400);
 
 
 ?>

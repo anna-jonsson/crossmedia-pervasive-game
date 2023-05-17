@@ -1,7 +1,6 @@
 // fill_content('introduction', 'mainContent', 'text')
-
 // re-useable fn to fill content with
-async function startpage(placeName, div_id, response) {
+async function startpage(placeName, div_id) {
   let location = await place_request(placeName);
   let wrapper = document.getElementById(div_id);
   wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
@@ -44,7 +43,7 @@ async function startpage(placeName, div_id, response) {
           let password = document.querySelector("input").value;
           let passwordCheck = await check_password(placeName, password);
 
-          if (response != 200) {
+          if (passwordCheck != 200) {
             user_feedback(passwordCheck, placeName);
           }
 

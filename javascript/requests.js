@@ -18,6 +18,13 @@ async function place_request(placeName) {
   return placeRsc;
 }
 
+async function get_all_users() {
+  const usersRequest = new Request("../php/users.php?all_users");
+  const usersResponse = await fetch(usersRequest);
+  const usersResource = await usersResponse.json();
+
+  return usersResource;
+}
 //Getter function for all final questions
 async function get_finale_questions() {
   const questionsRequest = new Request("../php/finale.php?all_questions");
@@ -34,18 +41,19 @@ async function check_password(placeName, password) {
     "../php/passwords.php?password=" + password + "&location_name=" + placeName
   );
   const passwordResp = await fetch(passwordRequest);
-
+  console.log(passwordResp.status);
   return passwordResp.status;
 }
 
 //PATCH
 //CHECKING IN
-async function checked_in(placeName, checked_status) {
+async function checked_in(userId, placeName, checked_status) {
   const checked_in_request = new Request("../php/checked_in_out.php");
   const checked_in_resp = await fetch(checked_in_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
+      user_id: userId,
       location_name: placeName,
       checked_in: checked_status,
     }),
@@ -54,12 +62,13 @@ async function checked_in(placeName, checked_status) {
 }
 
 //CHECKING OUT
-async function checked_out(placeName, checked_status) {
+async function checked_out(userId, placeName, checked_status) {
   const checked_out_request = new Request("../php/checked_in_out.php");
   const checked_out_resp = await fetch(checked_out_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
+      user_id: userId,
       location_name: placeName,
       checked_out: checked_status,
     }),

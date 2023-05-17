@@ -1,7 +1,7 @@
 // re-useable fn to fill div content based on the location_name, div id and type ("text, password, checkbox etc ")
-async function fill_content(placeName, div_id, type) {
+async function fill_content(userId, placeName, div_id, type) {
   let location = await place_request(placeName);
-  checked_in(placeName, true);
+  checked_in(userId, placeName, true);
 
   let wrapper = document.getElementById(div_id);
 
@@ -104,7 +104,7 @@ async function fill_content(placeName, div_id, type) {
 }
 
 //Function for user feedback based on the response status connected to the location name.
-function user_feedback(response, location_name) {
+function user_feedback(userId, response, location_name) {
   let wrong_input = "Det är fel lösenord. Vänligen försök igen";
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
@@ -167,7 +167,7 @@ function user_feedback(response, location_name) {
         newDiv.style.display = "none";
       });
       newDiv.appendChild(mapButton);
-      checked_out(location_name, true);
+      checked_out(userId, location_name, true);
     }
   }
 }

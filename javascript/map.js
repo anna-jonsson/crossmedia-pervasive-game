@@ -41,22 +41,17 @@ async function get_all_locations() {
   mainContent.style.backgroundPositionY = "-20px";
   //<img  src = "../images/Map3.png">
   let all_places = await all_places_request();
+  let get_all_users = await get_all_users();
 
   all_places.forEach((place) => {
     if (place.location_name !== "introduction") {
-      if (place.checked_out == true) {
-        createPin(
-          place.location_name,
-          document.getElementById("mainContent"),
-          true
-        );
-      } else {
-        createPin(
-          place.location_name,
-          document.getElementById("mainContent"),
-          false
-        );
-      }
+      get_all_users.forEach((user) => {
+        if (user.checked_out == true) {
+          createPin(place.location_name, document.getElementById("mainContent"), true);
+        } else {
+          createPin(place.location_name, document.getElementById("mainContent"), false);
+        }
+      });
     }
   });
 
@@ -66,19 +61,17 @@ async function get_all_locations() {
 
   let all_pins = document.querySelectorAll(".location_pin");
   all_pins.forEach((pin) => {
-    pin
-      .querySelector("img")
-      .addEventListener("click", function checkPin(event) {
-        if (event.target == this) {
-          if (this.classList.contains("done")) {
-            pin.removeEventListener("click", checkPin, true);
-          } else {
-            // background.style.backgroundColor="red";
-            let placeName = this.nextElementSibling.innerText;
-            create_pop_up(placeName, this.parentNode);
-          }
+    pin.querySelector("img").addEventListener("click", function checkPin(event) {
+      if (event.target == this) {
+        if (this.classList.contains("done")) {
+          pin.removeEventListener("click", checkPin, true);
+        } else {
+          // background.style.backgroundColor="red";
+          let placeName = this.nextElementSibling.innerText;
+          create_pop_up(placeName, this.parentNode);
         }
-      });
+      }
+    });
   });
 }
 

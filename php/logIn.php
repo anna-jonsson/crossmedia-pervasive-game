@@ -13,7 +13,7 @@ if($request_method != "POST"){
 //The r_data must include username and password 
 if(isset($r_data["username"], $r_data["password"])){
     //The r_data can't be empty
-    if(empty($r_data["username"]) or empty($r_data["password"])){
+    if(empty($r_data["user_id"] or $r_data["username"]) or empty($r_data["password"])){
         $error = ["error" => "Please fill in all of the information."];
         sendJSON($error, 400);
     }

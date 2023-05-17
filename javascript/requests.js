@@ -19,11 +19,19 @@ async function place_request(placeName) {
 }
 
 async function get_all_users() {
-  const usersRequest = new Request("../php/users.php?all_users");
+  const usersRequest = new Request("../php/all_users.php?all_users");
   const usersResponse = await fetch(usersRequest);
   const usersResource = await usersResponse.json();
 
   return usersResource;
+}
+
+async function get_one_user(user_id) {
+  const oneUserReq = new Request("../php/one_user.php?user_id=" + user_id);
+  const OneUserResp = await fetch(oneUserReq);
+  const OneuserRsc = await OneUserResp.json();
+
+  return OneuserRsc;
 }
 //Getter function for all final questions
 async function get_finale_questions() {
@@ -103,5 +111,8 @@ async function logIn_request(username, password) {
       password: password,
     }),
   });
+
+  let resourceLogin = await logInResponse.json();
+  localStorage.setItem("user_id", resourceLogin.user_id);
   return logInResponse.status;
 }

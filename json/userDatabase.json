@@ -4,36 +4,44 @@
         "username": "Cyberstrand",
         "password": "telefon10",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
+        "locations": [
+             {
+                 "location_name": "introduction",
                 "checked_in": false,
                 "checked_out": false
             },
-            "triangeln": {
+             {
+                "location_name": "triangeln",
                 "checked_in": false,
                 "checked_out": false
             },
-            "knarkrondellen": {
+             {
+                "location_name": "knarkrondellen",
                 "checked_in": false,
                 "checked_out": false
             },
-            "möllan": {
+            {
+                "location_name": "möllan",
                 "checked_in": false,
                 "checked_out": false
             },
-            "friisgatan": {
+            {
+                "location_name": "friisgatan",
                 "checked_in": false,
                 "checked_out": false
             },
-            "folkets_park": {
+            {
+                "location_name": "folkets_park",
                 "checked_in": false,
                 "checked_out": false
             },
-            "magisterparken": {
+            {
+                "location_name": "magisterparken",
                 "checked_in": false,
                 "checked_out": false
             }
-        },
+            
+        ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -96,36 +104,44 @@
         "username": "Hyperlund",
         "password": "vattenflaska11",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        }, 
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -185,36 +201,44 @@
         "username": "stjärnberg",
         "password": "dator12",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        }, 
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -274,36 +298,44 @@
         "username": "tekniksson",
         "password": "whiteboard13",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        },
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -363,36 +395,44 @@
         "username": "framtidsson",
         "password": "väska14",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        }, 
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -452,36 +492,44 @@
         "username": "Cybergren",
         "password": "pelare15",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        },
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",
@@ -541,36 +589,44 @@
         "username": "teknoberg",
         "password": "metall16",
         "current_balance": 0, 
-        "locations": {
-            "introduction": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "triangeln": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "knarkrondellen": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "möllan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "friisgatan": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "folkets_park": {
-                "checked_in": false,
-                "checked_out": false
-            },
-            "magisterparken": {
-                "checked_in": false,
-                "checked_out": false
-            }
-        },
+        "locations": [
+            {
+                "location_name": "introduction",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "triangeln",
+               "checked_in": false,
+               "checked_out": false
+           },
+            {
+               "location_name": "knarkrondellen",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "möllan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "friisgatan",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "folkets_park",
+               "checked_in": false,
+               "checked_out": false
+           },
+           {
+               "location_name": "magisterparken",
+               "checked_in": false,
+               "checked_out": false
+           }
+           
+       ],
         "finale": [
             {
                 "location_name": "möllevångstorget",

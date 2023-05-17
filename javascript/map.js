@@ -40,18 +40,15 @@ async function get_all_locations() {
   mainContent.style.backgroundPositionX = "-17px";
   mainContent.style.backgroundPositionY = "-20px";
   //<img  src = "../images/Map3.png">
-  let all_places = await all_places_request();
-  let get_all_users = await get_all_users();
+  // let all_places = await all_places_request();
+  let user_id = localStorage.getItem("user_id");
+  let user = await get_one_user(user_id);
 
-  all_places.forEach((place) => {
-    if (place.location_name !== "introduction") {
-      get_all_users.forEach((user) => {
-        if (user.checked_out == true) {
-          createPin(place.location_name, document.getElementById("mainContent"), true);
-        } else {
-          createPin(place.location_name, document.getElementById("mainContent"), false);
-        }
-      });
+  user["locations"].forEach((user_location) => {
+    if (user_location.checked_out == true && user_location.location_name != "introduction") {
+      createPin(user_location.location_name, document.getElementById("mainContent"), true);
+    } else if (user_location.location_name != "introduction") {
+      createPin(user_location.location_name, document.getElementById("mainContent"), false);
     }
   });
 

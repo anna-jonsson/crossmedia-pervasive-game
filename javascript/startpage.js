@@ -1,6 +1,6 @@
 // fill_content('introduction', 'mainContent', 'text')
 // re-useable fn to fill content with
-async function startpage(placeName, div_id) {
+async function startpage(placeName, div_id, response) {
   let location = await place_request(placeName);
   let wrapper = document.getElementById(div_id);
   wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
@@ -21,6 +21,7 @@ async function startpage(placeName, div_id) {
   document.querySelector(".logInBtn").addEventListener("click", async function () {
     let username = document.querySelector(".username_input").value;
     let logIn_PW = document.querySelector(".logIn_PW").value;
+
     let logInCheck = await logIn_request(username, logIn_PW);
 
     if (logInCheck == 200) {
@@ -43,14 +44,12 @@ async function startpage(placeName, div_id) {
           let password = document.querySelector("input").value;
           let passwordCheck = await check_password(placeName, password);
 
-          if (passwordCheck != 200) {
+          if (response != 200) {
             user_feedback(passwordCheck, placeName);
           }
-
-          if (localStorage.getItem("friisgatan") !== null) {
-            localStorage.clear();
-            await show_map();
-          }
+          // if (localStorage.getItem("friisgatan") !== null) {
+          //   localStorage.clear();
+          await show_map();
         });
       });
     } else {

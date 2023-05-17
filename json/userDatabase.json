@@ -3,7 +3,7 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 15000,
+        "current_balance": 17000,
         "locations": [
             {
                 "location_name": "introduction",
@@ -96,7 +96,7 @@
         "user_id": 1,
         "username": "Hyperlund",
         "password": "vattenflaska11",
-        "current_balance": 0,
+        "current_balance": 1000,
         "locations": [
             {
                 "location_name": "introduction",

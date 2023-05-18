@@ -16,13 +16,13 @@ $places = [];
 $users = [];
 
 //Array of finale questions
-$finale_questions = [];
+$final_questions = [];
 
 //The database for locations/places, and their information 
 $placeDatabase = "../json/placeDatabase.json";
 
 //Database for the finale questions and their information
-$finale_questions_json= "../json/finale.json";
+$final_questions_json= "../json/final.json";
 
 $userDatabase = "../json/userDatabase.json";
 
@@ -37,9 +37,9 @@ if(file_exists($placeDatabase)){
     $places = json_decode($places_json, true);
 }
 //If the finale.json exists update and decode it
-if (file_exists($finale_questions_json)) {
-    $questions_json = file_get_contents($finale_questions_json);
-    $finale_questions = json_decode($questions_json, true);
+if (file_exists($final_questions_json)) {
+    $questions_json = file_get_contents($final_questions_json);
+    $final_questions = json_decode($questions_json, true);
     
 }
 

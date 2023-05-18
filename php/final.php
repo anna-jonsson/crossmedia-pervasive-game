@@ -10,7 +10,7 @@ if ($request_method  != "GET") {
 
 
 if(isset($_GET["all_questions"])) {
-    sendJSON($finale_questions);
+    sendJSON($final_questions);
 }
 
 ?>

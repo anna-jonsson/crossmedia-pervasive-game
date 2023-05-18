@@ -1,6 +1,6 @@
 // re-useable fn to fill div content based on the location_name, div id and type ("text, password, checkbox etc ")
 async function fill_content(placeName, div_id, type) {
-  let location = await place_request(placeName);
+  let location = await place_request(placeName.replace("_", " "));
   let userId = localStorage.getItem("user_id");
   checked_in(userId, placeName, true);
 

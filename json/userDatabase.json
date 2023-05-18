@@ -3,12 +3,12 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 22300,
+        "current_balance": 22900,
         "locations": [
             {
                 "location_name": "introduction",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "triangeln",
@@ -27,8 +27,8 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "folkets_park",

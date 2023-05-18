@@ -111,6 +111,7 @@ function user_feedback(response, location_name) {
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
+  let triangeln_highscore = `Bra jobbat! Din högsta poäng blev: ${localStorage.getItem("high-score")}`;
 
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
   let p = document.createElement("p");
@@ -121,14 +122,18 @@ function user_feedback(response, location_name) {
     startpage("introduction", "mainContent");
   } else {
     newDiv.classList.add("feedbackPopup");
-    p.textContent =
-      response == 200
-        ? correct_input
-        : response == 400
-          ? wrong_input
-          : response == 500
-            ? server_error
-            : default_error;
+    if (response == 200 && location_name == "triangeln") {
+      p.textContent = triangeln_highscore;
+    } else {
+      p.textContent =
+        response == 200
+          ? correct_input
+          : response == 400
+            ? wrong_input
+            : response == 500
+              ? server_error
+              : default_error;
+    }
   }
 
   if (

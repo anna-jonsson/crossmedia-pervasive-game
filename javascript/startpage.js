@@ -54,8 +54,11 @@ balance.style.display = "none"
             show_current_balance(); // Show balance after successful login
           }
           // if (localStorage.getItem("friisgatan") !== null) {
-          //   localStorage.clear();
+          // localStorage.removeItem("friisgatan");
+          // await show_map();
+          // }
           await show_map();
+
         });
       });
     } else {

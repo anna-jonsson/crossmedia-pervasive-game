@@ -31,9 +31,33 @@ async function fill_content(placeName, div_id, type) {
 
   // Button for giving up and returning to the map
   let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
-    show_popup(function () {
-      show_map();
-      });
+    let popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = `
+      <div class="feedbackPopup">
+        <p>Är du säker att du vill ge upp?</p>
+        <div class="popup-buttons">
+          <button class="popup-confirm">Ja</button>
+          <button class="popup-cancel">Nej</button>
+        </div>
+      </div>
+    `;
+  
+    let confirmBtn = popup.querySelector(".popup-confirm");
+    let cancelBtn = popup.querySelector(".popup-cancel");
+  
+    confirmBtn.addEventListener("click", function () {
+      popup.remove();
+      let userId = localStorage.getItem("user_id");
+      checked_out(userId, placeName, true);
+      show_map()
+    });
+  
+    cancelBtn.addEventListener("click", function () {
+      popup.remove();
+    });
+  
+    document.body.appendChild(popup);
   });
 
     //Button for showing the task text with the type (password, checkbox etc.)
@@ -77,10 +101,35 @@ async function fill_content(placeName, div_id, type) {
               `;
   // Button for giving up and returning to the map
   let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
-    show_popup(function () {
-      show_map();
-      });
+    let popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = `
+      <div class="feedbackPopup">
+        <p>Är du säker att du vill ge upp?</p>
+        <div class="popup-buttons">
+          <button class="popup-confirm">Ja</button>
+          <button class="popup-cancel">Nej</button>
+        </div>
+      </div>
+    `;
+  
+    let confirmBtn = popup.querySelector(".popup-confirm");
+    let cancelBtn = popup.querySelector(".popup-cancel");
+  
+    confirmBtn.addEventListener("click", function () {
+      popup.remove();
+      let userId = localStorage.getItem("user_id");
+      checked_out(userId, placeName, true);
+      show_map()
+    });
+    
+    cancelBtn.addEventListener("click", function () {
+      popup.remove();
+    });
+  
+    document.body.appendChild(popup);
   });
+
         if (placeName != "knarkrondellen") {
           //Checking that the password for the task is correct with funciton check_password.
           let btnPassword = document.querySelector(".pwBtn");
@@ -119,33 +168,6 @@ async function fill_content(placeName, div_id, type) {
   });
 }
 
-function show_popup() {
-  let popup = document.createElement("div");
-  popup.className = "popup";
-  popup.innerHTML = `
-    <div class="feedbackPopup">
-      <p>Är du säker att du vill ge upp?</p>
-      <div class="popup-buttons">
-        <button class="popup-confirm">Ja</button>
-        <button class="popup-cancel">Nej</button>
-      </div>
-    </div>
-  `;
-
-  let confirmBtn = popup.querySelector(".popup-confirm");
-  let cancelBtn = popup.querySelector(".popup-cancel");
-
-  confirmBtn.addEventListener("click", function () {
-    popup.remove();
-    show_map()
-  });
-
-  cancelBtn.addEventListener("click", function () {
-    popup.remove();
-  });
-
-  document.body.appendChild(popup);
-}
 
 //Function for user feedback based on the response status connected to the location name.
 function user_feedback(response, location_name) {

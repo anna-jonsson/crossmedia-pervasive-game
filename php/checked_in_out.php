@@ -24,7 +24,7 @@ foreach ($users as $userIndex => $user) {
         // Iterating over user's locations
         foreach ($user["locations"] as $locationIndex => $location) {
             // Checking if location name matches and updating status
-            if ($location["location_name"] == $r_data["location_name"]) {
+            if (trim($location["location_name"]) === $r_data["location_name"]) {
                 if ($location["checked_in"] == false) {
                     $location["checked_in"] = true;
                     $location["checked_out"] = false;

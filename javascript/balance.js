@@ -40,10 +40,10 @@ async function add_to_balance(placeName, password) {
   //}
 }
 
-async function add_custom_balance(placeName, amount) {
+async function add_custom_balance(placeName, amount, password) {
 
   //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places
-  let password_check = await check_password(placeName, "1234");
+  let password_check = await check_password(placeName, password);
 
   let userId = localStorage.getItem("user_id");
   //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places

@@ -1,4 +1,5 @@
 // re-useable fn to fill div content based on the location_name, div id and type ("text, password, checkbox etc ")
+
 async function fill_content(placeName, div_id, type) {
   let location = await place_request(placeName);
   let userId = localStorage.getItem("user_id");
@@ -124,10 +125,10 @@ function user_feedback(response, location_name) {
       response == 200
         ? correct_input
         : response == 400
-        ? wrong_input
-        : response == 500
-        ? server_error
-        : default_error;
+          ? wrong_input
+          : response == 500
+            ? server_error
+            : default_error;
   }
 
   if (

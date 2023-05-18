@@ -48,8 +48,11 @@ async function startpage(userId, placeName, div_id, response) {
             user_feedback(passwordCheck, placeName);
           }
           // if (localStorage.getItem("friisgatan") !== null) {
-          //   localStorage.clear();
+          // localStorage.removeItem("friisgatan");
+          // await show_map();
+          // }
           await show_map();
+
         });
       });
     } else {

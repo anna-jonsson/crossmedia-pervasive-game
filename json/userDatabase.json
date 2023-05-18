@@ -7,8 +7,8 @@
         "locations": [
             {
                 "location_name": "introduction",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "triangeln",
@@ -27,8 +27,8 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets_park",

@@ -1,0 +1,432 @@
+body {
+  margin: 0;
+  background-color: #543e3e;
+  font-family: "Varela Round", sans-serif;
+}
+
+.header {
+  background-color: whitesmoke;
+  height: 10vh;
+}
+
+h1 {
+  margin-top: 0;
+  margin-left: 5vh;
+  padding: 5px;
+}
+
+.title > p {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: rgb(142, 228, 255);
+}
+
+.title h3 {
+  text-align: center;
+}
+
+img {
+  width: 6vh;
+  height: 6vh;
+}
+
+.logo {
+  position: absolute;
+  top: -5vh;
+  left: 5vh;
+  margin-top: 2vh;
+  width: 15vh;
+  height: 18vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.categoryBox {
+  background-color: rgb(118, 222, 255);
+  width: 25vh;
+  height: 25vh;
+  margin-top: 5vh;
+  cursor: pointer;
+  border-radius: 10px 10px 10px 10px;
+  transition: 0.5s ease;
+}
+
+.categoryBox:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.titleBox {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.iconBox {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+#icon-user {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+
+  position: absolute;
+  top: 2vh;
+  right: 50px;
+  width: 10vh;
+}
+
+#wrapper-category {
+  display: grid;
+  grid-row: 1fr 1fr 1fr;
+  justify-items: center;
+  margin-top: 10vh;
+}
+
+#backdiv {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition: 0.5s ease;
+  border-radius: 50%;
+}
+
+#backdiv:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.categoryTitle {
+  margin-bottom: 3vh;
+  font-size: 2rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.categoryLogo {
+  margin-bottom: 3vh;
+}
+
+.categoryLogo > img {
+  width: 10vh;
+  height: 10vh;
+}
+
+.categoryInfo {
+  font-size: 1rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.textOfNumber {
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+}
+
+.backDiv {
+  position: absolute;
+  top: 15vh;
+  left: 10vh;
+  width: 15vh;
+  height: 15vh;
+}
+
+.backDiv > img {
+  width: 7vh;
+  height: 7vh;
+}
+
+#input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 4vh;
+}
+
+#button-play > #btnPlayQuiz {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  position: absolute;
+
+  bottom: 30vh;
+  height: 8vh;
+  right: 30vh;
+  width: 15vh;
+  background-color: rgb(210, 208, 208);
+  border-radius: 10px 10px 10px 10px;
+  font-family: "Varela Round", sans-serif;
+}
+
+#button-play > #btnPlayQuiz:active {
+  background-color: rgb(161, 160, 160);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+#clock {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+span {
+  display: block;
+  width: 100%;
+  margin-top: 20vh;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 100px;
+}
+
+#wrapper-quiz {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  margin-top: 5vh;
+}
+
+#quiz-title {
+  font-size: 1.5rem;
+  font-family: "Varela Round", sans-serif;
+  margin-top: 15px;
+}
+
+#question {
+  font-size: 20px;
+  font-family: "Varela Round", sans-serif;
+  margin-top: 3vh;
+  padding-left: 0vh;
+  padding-right: 0vh;
+  text-align: center;
+}
+
+.box-answer {
+  width: 21vh;
+  height: auto;
+  background-color: rgb(169, 207, 212);
+  margin-bottom: 5vh;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid white;
+  background-color: rgb(62, 84, 84);
+  color: #d9d9d9;
+  border-radius: 5%;
+  border: solid 0.3px #d9d9d9;
+  outline: none;
+}
+
+.box-answer > input {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-left: 2vh;
+  position: relative;
+  top: 2.5vh;
+  *overflow: hidden;
+}
+
+#info-quiz {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  margin-top: 3vh;
+}
+
+label {
+  display: block;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+  padding-left: 35px;
+  font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+}
+
+.first-input {
+  height: 3vh;
+  width: 11vh;
+}
+
+#text {
+  text-align: center;
+}
+
+.timer {
+  font-family: "Indie Flower", cursive;
+  background-color: rgb(169, 207, 212);
+  border: 5px dotted rgb(255, 255, 255);
+  height: 45px;
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+
+.time_left_txt {
+  user-select: none;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.timer_sec {
+  background-color: #343a40;
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  user-select: none;
+}
+
+#question-count {
+  font-size: 1.5rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.time_line {
+  position: absolute;
+  bottom: 10vh;
+  width: 30%;
+  height: 30px;
+  background-color: rgb(108, 108, 108);
+}
+
+#back-menu {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+
+  position: absolute;
+  bottom: 45vh;
+  height: 8vh;
+  width: 15vh;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#back-menu:hover {
+  background-color: rgb(161, 160, 160);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+#date {
+  margin-bottom: 5vh;
+}
+
+#Finish-logo {
+  margin-left: 40vh;
+}
+
+#Finish-logo > img {
+  position: absolute;
+  left: 30vh;
+  bottom: 45vh;
+  width: 30vh;
+  height: 30vh;
+}
+
+#question-count > span {
+  font-size: 15px;
+  display: flex;
+  text-align: center;
+}
+
+#next-question {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+
+  position: absolute;
+  bottom: 35vh;
+  height: 8vh;
+  width: 15vh;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#next-question:active {
+  background-color: rgb(161, 160, 160);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+#results {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+
+  position: absolute;
+  bottom: 9vh;
+  height: 8vh;
+  width: 15vh;
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  bottom: 35vh;
+}
+
+#results:hover {
+  background-color: rgb(161, 160, 160);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+#date {
+  font-size: 1.5rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.user-text {
+  position: absolute;
+  top: 1.5vh;
+  left: 35vh;
+  font-family: "Varela Round", sans-serif;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  box-shadow: inset 0 0 0 0 #9190ae;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+a:hover {
+  box-shadow: inset 100px 100px 0 0 #9190ae;
+  color: white;
+}
+.submit {
+  position: absolute;
+  top: 1.5vh;
+  left: 55vh;
+  font-family: "Varela Round", sans-serif;
+}
+
+.edit {
+  position: absolute;
+  top: 1.5vh;
+  left: 85vh;
+  font-family: "Varela Round", sans-serif;
+}
+
+#input-fields .label {
+  margin-bottom: 0px;
+}

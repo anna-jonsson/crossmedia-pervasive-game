@@ -39,7 +39,7 @@ foreach ($users as $userIndex => $user) {
                     
                 } elseif ($location["checked_in"] == true) {
                     $location["checked_out"] = true;
-                    $location["checked_in"] = false;
+                    
                     
                     // Update the user in the users array
                     $user["locations"][$locationIndex] = $location;

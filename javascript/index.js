@@ -124,7 +124,7 @@ function show_popup() {
   popup.className = "popup";
   popup.innerHTML = `
     <div class="feedbackPopup">
-      <p>Är du säker på att du vill ge upp?</p>
+      <p>Är du säker att du vill ge upp?</p>
       <div class="popup-buttons">
         <button class="popup-confirm">Ja</button>
         <button class="popup-cancel">Nej</button>

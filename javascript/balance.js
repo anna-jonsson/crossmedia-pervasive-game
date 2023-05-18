@@ -1,13 +1,17 @@
 //SHOWING THE CURRENT BALANCE IN HTML for all of the locations
 async function show_current_balance() {
   let users = await get_all_users();
+  let saldo;
 
   users.forEach((user) => {
-    let saldo = user.current_balance;
+    if (user.user_id == localStorage.getItem("user_id")) {
+      console.log(user);
+      saldo = user.current_balance;
+    }
 
     document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
-    
-    document.querySelector("#balance").appendChild(balanceElement);
+
+    // document.querySelector("#balance").appendChild(balanceElement);
   });
   //Deletes the first value in tha array with slice because it's undefined.
   //Then adding all of the values in the array to one with reduce()
@@ -36,22 +40,19 @@ async function add_to_balance(placeName, password) {
   //}
 }
 
-// async function add_custom_balance(placeName, amount) {
-//   //awaits the place_request
-//   let place = await place_request(placeName);
+async function add_custom_balance(placeName, amount) {
 
-//   //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places
+  //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places
+  let password_check = await check_password(placeName, "1234");
 
-//   let placeBalance = (place.current_balance = amount);
-//   let updateObjectBalance = await patch_balance(placeName, placeBalance);
-//   show_current_balance();
-//   //Returns the updatedObjectBalance (place current_balance)
-//   return updateObjectBalance;
-//   // else {
-//   //Sends error incase the input is wrong.
-//   //  user_feedback(400, placeName);
-//   //}
-// }
+  let userId = localStorage.getItem("user_id");
+  //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for all of the places
+  if (password_check === 200) {
+    let updatedBalance = await patch_balance(userId, amount);
+
+    return show_current_balance(), updatedBalance;
+  }
+}
 //DIRECT CODE
 //Running the function to show the current balance all the time.
 show_current_balance();

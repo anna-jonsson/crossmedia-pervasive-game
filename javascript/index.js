@@ -25,8 +25,16 @@ async function fill_content(placeName, div_id, type) {
             <div class='riddle'>
                 <div class='riddleText'>${location.riddle_text}</div>
                 <button class='taskBtn'>Jag har hittat dit!</button>
+                <button class='giveUpBtn'>Jag ger upp</button>
             </div>
         `;
+
+  // Button for giving up and returning to the map
+  let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+    show_popup(function () {
+      show_map();
+      });
+  });
 
     //Button for showing the task text with the type (password, checkbox etc.)
     let btnTask = document.querySelector(".taskBtn").addEventListener("click", async function () {
@@ -64,9 +72,15 @@ async function fill_content(placeName, div_id, type) {
                   <div class='taskText'>${location.task_text}</div>
                   <input class='pw_input' type=${type}></input>
                   <button class='pwBtn'>Skicka svar</button>
+                  <button class='giveUpBtn'>Jag ger upp</button>
               </div>
               `;
-
+  // Button for giving up and returning to the map
+  let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+    show_popup(function () {
+      show_map();
+      });
+  });
         if (placeName != "knarkrondellen") {
           //Checking that the password for the task is correct with funciton check_password.
           let btnPassword = document.querySelector(".pwBtn");
@@ -103,6 +117,34 @@ async function fill_content(placeName, div_id, type) {
       }
     });
   });
+}
+
+function show_popup() {
+  let popup = document.createElement("div");
+  popup.className = "popup";
+  popup.innerHTML = `
+    <div class="feedbackPopup">
+      <p>Är du säker på att du vill ge upp?</p>
+      <div class="popup-buttons">
+        <button class="popup-confirm">Ja</button>
+        <button class="popup-cancel">Nej</button>
+      </div>
+    </div>
+  `;
+
+  let confirmBtn = popup.querySelector(".popup-confirm");
+  let cancelBtn = popup.querySelector(".popup-cancel");
+
+  confirmBtn.addEventListener("click", function () {
+    popup.remove();
+    show_map()
+  });
+
+  cancelBtn.addEventListener("click", function () {
+    popup.remove();
+  });
+
+  document.body.appendChild(popup);
 }
 
 //Function for user feedback based on the response status connected to the location name.

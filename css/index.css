@@ -293,3 +293,9 @@ button:active {
   height: 600px;
   width: 400px;
 }
+
+.giveUpBtn {
+  position: fixed;
+top: 2%;
+right: 31%;
+}

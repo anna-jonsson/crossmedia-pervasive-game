@@ -3,7 +3,7 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 23900,
+        "current_balance": 28900,
         "locations": [
             {
                 "location_name": "introduction",
@@ -17,8 +17,8 @@
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "m\u00f6llan",
@@ -31,9 +31,9 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
-                "checked_in": false,
-                "checked_out": false
+                "location_name": "folkets park",
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "magisterparken",
@@ -75,7 +75,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -124,7 +124,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -168,7 +168,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -217,7 +217,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -261,7 +261,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -310,7 +310,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -354,7 +354,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -403,7 +403,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -447,7 +447,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -496,7 +496,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -540,7 +540,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",
@@ -589,7 +589,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
@@ -633,7 +633,7 @@
                 "incorrectAnswer3": "En klocka"
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
                 "correctAnswer": "Turning Torso",
                 "incorrectAnswer1": "\u00d6resundsbron",

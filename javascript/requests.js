@@ -65,14 +65,13 @@ async function check_password(placeName, password) {
 
 //PATCH
 //CHECKING IN
-async function checked_in(userId, placeName, checked_status) {
-  // let userID = localStorage.getItem("user_id");
+async function checked_in(userID, placeName, checked_status) {
   const checked_in_request = new Request("../php/checked_in_out.php");
   const checked_in_resp = await fetch(checked_in_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      user_id: userId,
+      user_id: userID,
       location_name: placeName,
       checked_in: checked_status,
     }),
@@ -82,14 +81,13 @@ async function checked_in(userId, placeName, checked_status) {
 }
 
 //CHECKING OUT
-async function checked_out(userId, placeName, checked_status) {
-  // let userID = localStorage.getItem("user_id");
+async function checked_out(userID, placeName, checked_status) {
   const checked_out_request = new Request("../php/checked_in_out.php");
   const checked_out_resp = await fetch(checked_out_request, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      user_id: userId,
+      user_id: userID,
       location_name: placeName,
       checked_out: checked_status,
     }),

@@ -7,37 +7,37 @@
         "locations": [
             {
                 "location_name": "introduction",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "triangeln",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "folkets_park",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "magisterparken",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             }
         ],

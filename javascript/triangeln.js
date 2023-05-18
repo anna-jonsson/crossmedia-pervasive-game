@@ -222,7 +222,7 @@ function init_snake_game() {
 
     updateFoodPosition();
     setIntervalId = setInterval(initGame, t);
-    countDown("countdown", 2, 30, setIntervalId, highScoreElement);
+    countDown("countdown", 0, 10, setIntervalId, highScoreElement);
     document.addEventListener("keyup", changeDirection);
 };
 

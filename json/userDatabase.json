@@ -36,7 +36,7 @@
                 "checked_out": true
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": true,
                 "checked_out": false
             }
@@ -80,7 +80,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }
@@ -123,7 +123,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }
@@ -166,7 +166,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }
@@ -209,7 +209,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }
@@ -252,7 +252,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }
@@ -295,7 +295,7 @@
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
             }

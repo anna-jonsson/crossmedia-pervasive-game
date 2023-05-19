@@ -50,7 +50,7 @@ async function startpage(userId, placeName, div_id, response) {
           if (response != 200) {
             user_feedback(passwordCheck, placeName);
           } else {
-            show_current_balance(); // Show balance after successful login
+            await show_current_balance(); // Show balance after successful login
             await show_map();
           }
         });
@@ -61,6 +61,7 @@ async function startpage(userId, placeName, div_id, response) {
   });
 
   if (localStorage.getItem("friisgatan") != null) {
+    await show_map();
     localStorage.removeItem("friisgatan");
   }
 }

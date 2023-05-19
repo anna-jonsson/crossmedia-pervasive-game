@@ -2,6 +2,7 @@
 // re-useable fn to fill content with
 async function startpage(userId, placeName, div_id, response) {
   let balance = document.getElementById("balance");
+
   balance.style.display = "none";
   let location = await place_request(placeName);
   let wrapper = document.getElementById(div_id);
@@ -61,6 +62,7 @@ async function startpage(userId, placeName, div_id, response) {
   });
 
   if (localStorage.getItem("friisgatan") != null) {
+    balance.style.display = "flex";
     await show_map();
     localStorage.removeItem("friisgatan");
   }

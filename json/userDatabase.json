@@ -3,7 +3,7 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 28900,
+        "current_balance": 30900,
         "locations": [
             {
                 "location_name": "introduction",
@@ -23,12 +23,12 @@
             {
                 "location_name": "m\u00f6llan",
                 "checked_in": true,
-                "checked_out": false
+                "checked_out": true
             },
             {
                 "location_name": "friisgatan",
                 "checked_in": true,
-                "checked_out": false
+                "checked_out": true
             },
             {
                 "location_name": "folkets park",
@@ -38,7 +38,7 @@
             {
                 "location_name": "magisterparken",
                 "checked_in": true,
-                "checked_out": false
+                "checked_out": true
             }
         ],
         "finale": [

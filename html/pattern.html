@@ -88,10 +88,10 @@
             let passwordCheck = await check_password("friisgatan", correctData);
 
             checked_out(userID, "friisgatan", true);
-            await add_to_balance("friisgatan", correctData);
-            await show_current_balance();
             document.getElementById("balance").style.display = "flex";
             async function back() {
+              await add_to_balance("friisgatan", correctData);
+              await show_current_balance();
               window.location.href = "../html/index.html";
             }
 

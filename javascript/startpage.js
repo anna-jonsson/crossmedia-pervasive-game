@@ -1,7 +1,6 @@
 // fill_content('introduction', 'mainContent', 'text')
 // re-useable fn to fill content with
 async function startpage(userId, placeName, div_id, response) {
-  localStorage.clear();
   let balance = document.getElementById("balance");
 
   balance.style.display = "none";

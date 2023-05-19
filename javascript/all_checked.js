@@ -54,7 +54,11 @@ async function finalPin(parent) {
   parent.append(div);
 
   document.querySelector("#pin_final").addEventListener("click", async function () {
-    ////F-----------------FINALE CODE HERE!----------
+    //-----------------FINALE CODE HERE!---------------------
+
+    window.location.href = "../html/final.html";
+
+    //-----------------FINALE CODE HERE!---------------------
   });
 }
 

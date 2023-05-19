@@ -1,6 +1,7 @@
 // fill_content('introduction', 'mainContent', 'text')
 // re-useable fn to fill content with
 async function startpage(userId, placeName, div_id, response) {
+  localStorage.clear();
   let balance = document.getElementById("balance");
 
   balance.style.display = "none";
@@ -29,6 +30,7 @@ async function startpage(userId, placeName, div_id, response) {
 
     if (logInCheck == 200) {
       balance.style.display = "flex";
+      await show_current_balance();
       wrapper.innerHTML = `
         <div class='location'>
         <div class='locationText'>${location.intro_text}</div>

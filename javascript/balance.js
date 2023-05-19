@@ -1,12 +1,13 @@
 //SHOWING THE CURRENT BALANCE IN HTML for all of the locations
 async function show_current_balance() {
+  let userID = localStorage.getItem("user_id");
   let users = await get_all_users();
   let saldo;
 
   users.forEach((user) => {
-    if (user.user_id == localStorage.getItem("user_id")) {
+    if (user.user_id == userID) {
       saldo = user.current_balance;
-      return (document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr");
+      document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
     }
 
     // document.querySelector("#balance").appendChild(balanceElement);

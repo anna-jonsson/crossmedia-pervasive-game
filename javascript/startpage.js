@@ -28,7 +28,7 @@ async function startpage(userId, placeName, div_id, response) {
     let logInCheck = await logIn_request(username, logIn_PW);
 
     if (logInCheck == 200) {
-      balance.style.display = "inline";
+      balance.style.display = "flex";
       wrapper.innerHTML = `
         <div class='location'>
         <div class='locationText'>${location.intro_text}</div>

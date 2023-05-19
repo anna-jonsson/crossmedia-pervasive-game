@@ -202,12 +202,12 @@ body {
   color: var(--white);
 }
 
-#finalWrapper {
+#endWrapper {
   background-color: #543e3e7a;
   padding: 10%;
 }
 
-#finalWrapper > p,
+#endWrapper > p,
 button,
 h2 {
   padding: 5%;
@@ -222,6 +222,10 @@ h2 {
 #scoreWrapper > ol {
   margin: 3%;
   padding: 2%;
+}
+
+#endWrapper > button {
+  margin: 3%;
 }
 
 .feedbackPopup {

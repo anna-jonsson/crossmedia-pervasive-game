@@ -46,7 +46,7 @@
         "user_id": 1,
         "username": "Hyperlund",
         "password": "vattenflaska11",
-        "current_balance": 4000,
+        "current_balance": 6300,
         "locations": [
             {
                 "location_name": "introduction",
@@ -55,13 +55,13 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "m\u00f6llan",
@@ -75,8 +75,8 @@
             },
             {
                 "location_name": "folkets park",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "magistratsparken",

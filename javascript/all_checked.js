@@ -52,6 +52,61 @@ async function finalPin(parent) {
       `;
 
   parent.append(div);
+
+  document.querySelector("#pin_final").addEventListener("click", async function () {
+    await showFinale();
+  });
 }
 
 //Direct code - this will run all the time
+
+async function showFinale() {
+  let wrapper = document.querySelector("#mainContent");
+  wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
+  wrapper.style.backgroundSize = "cover";
+  wrapper.style.width = "400px";
+  wrapper.style.height = "600px";
+  wrapper.innerHTML = `
+  <div id ="finalWrapper" class='locationText logInWrapper'>
+  <h2>BRA SPELAT!</h2>
+  <p>Klicka på knappen för att se hur ni ligger till.</p>
+  <button class='score_button'>SCOREBOARD</button>
+  </div>
+  `;
+
+  document.querySelector(".score_button").addEventListener("click", async function () {
+    //SCOREBOARD FUNCTION
+    await scoreBoard();
+  });
+}
+
+async function scoreBoard() {
+  let userID = localStorage.getItem("user_id");
+  let allUsers = await get_all_users();
+  let wrapper = document.querySelector("#mainContent");
+  wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
+  wrapper.style.backgroundSize = "cover";
+  wrapper.style.width = "400px";
+  wrapper.style.height = "600px";
+  wrapper.innerHTML = `
+  <div id ="scoreWrapper" class='locationText logInWrapper'>
+  <h2>SCOREBOARD</h2>
+  <ol type = "1"></ol>
+  <button class='exit_button'>Exit</button>
+  </div>
+  `;
+  allUsers.forEach((user) => {
+    // list.innerHTML = `
+    //     <li>${user.current_balance}</li>
+    // `;
+
+    let item = document.createElement("li");
+    item.innerHTML = `
+    <div><h4> Team: ${user.username}   Score: ${user.current_balance}<h4>
+    </div>
+    `;
+
+    // item.innerHTML = user.current_balance;
+    document.querySelector("ol").append(item);
+  });
+}

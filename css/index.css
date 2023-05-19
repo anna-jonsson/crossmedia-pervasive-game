@@ -202,6 +202,28 @@ body {
   color: var(--white);
 }
 
+#finalWrapper {
+  background-color: #543e3e7a;
+  padding: 10%;
+}
+
+#finalWrapper > p,
+button,
+h2 {
+  padding: 5%;
+}
+
+#scoreWrapper {
+  background-color: #543e3e7a;
+  padding: 10%;
+  width: 90%;
+}
+
+#scoreWrapper > ol {
+  margin: 3%;
+  padding: 2%;
+}
+
 .feedbackPopup {
   font-size: smaller;
   position: fixed;

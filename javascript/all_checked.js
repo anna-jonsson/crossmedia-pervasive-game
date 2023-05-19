@@ -22,27 +22,26 @@ async function allChecked() {
       });
   });
 
-  //Checks so that the array lengh is 7 (all values checked_in = true)
+  //Checks so that the array lengh is 6 (all values checked_in = true) OBS the
+  //checked in and out on introduction doesnt change thats why its 6 and not 7
   if (checked_in_locations.length === 6) {
-    //Here the code to enter the  final will run
-    //-----------------FINAL CODE HERE-----------------------
+    //Awaits the pin for the final and appending it to mainContent
     await finalPin(document.querySelector("#mainContent"));
     console.log("klart välkommen till finalen");
   } else {
-    //Returns nothing /does nothing . maybe delete the else
+    //Returns nothing /does nothing .
     console.log("du är inte klar ännu, utan måste checka in på alla platser för att nå finalen.");
   }
   //Returns the array of checked_in status
   return checked_in_locations;
 }
 
+//Creates the extra pin for the finale when all of the places are checked in
 async function finalPin(parent) {
   let div = document.createElement("div");
   div.classList.add("pin");
-  // if (placeName.includes("_")) {
-  //   ;
-  // }
 
+  //HTML for the finale pin
   let placeName = "FINAL";
   div.innerHTML = `
           <div id='pin_final' class='location_pin' >
@@ -50,20 +49,24 @@ async function finalPin(parent) {
               <p>${placeName} </p>
           </div>
       `;
-
+  //Appending it to parent (maminContent) when calling it.
   parent.append(div);
 
+  //Adds event to the pin
   document.querySelector("#pin_final").addEventListener("click", async function () {
     //-----------------FINALE CODE HERE!---------------------
-
+    //When clicking - goes to the final page in html
     window.location.href = "../html/final.html";
 
     //-----------------FINALE CODE HERE!---------------------
   });
 }
 
-//RUN THIS WHEN THE GAME IS OVER TO GET TO THE "BRA SPELAT";
+//RUN THIS WHEN THE GAME IS OVER TO GET TO THE "BRA SPELAT" in the end of the final
+
+//Creates the page for the end
 async function endGame() {
+  //HTML for the last page after the final
   let wrapper = document.querySelector("#mainContent");
   wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
   wrapper.style.backgroundSize = "cover";
@@ -77,15 +80,18 @@ async function endGame() {
   </div>
   `;
 
+  //Score button event
   document.querySelector(".score_button").addEventListener("click", async function () {
     //SCOREBOARD FUNCTION
     await scoreBoard();
   });
 }
 
+//Function for the scoreboard
 async function scoreBoard() {
-  let userID = localStorage.getItem("user_id");
+  //awaits all the users
   let allUsers = await get_all_users();
+  //HTML for the list
   let wrapper = document.querySelector("#mainContent");
   wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
   wrapper.style.backgroundSize = "cover";
@@ -100,18 +106,15 @@ async function scoreBoard() {
   
   </div>
   `;
+  //Loops the users and adds the name + score /current balance to an li element
   allUsers.forEach((user) => {
-    // list.innerHTML = `
-    //     <li>${user.current_balance}</li>
-    // `;
-
     let item = document.createElement("li");
     item.innerHTML = `
     <div><h4> Team: ${user.username}   Score: ${user.current_balance}<h4>
     </div>
     `;
 
-    // item.innerHTML = user.current_balance;
+    ///Appends it to parent (ol)
     document.querySelector("ol").append(item);
   });
 }

@@ -5,11 +5,9 @@ async function show_current_balance() {
 
   users.forEach((user) => {
     if (user.user_id == localStorage.getItem("user_id")) {
-      console.log(user);
       saldo = user.current_balance;
+      return (document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr");
     }
-
-    document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
 
     // document.querySelector("#balance").appendChild(balanceElement);
   });

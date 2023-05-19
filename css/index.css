@@ -155,8 +155,9 @@ body {
   position: absolute;
   width: 30px;
   height: auto;
-  top: 6%;
-  left: 60%;
+  top: 5%;
+  left: 58%;
+  width: 18%;
 }
 
 #pin_friisgatan {
@@ -296,6 +297,6 @@ button:active {
 
 .giveUpBtn {
   position: fixed;
-top: 2%;
-right: 31%;
+  top: 2%;
+  right: 31%;
 }

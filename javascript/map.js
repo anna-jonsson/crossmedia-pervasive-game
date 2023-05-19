@@ -13,7 +13,7 @@ async function createPin(placeName, parent, state) {
   //   ;
   // }
   div.innerHTML = `
-        <div id='pin_${placeName}' class='location_pin'>
+        <div id='pin_${placeName.replace(" ", "_")}' class='location_pin'>
             <img class='pin_img' src='../images/pin.png'>
             <p>${placeName.replace("_", " ")}</p>
         </div>

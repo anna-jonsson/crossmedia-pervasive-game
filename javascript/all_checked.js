@@ -23,10 +23,10 @@ async function allChecked() {
   });
 
   //Checks so that the array lengh is 7 (all values checked_in = true)
-  if (checked_in_locations.length === 7) {
+  if (checked_in_locations.length === 6) {
     //Here the code to enter the  final will run
     //-----------------FINAL CODE HERE-----------------------
-
+    await finalPin(document.querySelector("#mainContent"));
     console.log("klart välkommen till finalen");
   } else {
     //Returns nothing /does nothing . maybe delete the else
@@ -43,11 +43,11 @@ async function finalPin(parent) {
   //   ;
   // }
 
-  let placeName = "Final!";
+  let placeName = "FINAL";
   div.innerHTML = `
           <div id='pin_final' class='location_pin' >
               <img class='pin_img' src='../images/pin.png'>
-              <p>${placeName}</p>
+              <p>${placeName} </p>
           </div>
       `;
 

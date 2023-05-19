@@ -45,6 +45,7 @@ body {
 
 .pin_img.done {
   filter: grayscale(0.9);
+  height: 30px;
 }
 
 .location {
@@ -182,6 +183,23 @@ body {
   height: auto;
   top: 75%;
   left: 38%;
+}
+
+#pin_final {
+  position: absolute;
+  top: 50%;
+  background: rgba(62, 84, 84, 0.8);
+  padding: 5%;
+  border-radius: 5%;
+}
+
+#pin_final > img {
+  height: 50px;
+}
+
+#pin_final > p {
+  font-size: large;
+  color: var(--white);
 }
 
 .feedbackPopup {

@@ -2,6 +2,9 @@
 async function show_map() {
   // add bg image in css using id #map
   await get_all_locations();
+  (async () => {
+    await allChecked();
+  })();
 }
 
 //Function for creating the pins on the map and eventListners   on the pins

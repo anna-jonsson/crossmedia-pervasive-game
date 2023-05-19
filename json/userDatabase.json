@@ -41,13 +41,12 @@
                 "checked_out": true
             }
         ]
-       
     },
     {
         "user_id": 1,
         "username": "Hyperlund",
         "password": "vattenflaska11",
-        "current_balance": 1000,
+        "current_balance": 2000,
         "locations": [
             {
                 "location_name": "introduction",
@@ -66,8 +65,8 @@
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "friisgatan",
@@ -84,7 +83,7 @@
                 "checked_in": false,
                 "checked_out": false
             }
-        ] 
+        ]
     },
     {
         "user_id": 2,

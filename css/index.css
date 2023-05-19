@@ -140,7 +140,7 @@ body {
   width: 30px;
   height: auto;
   top: 17%;
-  left: 84%;
+  left: 82%;
 }
 
 #pin_möllan {
@@ -148,7 +148,7 @@ body {
   width: 30px;
   height: auto;
   top: 35%;
-  left: 90%;
+  left: 85%;
 }
 
 #pin_folkets_park {
@@ -168,12 +168,12 @@ body {
   left: 37%;
 }
 
-#pin_magisterparken {
+#pin_magistratsparken {
   position: absolute;
   width: 30px;
   height: auto;
   top: 88%;
-  left: 10%;
+  left: 16%;
 }
 
 #pin_triangeln {

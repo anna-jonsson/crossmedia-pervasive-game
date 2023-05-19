@@ -36,9 +36,9 @@
     },
     {
         "id": 6,
-        "password": "SKA L\u00c4GGAS TILL!",
-        "location_name": "magistratsrparken",
-        "intro_text": "V\u00e4lkommen till Magisterparken!",
+        "password": "kobolt",
+        "location_name": "magistratsparken",
+        "intro_text": "V\u00e4lkommen till Magistratsparken!",
         "riddle_text": "\u00d6ver 100 \u00e5r gammal jag \u00e4r. Rotad jag alltid st\u00e5r h\u00e4r. Kring mig flockas m\u00e5nga underliga ting. Ta en titt och se er omkring",
         "task_text": "\u201cHidden in plain sight\u201d. Hitta de g\u00f6mda objekten som alla har en bokstav p\u00e5 sig. Anv\u00e4nd bokst\u00e4verna till att sammanst\u00e4lla l\u00f6senordet.",
         "background_picture": ".\/images\/213"
@@ -58,7 +58,7 @@
         "id": 4,
         "password": "67510",
         "location_name": "friisgatan",
-        "intro_text": "V\u00e4lkommen till Friisgatan!",
+        "intro_text": "V\u00e4lkommen till Friis Sommargata!",
         "riddle_text": "P\u00e5 denna plats hittas v\u00e5r allas King of rock.I formen han var, \u00e4r inte fallet dock. Ligger i marken de numera b\u00e5da g\u00f6r.Lyfta blicken ni d\u00e4rf\u00f6r inte b\u00f6r.",
         "task_text": "Anv\u00e4nda en analog mall f\u00f6r att hitta \u201cC\u201d p\u00e5 mosaik-objektets tr\u00f6ja. C-et \u00e4r sedan den r\u00f6relsen som beh\u00f6ver utf\u00f6ras p\u00e5 lock-upen.",
         "background_picture": ".\/images\/213",

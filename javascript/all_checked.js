@@ -54,20 +54,19 @@ async function finalPin(parent) {
   parent.append(div);
 
   document.querySelector("#pin_final").addEventListener("click", async function () {
-    await showFinale();
+    ////F-----------------FINALE CODE HERE!----------
   });
 }
 
-//Direct code - this will run all the time
-
-async function showFinale() {
+//RUN THIS WHEN THE GAME IS OVER TO GET TO THE "BRA SPELAT";
+async function endGame() {
   let wrapper = document.querySelector("#mainContent");
   wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
   wrapper.style.backgroundSize = "cover";
   wrapper.style.width = "400px";
   wrapper.style.height = "600px";
   wrapper.innerHTML = `
-  <div id ="finalWrapper" class='locationText logInWrapper'>
+  <div id ="endWrapper" class='locationText logInWrapper'>
   <h2>BRA SPELAT!</h2>
   <p>Klicka på knappen för att se hur ni ligger till.</p>
   <button class='score_button'>SCOREBOARD</button>
@@ -93,6 +92,8 @@ async function scoreBoard() {
   <h2>SCOREBOARD</h2>
   <ol type = "1"></ol>
   <button class='exit_button'>Exit</button>
+
+  
   </div>
   `;
   allUsers.forEach((user) => {

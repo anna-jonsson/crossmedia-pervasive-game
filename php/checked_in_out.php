@@ -57,10 +57,10 @@ foreach ($users as $userIndex => $user) {
             $error = ["error" => "Required parameters ('Checked in' OR 'Checked out') are not set OR 'Location_name' does not match."];
             sendJSON($error, 400);
         }
-        $error = ["error" => "User not found"];
-        sendJSON($error, 404);
+        
     }
-
+    $error = ["error" => "User not found"];
+    sendJSON($error, 404);
 
 ?>
 

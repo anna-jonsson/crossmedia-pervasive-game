@@ -5,7 +5,9 @@
         "correctAnswer": "6",
         "incorrectAnswer1": "8",
         "incorrectAnswer2": "5",
-        "incorrectAnswer3": "10"
+        "incorrectAnswer3": "10",
+        "incorrectAnswer4": "3",
+        "incorrectAnswer5": "4"
     },
 
     {
@@ -14,7 +16,9 @@
         "correctAnswer": "En lyktstolpe",
         "incorrectAnswer1": "En fontän",
         "incorrectAnswer2": "En staty",
-        "incorrectAnswer3": "Ingenting"
+        "incorrectAnswer3": "Ingenting",
+        "incorrectAnswer4": "Körsbärsträd",
+        "incorrectAnswer5": "En skylt"
     },
     {
         "location_name": "triangeln",
@@ -22,7 +26,9 @@
         "correctAnswer": "Åka skateboard",
         "incorrectAnswer1": "Åka scooter",
         "incorrectAnswer2": "Ta med en ballong ner",
-        "incorrectAnswer3": "Ha hunden lös"
+        "incorrectAnswer3": "Ha hunden lös",
+        "incorrectAnswer4": "Sparka boll",
+        "incorrectAnswer5": "Dricka alkohol"
     },
     {
         "location_name": "friisgatan",
@@ -30,7 +36,9 @@
         "correctAnswer": "Glasögon",
         "incorrectAnswer1": "Ett halsband",
         "incorrectAnswer2": "En hatt",
-        "incorrectAnswer3": "En klocka"
+        "incorrectAnswer3": "En klocka",
+        "incorrectAnswer4": "Hörlurar",
+        "incorrectAnswer5": "Armband"
     },
     {
         "location_name": "folkets_park",
@@ -38,7 +46,9 @@
         "correctAnswer": "Turning Torso",
         "incorrectAnswer1": "Öresundsbron",
         "incorrectAnswer2": "Malmö Arena",
-        "incorrectAnswer3": "Ribbersborgs kallbadhus"
+        "incorrectAnswer3": "Ribbersborgs kallbadhus",
+        "incorrectAnswer4": "Vattentornet",
+        "incorrectAnswer5": "Kronprinsen"
 
     },
      {
@@ -47,6 +57,8 @@
         "correctAnswer": "",
         "incorrectAnswer1": "",
         "incorrectAnswer2": "",
-        "incorrectAnswer3": ""
+        "incorrectAnswer3": "",
+        "incorrectAnswer4": "3",
+        "incorrectAnswer5": "4"
     }
 ]

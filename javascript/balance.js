@@ -24,7 +24,7 @@ async function add_to_balance(placeName, password) {
   //If the response is OK (200) the place(current_balance) will add the new sum to the objecs, and alo updates the current_balance for the user
   if (password_check === 200) {
     //Added sum - IS GOING TO CHANGE TO AN HIGHGER SUM
-    let addedSum = 1000;
+    let addedSum = 5000;
     //updated balance with the userId and the addedSum
     let updatedBalance = await patch_balance(userId, addedSum);
     //returns the current_balance and updated balance

@@ -18,12 +18,12 @@
     },
     {
         "id": 3,
-        "password": "morot",
+        "password": "hjälm",
         "location_name": "m\u00f6llan",
-        "intro_text": "V\u00e4lkommen till M\u00f6llev\u00e5ngstorget",
+        "intro_text": "Möllevångstorget är en samlingsplats där människor från hela Malmö möts och är en av de livligaste platserna i Malmö. Här finns det säkert möjlighet att sälja något för att tjäna in pengar!",
         "riddle_text": "Vi st\u00e5r h\u00e4r \u00e5r efter \u00e5r i alla v\u00e4der utan att r\u00f6ra en fena, vi har f\u00f6tter kn\u00e4n t\u00e5r och l\u00e5r men vi r\u00f6r \u00e4nd\u00e5 aldrig p\u00e5 bena.",
         "task_text": "L\u00f6s Wordle f\u00f6r att s\u00e4lja s\u00e5 m\u00e5nga gr\u00f6nsaker och frukter som m\u00f6jligt.",
-        "background_picture": ".\/images\/213"
+        "background_picture": "../images/möllan.png"
     },
     {
         "id": 5,

@@ -1,22 +1,13 @@
-const realDictionary = [
-  "gurka",
-  "morot",
-  "pumpa",
-  "tomat",
-  "guava",
-  "dadel",
-  "fikon",
-  "banan",
-  "mango",
-  "äpple",
-  "päron",
-  "melon",
-  "mmmmm"
-];
+
+
+
+
 
 const dictionary = realDictionary;
+const filteredWords = dictionary.filter(word => !word.includes("-"));
+const fiveLetterWords = filteredWords.filter(word => word.length === 5);
 const state = {
-  secret: dictionary[1],
+  secret: fiveLetterWords[1348],
   grid: Array(6)
     .fill()
     .map(() => Array(2).fill("")),
@@ -77,7 +68,7 @@ function registerKeyboardEvents() {
           state.currentRow++;
           state.currentCol = 0;
         } else {
-          alert("Not a valid word.");
+          alert("Ordet finns inte med i ordlistan");
         }
       }
     }
@@ -264,3 +255,5 @@ function startup() {
 function test() {
   document.querySelector(".first-row > button:nth-child(1)").addEventListener;
 }
+
+console.log(fiveLetterWords);

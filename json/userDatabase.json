@@ -161,8 +161,8 @@
             },
             {
                 "location_name": "folkets park",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "magistratsparken",

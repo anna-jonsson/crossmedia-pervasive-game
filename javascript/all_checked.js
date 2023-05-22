@@ -67,17 +67,18 @@ async function finalPin(parent) {
 //Creates the page for the end
 async function endGame() {
   //HTML for the last page after the final
-  let wrapper = document.querySelector("#mainContent");
+  let wrapper = document.querySelector("#info-quiz");
+  wrapper.classList.add('final-scoreboard');
   wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
   wrapper.style.backgroundSize = "cover";
   wrapper.style.width = "400px";
   wrapper.style.height = "600px";
   wrapper.innerHTML = `
-  <div id ="endWrapper" class='locationText logInWrapper'>
-  <h2>BRA SPELAT!</h2>
-  <p>Klicka på knappen för att se hur ni ligger till.</p>
-  <button class='score_button'>SCOREBOARD</button>
-  </div>
+    <div id ="endWrapper" class='locationText logInWrapper'>
+      <h2>BRA SPELAT!</h2>
+      <p>Klicka på knappen för att se hur ni ligger till.</p>
+      <button class='score_button'>SCOREBOARD</button>
+    </div>
   `;
 
   //Score button event
@@ -92,7 +93,8 @@ async function scoreBoard() {
   //awaits all the users
   let allUsers = await get_all_users();
   //HTML for the list
-  let wrapper = document.querySelector("#mainContent");
+  // let wrapper = document.querySelector("#mainContent");
+  let wrapper = document.querySelector("#info-quiz");
   wrapper.style.backgroundImage = `url(../images/startpage.jpeg)`;
   wrapper.style.backgroundSize = "cover";
   wrapper.style.width = "400px";
@@ -102,8 +104,6 @@ async function scoreBoard() {
   <h2>SCOREBOARD</h2>
   <ol type = "1"></ol>
   <button class='exit_button'>Exit</button>
-
-  
   </div>
   `;
   //Loops the users and adds the name + score /current balance to an li element

@@ -237,7 +237,7 @@ function playQuiz() {
           infoQuiz.classList.add('customBg');
           console.log(userScore + " hej");
           try {
-            await add_custom_balance_final(userScore * 1000);
+            await add_custom_balance_final(userScore * 10000);
             console.log(userScore + " yte");
             const saldo = await get_current_balance();
             let saldo2 = parseInt(saldo);

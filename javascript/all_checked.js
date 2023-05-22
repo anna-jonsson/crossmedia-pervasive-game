@@ -92,6 +92,8 @@ async function endGame() {
 async function scoreBoard() {
   //awaits all the users
   let allUsers = await get_all_users();
+
+  allUsers.sort((a, b) => b.current_balance - a.current_balance);
   //HTML for the list
   // let wrapper = document.querySelector("#mainContent");
   let wrapper = document.querySelector("#info-quiz");

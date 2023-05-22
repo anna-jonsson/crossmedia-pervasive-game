@@ -2,6 +2,10 @@
 async function show_map() {
   // add bg image in css using id #map
   await get_all_locations();
+  //Checked in for all places runs everytime the show map is called to check that the locations are done and the user is allowed to enter the final
+  (async () => {
+    await allChecked();
+  })();
 }
 
 //Function for creating the pins on the map and eventListners   on the pins
@@ -9,11 +13,9 @@ async function show_map() {
 async function createPin(placeName, parent, state) {
   let div = document.createElement("div");
   div.classList.add("pin");
-  // if (placeName.includes("_")) {
-  //   ;
-  // }
+
   div.innerHTML = `
-        <div id='pin_${placeName}' class='location_pin'>
+        <div id='pin_${placeName.replace(" ", "_")}' class='location_pin'>
             <img class='pin_img' src='../images/pin.png'>
             <p>${placeName.replace("_", " ")}</p>
         </div>
@@ -39,8 +41,7 @@ async function get_all_locations() {
 
   mainContent.style.backgroundPositionX = "-17px";
   mainContent.style.backgroundPositionY = "-20px";
-  //<img  src = "../images/Map3.png">
-  // let all_places = await all_places_request();
+
   let user_id = localStorage.getItem("user_id");
   let user = await get_one_user(user_id);
 
@@ -111,10 +112,4 @@ function create_pop_up(placeName, parent) {
   document.querySelector(".background").addEventListener("click", function () {
     overlay.style.display = "none";
   });
-
-  // window.onclick = function (event) {
-  //   if (event.target == document.querySelector("#main")) {
-  //     overlay.style.display = "none";
-  //   }
-  // };
 }

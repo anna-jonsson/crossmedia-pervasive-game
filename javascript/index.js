@@ -25,8 +25,40 @@ async function fill_content(placeName, div_id, type) {
             <div class='riddle'>
                 <div class='riddleText'>${location.riddle_text}</div>
                 <button class='taskBtn'>Jag har hittat dit!</button>
+                <button class='giveUpBtn'>Jag ger upp</button>
             </div>
         `;
+
+    // Button for giving up and returning to the map
+    let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+      let popup = document.createElement("div");
+      popup.className = "popup";
+      popup.innerHTML = `
+      <div class="feedbackPopup">
+        <p>Är du säker att du vill ge upp?</p>
+        <div class="popup-buttons">
+          <button class="popup-confirm">Ja</button>
+          <button class="popup-cancel">Nej</button>
+        </div>
+      </div>
+    `;
+
+      let confirmBtn = popup.querySelector(".popup-confirm");
+      let cancelBtn = popup.querySelector(".popup-cancel");
+
+      confirmBtn.addEventListener("click", function () {
+        popup.remove();
+        let userId = localStorage.getItem("user_id");
+        checked_out(userId, placeName, true);
+        show_map();
+      });
+
+      cancelBtn.addEventListener("click", function () {
+        popup.remove();
+      });
+
+      document.body.appendChild(popup);
+    });
 
     //Button for showing the task text with the type (password, checkbox etc.)
     let btnTask = document.querySelector(".taskBtn").addEventListener("click", async function () {
@@ -44,10 +76,6 @@ async function fill_content(placeName, div_id, type) {
 
           document.getElementById("game").style.flexDirection = "column-reverse";
 
-          // document.getElementById("game").innerHTML =`
-          // <h1>Hej</h1>
-          // `;
-
           const boxes = document.querySelectorAll(".box");
           boxes.forEach((box) => {
             box.style.visibility = "visible";
@@ -64,8 +92,39 @@ async function fill_content(placeName, div_id, type) {
                   <div class='taskText'>${location.task_text}</div>
                   <input class='pw_input' type=${type}></input>
                   <button class='pwBtn'>Skicka svar</button>
+                  <button class='giveUpBtn'>Jag ger upp</button>
               </div>
               `;
+        // Button for giving up and returning to the map
+        let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+          let popup = document.createElement("div");
+          popup.className = "popup";
+          popup.innerHTML = `
+      <div class="feedbackPopup">
+        <p>Är du säker att du vill ge upp?</p>
+        <div class="popup-buttons">
+          <button class="popup-confirm">Ja</button>
+          <button class="popup-cancel">Nej</button>
+        </div>
+      </div>
+    `;
+
+          let confirmBtn = popup.querySelector(".popup-confirm");
+          let cancelBtn = popup.querySelector(".popup-cancel");
+
+          confirmBtn.addEventListener("click", function () {
+            popup.remove();
+            let userId = localStorage.getItem("user_id");
+            checked_out(userId, placeName, true);
+            show_map();
+          });
+
+          cancelBtn.addEventListener("click", function () {
+            popup.remove();
+          });
+
+          document.body.appendChild(popup);
+        });
 
         if (placeName != "knarkrondellen") {
           //Checking that the password for the task is correct with funciton check_password.
@@ -111,6 +170,9 @@ function user_feedback(response, location_name) {
   let server_error,
     default_error = "Ooops! Något gick fel, prova igen!";
   let correct_input = "Grattis, ni klarade det!";
+  let triangeln_highscore = `Bra jobbat! Din högsta poäng blev: ${localStorage.getItem(
+    "high-score"
+  )}`;
 
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
   let p = document.createElement("p");
@@ -121,14 +183,18 @@ function user_feedback(response, location_name) {
     startpage("introduction", "mainContent");
   } else {
     newDiv.classList.add("feedbackPopup");
-    p.textContent =
-      response == 200
-        ? correct_input
-        : response == 400
+    if (response == 200 && location_name == "triangeln") {
+      p.textContent = triangeln_highscore;
+    } else {
+      p.textContent =
+        response == 200
+          ? correct_input
+          : response == 400
           ? wrong_input
           : response == 500
-            ? server_error
-            : default_error;
+          ? server_error
+          : default_error;
+    }
   }
 
   if (

@@ -3,7 +3,7 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 22300,
+        "current_balance": 33900,
         "locations": [
             {
                 "location_name": "introduction",
@@ -12,83 +12,33 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
-                "location_name": "folkets_park",
-                "checked_in": false,
-                "checked_out": false
+                "location_name": "folkets park",
+                "checked_in": true,
+                "checked_out": true
             },
             {
-                "location_name": "magisterparken",
-                "checked_in": false,
-                "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
+                "location_name": "magistratsparken",
+                "checked_in": true,
+                "checked_out": true
             }
         ]
     },
@@ -96,7 +46,7 @@
         "user_id": 1,
         "username": "Hyperlund",
         "password": "vattenflaska11",
-        "current_balance": 1000,
+        "current_balance": 6300,
         "locations": [
             {
                 "location_name": "introduction",
@@ -105,89 +55,39 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
-                "location_name": "folkets_park",
-                "checked_in": false,
-                "checked_out": false
+                "location_name": "folkets park",
+                "checked_in": true,
+                "checked_out": true
             },
             {
-                "location_name": "magisterparken",
-                "checked_in": false,
-                "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
+                "location_name": "magistratsparken",
+                "checked_in": true,
+                "checked_out": true
             }
         ]
     },
     {
         "user_id": 2,
-        "username": "stj\u00e4rnberg",
+        "username": "starfighter",
         "password": "dator12",
         "current_balance": 0,
         "locations": [
@@ -217,64 +117,14 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
             }
         ]
     },
@@ -310,64 +160,14 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
             }
         ]
     },
@@ -403,64 +203,14 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
             }
         ]
     },
@@ -496,64 +246,14 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
             }
         ]
     },
@@ -589,64 +289,14 @@
                 "checked_out": false
             },
             {
-                "location_name": "folkets_park",
+                "location_name": "folkets park",
                 "checked_in": false,
                 "checked_out": false
             },
             {
-                "location_name": "magisterparken",
+                "location_name": "magistratsparken",
                 "checked_in": false,
                 "checked_out": false
-            }
-        ],
-        "finale": [
-            {
-                "location_name": "m\u00f6llev\u00e5ngstorget",
-                "question": "Hur m\u00e5nga \u00e4r det som h\u00e5ller upp statyn p\u00e5 m\u00f6llev\u00e5ngstorget?",
-                "correctAnswer": "6",
-                "incorrectAnswer1": "8",
-                "incorrectAnswer2": "5",
-                "incorrectAnswer3": "10"
-            },
-            {
-                "location_name": "knarkrondellen",
-                "question": "Vad \u00e4r det som st\u00e5r i mitten av knarkrondellen?",
-                "correctAnswer": "En lyktstolpe",
-                "incorrectAnswer1": "En font\u00e4n",
-                "incorrectAnswer2": "En staty",
-                "incorrectAnswer3": "Ingenting"
-            },
-            {
-                "location_name": "triangeln",
-                "question": "Enligt f\u00f6rbudsm\u00e4rkena vid Norra Uppg\u00e5ngen: vad f\u00e5r du INTE lov att g\u00f6ra nere p\u00e5 sp\u00e5ret?",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
-            },
-            {
-                "location_name": "friisgatan",
-                "question": "Vilken accessoar bar den andra figuren p\u00e5 mosaikplattan d\u00e4r mallen inte passade?",
-                "correctAnswer": "Glas\u00f6gon",
-                "incorrectAnswer1": "Ett halsband",
-                "incorrectAnswer2": "En hatt",
-                "incorrectAnswer3": "En klocka"
-            },
-            {
-                "location_name": "folkets_park",
-                "question": "Vilket Malm\u00f6monument har h\u00e5l nummer 5?",
-                "correctAnswer": "Turning Torso",
-                "incorrectAnswer1": "\u00d6resundsbron",
-                "incorrectAnswer2": "Malm\u00f6 Arena",
-                "incorrectAnswer3": "Ribbersborgs kallbadhus"
-            },
-            {
-                "location_name": "magisterparken",
-                "question": "Inte lagt till n\u00e5got \u00e4nnu!",
-                "correctAnswer": "",
-                "incorrectAnswer1": "",
-                "incorrectAnswer2": "",
-                "incorrectAnswer3": ""
             }
         ]
     }

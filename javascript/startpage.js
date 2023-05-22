@@ -1,8 +1,9 @@
 // fill_content('introduction', 'mainContent', 'text')
 // re-useable fn to fill content with
 async function startpage(userId, placeName, div_id, response) {
-  let balance = document.getElementById("balance")
-balance.style.display = "none"
+  let balance = document.getElementById("balance");
+
+  balance.style.display = "none";
   let location = await place_request(placeName);
   let wrapper = document.getElementById(div_id);
   wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
@@ -27,8 +28,8 @@ balance.style.display = "none"
     let logInCheck = await logIn_request(username, logIn_PW);
 
     if (logInCheck == 200) {
-      
- balance.style.display = "inline" 
+      balance.style.display = "flex";
+      await show_current_balance();
       wrapper.innerHTML = `
         <div class='location'>
         <div class='locationText'>${location.intro_text}</div>
@@ -50,21 +51,22 @@ balance.style.display = "none"
 
           if (response != 200) {
             user_feedback(passwordCheck, placeName);
-          }else {
-            show_current_balance(); // Show balance after successful login
+          } else {
+            await show_current_balance(); // Show balance after successful login
+            await show_map();
           }
-          // if (localStorage.getItem("friisgatan") !== null) {
-          // localStorage.removeItem("friisgatan");
-          // await show_map();
-          // }
-          await show_map();
-
         });
       });
     } else {
       user_feedback(logInCheck, "logIn");
     }
   });
+
+  if (localStorage.getItem("friisgatan") != null) {
+    balance.style.display = "flex";
+    await show_map();
+    localStorage.removeItem("friisgatan");
+  }
 }
 
 startpage("user_id", "introduction", "mainContent");

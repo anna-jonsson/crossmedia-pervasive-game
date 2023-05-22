@@ -18,7 +18,6 @@ async function createInputs() {
 }
 
 async function input_fields() {
-  //   createInputs();
   let PW = [];
   console.log(document.querySelectorAll(".inputs"));
   document.querySelectorAll(".inputs").forEach((input) => {
@@ -52,7 +51,6 @@ async function input_fields() {
         }
       }
       if (isNaN(input.value)) {
-        //put user_feedback(wrong input here)
         console.log("this must be a number");
         return;
       }

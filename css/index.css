@@ -36,7 +36,7 @@ body {
   padding: 10px;
 }
 .pin_img {
-  height: 20px;
+  height: 30px;
 }
 
 .pin_img:active {
@@ -45,6 +45,7 @@ body {
 
 .pin_img.done {
   filter: grayscale(0.9);
+  height: 30px;
 }
 
 .location {
@@ -140,7 +141,7 @@ body {
   width: 30px;
   height: auto;
   top: 17%;
-  left: 84%;
+  left: 82%;
 }
 
 #pin_möllan {
@@ -148,15 +149,16 @@ body {
   width: 30px;
   height: auto;
   top: 35%;
-  left: 90%;
+  left: 85%;
 }
 
 #pin_folkets_park {
   position: absolute;
   width: 30px;
   height: auto;
-  top: 6%;
-  left: 60%;
+  top: 5%;
+  left: 58%;
+  width: 18%;
 }
 
 #pin_friisgatan {
@@ -167,12 +169,12 @@ body {
   left: 37%;
 }
 
-#pin_magisterparken {
+#pin_magistratsparken {
   position: absolute;
   width: 30px;
   height: auto;
   top: 88%;
-  left: 10%;
+  left: 16%;
 }
 
 #pin_triangeln {
@@ -181,6 +183,49 @@ body {
   height: auto;
   top: 75%;
   left: 38%;
+}
+
+#pin_final {
+  position: absolute;
+  top: 50%;
+  background: rgba(62, 84, 84, 0.8);
+  padding: 5%;
+  border-radius: 5%;
+}
+
+#pin_final > img {
+  height: 50px;
+}
+
+#pin_final > p {
+  font-size: large;
+  color: var(--white);
+}
+
+#endWrapper {
+  background-color: #543e3e7a;
+  padding: 10%;
+}
+
+#endWrapper > p,
+button,
+h2 {
+  padding: 5%;
+}
+
+#scoreWrapper {
+  background-color: #543e3e7a;
+  padding: 10%;
+  width: 90%;
+}
+
+#scoreWrapper > ol {
+  margin: 3%;
+  padding: 2%;
+}
+
+#endWrapper > button {
+  margin: 3%;
 }
 
 .feedbackPopup {
@@ -292,4 +337,10 @@ button:active {
   background-color: rgba(217, 217, 217, 0.007);
   height: 600px;
   width: 400px;
+}
+
+.giveUpBtn {
+  position: fixed;
+  top: 2%;
+  right: 31%;
 }

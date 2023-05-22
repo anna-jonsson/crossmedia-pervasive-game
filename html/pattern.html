@@ -1,167 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/pattern.css" />
-    <title>Pattern Box || Code Village</title>
-  </head>
-  <body>
-    <div id="container">
-      <h4 class="h4_style">
-        Tredje bokstaven i spelkaraktärens namn kan hjälpa dig att lösa uppgiften.
-      </h4>
-      <div class="lockBox box">
-        <svg>
-          <path d=""></path>
-        </svg>
-      </div>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=320; user-scalable=no; initial-scale=1.0; maximum-scale=1.0"
+    />
+    <title>Pattern Lock</title>
 
-      <h4 class="h4_style" id="lockUp_corr">
-        Det var rätt!! Ta dig tillbaka till kartan och fortsätt arbeta.
-      </h4>
-      <button id="goToMap">Tillbaka till kartan</button>
-    </div>
-
-    <div id="balance"></div>
-
+    <link rel="stylesheet" type="text/css" href="../css/patternlock.css" />
+    <script src="../javascript/patternlock.js"></script>
     <script src="../javascript/requests.js"></script>
-    <script src="../javascript/map.js"></script>
     <script src="../javascript/balance.js"></script>
+
+    <script src="../javascript/map.js"></script>
     <script src="../javascript/index.js"></script>
 
-    <!-- Now Scripting......  -->
     <script>
-      document.querySelector("#goToMap").style.display = "none";
-      document.querySelector("#lockUp_corr").style.display = "none";
-      var log = console.log;
-      function op(elem) {
-        return document.querySelector(elem);
-      }
-      function opp(elem) {
-        return document.querySelectorAll(elem);
-      }
-
-      var lockBox = op(".lockBox");
-      for (var a = 0; a < 9; a++) {
-        lockBox.insertAdjacentHTML(
-          "afterbegin",
-          `
-        <div class="dot">
-            <div class="dotArea" onmousedown="down(this)">
-                <i>${a}</i>
-            </div>
-        </div>`
-        );
-      }
-
-      var startDot,
-        svg = op("svg"),
-        dots = opp(".dot"),
-        lineData = "M",
-        tempLineData,
-        svgPath = op("svg path"),
-        inputData = "",
-        correctData = "67510";
-      // "inputData" för att spara värdet på det korrekta mönstret
-
-      function end() {
-        // localStorage.clear()
-
-        let userID = localStorage.getItem("user_id");
-
-        document.body.style.setProperty("--baseCol", inputData == correctData ? "#0f0" : "#f00");
-        log(inputData);
-        startDot = undefined;
-        lineData = "M";
-        // inputData="";
-        tempLineData = undefined;
-
-        if (inputData == correctData) {
-          log("hej");
-          localStorage.setItem("friisgatan", correctData);
-
-          let btn = document.querySelector("#goToMap");
-          let h4 = document.querySelector("#lockUp_corr");
-          h4.style.display = "block";
-          btn.style.display = "block";
-          btn.addEventListener("click", async function () {
-            let passwordCheck = await check_password("friisgatan", correctData);
-
-            checked_out(userID, "friisgatan", true);
+      function submitform() {
+        if (document.getElementById('password').value == '32489') {
+          let p = document.createElement('p')
+          let newDiv = document.createElement('div')
+          newDiv.classList.add('feedbackPopup')
+          let mapButton = document.createElement('button')
+          newDiv.appendChild(p)
+          document.body.appendChild(newDiv)
+          p.innerText = "Det va helt rätt, gå tillbaka till kartan och fortsätt med uppgifterna.";
+          mapButton.innerHTML = 'Till kartan'
+          mapButton.addEventListener('click', async function () {
+        
+            localStorage.setItem(
+              'friisgatan',
+              document.getElementById('password').value
+            )
+            let userID = localStorage.getItem('user_id')
+            checked_out(userID, 'friisgatan', true)
             document.getElementById("balance").style.display = "flex";
-            async function back() {
-              await add_to_balance("friisgatan", correctData);
-              await show_current_balance();
-              window.location.href = "../html/index.html";
-            }
-
-            await back();
-          });
+            await add_to_balance(
+              'friisgatan',
+              document.getElementById('password').value
+            )
+            await show_current_balance()
+            window.location.href = '../html/index.html'
+          })
+          newDiv.appendChild(mapButton)
+        } else {
+          alert('Fel svar, testa igen!')
         }
-        setTimeout(() => {
-          opp(".dot.active").forEach((val) => {
-            val.classList.remove("active");
-          });
-          svgPath.setAttribute("d", "");
-          document.body.style.setProperty("--baseCol", "#00cbff");
-        }, 500);
-      }
-
-      function down(elem) {
-        log(elem.innerText);
-        startDot = elem;
-        lockBox.addEventListener("mousemove", moving);
-        addEvToMouseEnter();
-        lineData += `${startDot.parentElement.offsetLeft + 5},${
-          startDot.parentElement.offsetTop + 5
-        }`;
-        makeLine();
-        startDot.classList.add("active");
-      }
-      document.onmouseup = function () {
-        lockBox.removeEventListener("mousemove", moving);
-        removeEvToMouseEnter();
-        tempLineData = "";
-        updateLine();
-        end(startDot, tempLineData, lineData);
-      };
-      function moving(e) {
-        makeLineWhileMoving(e.clientX, e.clientY);
-      }
-      function makeLineWhileMoving(x, y) {
-        var x = Math.floor(x - lockBox.getBoundingClientRect().left);
-        var y = Math.floor(y - lockBox.getBoundingClientRect().top);
-
-        tempLineData = " L" + x + "," + y;
-
-        updateLine();
-      }
-
-      function makeLine(e = startDot) {
-        e.target = startDot;
-        var dot = e.target.parentElement;
-        dot.classList.add("active");
-        var x = dot.getBoundingClientRect().left,
-          y = dot.getBoundingClientRect().top;
-        inputData += dot.innerText;
-
-        makeLineWhileMoving(x, y);
-        lineData += tempLineData;
-      }
-
-      function addEvToMouseEnter() {
-        opp(".dotArea").forEach((val) => {
-          val.addEventListener("mouseenter", makeLine);
-        });
-      }
-      function removeEvToMouseEnter() {
-        opp(".dotArea").forEach((val) => {
-          val.removeEventListener("mouseenter", makeLine);
-        });
-      }
-      function updateLine() {
-        svgPath.setAttribute("d", lineData + tempLineData);
+        return true
       }
     </script>
+  </head>
+
+  <body>
+    <form class="form_style" method="post" onsubmit="return submitform()">
+      <h4 class="h4_style">Använd mallen i kuvertet för att få fram det ni behöver för att lösa uppgiften. 
+        Objektets tredje bokstav hjälper er att dra rätt linje.</h4>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="patternlock"
+        />
+        <input type="submit" value="login" />
+      </div>
+    </form>
+    <div id="balance"></div>
   </body>
 </html>

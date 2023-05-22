@@ -3,6 +3,8 @@
   --brown: #543e3e;
   --wheat: #f5deb3;
   --white: #d9d9d9;
+  --red: #A41919;
+
 }
 * {
   display: flex;
@@ -14,7 +16,7 @@ body {
   background-color: #543e3e;
 }
 #balance {
-  color: red;
+  color: var(--red);
   background-color: var(--brown);
   height: 45px;
   display: flex;
@@ -71,6 +73,7 @@ body {
 .taskText {
   width: 68%;
   padding: 5%;
+  margin-bottom: 20px;
   color: white;
   gap: 25px;
   text-align: left;
@@ -236,9 +239,9 @@ h2 {
   transform: translate(-50%, -50%);
   padding: 5%;
   border-radius: 5%;
-  background: rgba(62, 84, 84, 0.8);
+  background: rgba(62, 84, 84, 0.95);
   color: var(--white);
-  border: solid 0.3px black;
+  border: solid 0.3px var(--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9999;
   gap: 20px;
@@ -342,5 +345,5 @@ button:active {
 .giveUpBtn {
   position: fixed;
   top: 2%;
-  right: 31%;
+  /* right: 31%; */
 }

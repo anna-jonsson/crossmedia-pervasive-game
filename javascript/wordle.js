@@ -11,6 +11,7 @@ const realDictionary = [
   "äpple",
   "päron",
   "melon",
+  "mmmmm"
 ];
 
 const dictionary = realDictionary;
@@ -18,7 +19,7 @@ const state = {
   secret: dictionary[1],
   grid: Array(6)
     .fill()
-    .map(() => Array(5).fill("")),
+    .map(() => Array(2).fill("")),
   currentRow: 0,
   currentCol: 0,
 };
@@ -167,7 +168,24 @@ function revealWord(guess) {
 
       await add_to_balance("möllan", guess);
     } else if (isGameOver) {
-      alert(`Ajdå! Ordet var: ${state.secret}`);
+      console.log(guess);
+
+      //Sending feedback to the user based on the input (correct/incorrect)
+      let p = document.createElement("p");
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("feedbackPopup");
+      let mapButton = document.createElement("button");
+      newDiv.appendChild(p);
+      document.body.appendChild(newDiv);
+    
+      mapButton.innerHTML = "Till kartan";
+      mapButton.addEventListener("click", function () {
+        show_map();
+        newDiv.style.display = "none";
+      });
+      newDiv.appendChild(mapButton);
+      let userId = localStorage.getItem("user_id");
+      checked_out(userId, "möllan", true);
     }
   }, 3 * animation_duration);
 }

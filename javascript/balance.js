@@ -8,7 +8,14 @@ async function show_current_balance() {
     if (user.user_id == userID) {
       saldo = user.current_balance;
       console.log(user);
-      document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
+      let pic = document.createElement("img");
+      pic.src = "../images/digital-money.png";
+      
+      document.querySelector("#balance").innerHTML = `
+      <p class="saldoP">${saldo} kr</p>
+      `
+
+      document.querySelector("#balance").appendChild(pic);
     }
   });
 }

@@ -10,27 +10,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
 }
 
 body {
   background-color: #543e3e;
 }
 #balance {
-  color: var(--red);
+  color: #feda40;
   background-color: var(--brown);
-  height: 45px;
+  /*! height: 45px; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /*! justify-content: center; */
+  /*! align-items: center; */
+  flex-direction: row-reverse;
+  width: 45%;
+  background-color: black;
+padding: 3px;
+border-radius: 5px;
+width: 100%;
+padding-bottom: 2%;
+padding-top: 2%;
 }
 
 #mainContent {
   font-size: smaller;
 }
 
+@font-face {
+  font-family: 'Game Of Squids';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Game Of Squids'), url('Game Of Squids.woff') format('woff');
+}
+
 #logInWrapper {
   background-color: #543e3e7a;
+  border-radius: 10px;
 }
 #logInWrapper h2 {
   padding: 10px;
@@ -350,3 +366,26 @@ button:active {
   top: 2%;
   /* right: 31%; */
 }
+
+#balance > img:nth-child(2) {
+  height: 20px;
+  margin-right: 2%;
+}
+
+.saldoP {
+  /*! font-size: inherit; */font-weight: bold;
+  font-size: 15px;
+ }
+
+ #mainContent > h2:nth-child(1) {
+  font-family:'Game Of Squids';
+  font-weight:normal;
+  font-size:48px;
+  text-align: center;
+  color: white;
+  /*! text-decoration: dotted; */text-decoration: underline;
+  /*! border: solid yellow 5px; */background-color: #00000047;
+  /*! border-radius: 19%; */margin-bottom: 8%;
+ }
+ 
+ 

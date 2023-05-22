@@ -25,8 +25,8 @@ function selectQuiz() {
   let btnPlayQuiz = document.createElement("div");
   btnPlayQuiz.id = "button-play";
   btnPlayQuiz.innerHTML = `
-      <button id = "btnPlayQuiz"> Play quiz </button>`;
-  document.body.appendChild(btnPlayQuiz);
+      <button id = "btnPlayQuiz"> Starta quizet </button>`;
+  document.querySelector(".title").appendChild(btnPlayQuiz);
   //When you click on the play button
   let click = document.getElementById("button-play");
   click.addEventListener("click", function () {
@@ -44,7 +44,7 @@ function playQuiz() {
   document.getElementById("clock").style.visibility = "visible";
   document.getElementById("wrapper-category").style.display = "none";
   document.getElementById("input-fields").style.display = "none";
-  document.getElementById("button-play").style.display = "none";
+  // document.getElementById("button-play").style.display = "none";
 
   let clockDiv = document.getElementById("clock");
   let clock = document.createElement("SPAN");
@@ -72,10 +72,10 @@ function playQuiz() {
       timer.appendChild(time_txt);
       let timer_sec = document.createElement("div");
       timer_sec.className = "timer_sec";
-      timer_sec.innerHTML = "20";
+      timer_sec.innerHTML = "60";
       timer.appendChild(timer_sec);
 
-      startTimer(20);
+      startTimer(60);
 
       let quizTitle = document.createElement("div");
       quizTitle.id = "quiz-title";
@@ -91,7 +91,7 @@ function playQuiz() {
 
       let userScore = 0;
       //Create each div of the answers
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 6; i++) {
         let answerBox = document.createElement("div");
         answerBox.className = "box-answer";
         answerBox.id = "box-answer" + `${i}`;
@@ -136,9 +136,16 @@ function playQuiz() {
               nextQuestion.style.visibility = "visible";
             }
             if (`${questionNumber}` == `${data.length}`) {
+              console.log(userScore + " sfsfsf");
+
               let finish = document.getElementById("results");
+
               finish.style.visibility = "visible";
               nextQuestion.style.visibility = "hidden";
+
+              let bal = document.createElement("div");
+              bal.id = "balance";
+              document.getElementById("info-quiz").appendChild(bal);
             }
             i++;
           }
@@ -146,7 +153,7 @@ function playQuiz() {
       }
       let nextQuestion = document.createElement("button");
       nextQuestion.id = "next-question";
-      nextQuestion.innerHTML = "Next Question";
+      nextQuestion.innerHTML = "Nästa fråga";
       overviewQuiz.appendChild(nextQuestion);
       nextQuestion.style.visibility = "hidden";
 
@@ -163,11 +170,12 @@ function playQuiz() {
 
       let showResults = document.createElement("button");
       showResults.id = "results";
-      showResults.innerHTML = "Finish";
+      showResults.innerHTML = "Avsluta";
       overviewQuiz.appendChild(showResults);
       showResults.style.visibility = "hidden";
 
       showResults.addEventListener("click", () => {
+        console.log(userScore + "ds");
         let hiddenTimer = document.getElementsByClassName("timer");
         hiddenTimer[0].style.visibility = "hidden";
         let hiddenQuestion = document.getElementById("question");
@@ -175,48 +183,94 @@ function playQuiz() {
         let hiddenWrapperQuiz = document.getElementById("wrapper-quiz");
         hiddenWrapperQuiz.style.visibility = "hidden";
         showResults.style.visibility = "hidden";
-        document.getElementById("quiz-title").innerHTML =
-          "Quiz with user questions";
+        document.getElementById("quiz-title").innerHTML = "Minnesmoment";
 
         let results_box = document.getElementById("question-count");
-        results_box.innerHTML =
-          "Score: " + `${userScore}` + " of " + `${data.length}`;
+        results_box.innerHTML = "";
 
-        let pictureFinish = document.createElement("div");
-        pictureFinish.id = "Finish-logo";
-        pictureFinish.innerHTML = `
-              
-             `;
-        infoQuiz.appendChild(pictureFinish);
+        // let pictureFinish = document.createElement("div");
+        // pictureFinish.id = "Finish-logo";
+        // pictureFinish.innerHTML = `
 
-        function addZero(i) {
-          if (i < 10) {
-            i = "0" + i;
-          }
-          return i;
+        //      `;
+        // infoQuiz.appendChild(pictureFinish);
+
+        // async function getBalance() {
+        //   try {
+        //     const result = await get_current_balance();
+        //     console.log(result); // Output: "Async operation complete"
+        //   } catch (error) {
+        //     console.log(error); // Error handling
+        //   }
+        // }
+        // getBalance();
+
+        // let saldo1;
+        // show_current_balance2();
+
+        function winningFunc() {
+          document.getElementById("question-count").textContent = `
+                GRATTIS!
+                Ni lyckades rädda familjen etc...
+                `;
+          console.log("win2");
         }
-        //Results - date and time
-        const date = new Date();
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-        let currentDate = `${day}-${month}-${year}`;
-        let h = addZero(date.getHours());
-        let m = addZero(date.getMinutes());
-        let s = addZero(date.getSeconds());
-        let time = h + ":" + m + ":" + s;
 
-        let current_time = console.log(currentDate);
+        function losingFunc() {
+          document.getElementById("question-count").textContent = `
+                ÅHNEJ
+                Det gick inget bra etc...
+                `;
+          console.log("lose2");
+        }
 
-        let dateInfo = document.createElement("div");
-        dateInfo.id = "date";
-        dateInfo.innerHTML = "Date" + ": " + currentDate;
-        infoQuiz.appendChild(dateInfo);
+        async function myFunction() {
+          console.log(userScore + " hej");
+          try {
+            await add_custom_balance_final(userScore * 1000);
+            console.log(userScore + " yte");
+            const saldo = await get_current_balance();
+            let saldo2 = parseInt(saldo);
 
-        let timeInfo = document.createElement("div");
-        timeInfo.id = "time";
-        timeInfo.innerHTML = "Time" + ": " + time;
-        infoQuiz.appendChild(timeInfo);
+            if (saldo2 >= 43000) {
+              winningFunc();
+              console.log("win");
+            } else if (saldo2 < 43000) {
+              losingFunc();
+              console.log("lose");
+            }
+            console.log(userScore +" annas förslag");
+            // Use the value of saldo in your code
+          } catch (error) {
+            console.log(error); // Handle any errors that occur within show_current_balance2
+          }
+        }
+
+        myFunction();
+
+        // async function processBalance() {
+        //   // try {
+
+        //   //   return saldo1 // Use the return value as needed
+        //   // } catch (error) {
+        //   //   console.log(error); // Handle any errors that occur within get_current_balance
+        //   // }
+        //   const balance = await get_current_balance();
+
+        //   console.log(balance);
+        // }
+
+        // console.log(balance);
+
+        // // Call the async function to start the process
+        // // let zaldo = processBalance()
+        // console.log(processBalance() + " hej");
+        // console.log(saldo1 + " bing");
+        // // console.log(zaldo +" bing");
+
+        // let zaldo = get_current_balance();
+
+        // console.log(zaldo + " ytyt");
 
         let backToMenu = document.createElement("button");
         backToMenu.id = "back-menu";
@@ -224,7 +278,7 @@ function playQuiz() {
         infoQuiz.appendChild(backToMenu);
 
         backToMenu.addEventListener("click", () => {
-          location.href = "home-account.html";
+          location.href = "../html/final.html";
         });
       });
     }
@@ -232,7 +286,7 @@ function playQuiz() {
   let timeTex = document.getElementsByClassName("time_left_txt");
   let timeCount = document.getElementsByClassName("timer_sec");
 
-  let timeValue = 20;
+  let timeValue = 60;
   let counter = 0;
   //The big time of the white page
   function startTimer(time) {
@@ -262,7 +316,7 @@ function playQuiz() {
 
   //Check if answer is correct
   function setCorrectAnswer() {
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 6; i++) {
       let label = document.getElementById("label" + `${i}`);
       let color = document.getElementById("box-answer" + `${i}`);
       if (correctAnswer == label.textContent) {
@@ -277,7 +331,7 @@ function playQuiz() {
   }
   //Answer-color resets
   function clearAnswerColor() {
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 6; i++) {
       let color = document.getElementById("box-answer" + `${i}`);
       color.style.backgroundColor = "";
     }
@@ -318,6 +372,8 @@ function showQuestion() {
     data[questionNumber - 1].incorrectAnswer1,
     data[questionNumber - 1].incorrectAnswer2,
     data[questionNumber - 1].incorrectAnswer3,
+    data[questionNumber - 1].incorrectAnswer4,
+    data[questionNumber - 1].incorrectAnswer5,
   ];
   answers.push(data[questionNumber - 1].correctAnswer);
   console.log(answers);
@@ -326,7 +382,7 @@ function showQuestion() {
   let shuffledArray = answers.sort((a, b) => 0.8 - Math.random());
   console.log(shuffledArray);
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 6; i++) {
     let addAnswer = document.getElementById("label" + `${i}`);
     addAnswer.textContent = shuffledArray[i];
   }

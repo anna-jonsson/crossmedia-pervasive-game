@@ -7,6 +7,7 @@ async function show_current_balance() {
   users.forEach((user) => {
     if (user.user_id == userID) {
       saldo = user.current_balance;
+      console.log(user);
       document.querySelector("#balance").innerText = "Saldo: " + saldo + " kr";
     }
   });
@@ -98,10 +99,10 @@ async function add_custom_balance_final(amount) {
 //       saldo = user.current_balance;
 //     }
 
- 
+
 //     // document.querySelector("#balance").appendChild(balanceElement);
 //   });
-  
+
 //   //Deletes the first value in tha array with slice because it's undefined.
 //   //Then adding all of the values in the array to one with reduce()
 //   // let total = sum.slice(1).reduce((a, b) => a + b + 0);

@@ -22,10 +22,10 @@
     },
     {
         "location_name": "triangeln",
-        "question": "Enligt förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
+        "question": "Enligt en av förbudsmärkena vid Norra Uppgången: vad får du INTE lov att göra nere på spåret?",
         "correctAnswer": "Åka skateboard",
-        "incorrectAnswer1": "Åka scooter",
-        "incorrectAnswer2": "Ta med en ballong ner",
+        "incorrectAnswer1": "Åka ner på räcket",
+        "incorrectAnswer2": "Släppa din ballong",
         "incorrectAnswer3": "Ha hunden lös",
         "incorrectAnswer4": "Sparka boll",
         "incorrectAnswer5": "Dricka alkohol"

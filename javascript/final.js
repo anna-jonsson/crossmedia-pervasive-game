@@ -40,7 +40,7 @@ let selectList = null;
 let questionNumber = 1;
 
 function playQuiz() {
-  document.querySelector(".title").remove();
+  document.querySelector("#wrapAll").remove();
   document.getElementById("clock").style.visibility = "visible";
   document.getElementById("wrapper-category").style.display = "none";
   document.getElementById("input-fields").style.display = "none";
@@ -76,6 +76,7 @@ function playQuiz() {
       timer.appendChild(timer_sec);
 
       startTimer(60);
+
 
       let quizTitle = document.createElement("div");
       quizTitle.id = "quiz-title";
@@ -174,7 +175,8 @@ function playQuiz() {
       overviewQuiz.appendChild(showResults);
       showResults.style.visibility = "hidden";
 
-      showResults.addEventListener("click", () => {
+
+      showResults.addEventListener("click", async () => {
         console.log(userScore + "ds");
         let hiddenTimer = document.getElementsByClassName("timer");
         hiddenTimer[0].style.visibility = "hidden";
@@ -185,8 +187,14 @@ function playQuiz() {
         showResults.style.visibility = "hidden";
         document.getElementById("quiz-title").innerHTML = "Minnesmoment";
 
-        let results_box = document.getElementById("question-count");
+        let results_box = document.createElement('div');
+        results_box.id = "results_box";
         results_box.innerHTML = "";
+        console.log(results_box);
+        let resultsWrap = document.createElement('div');
+        resultsWrap.classList.add("resultsWrap");
+        infoQuiz.append(resultsWrap);
+        resultsWrap.append(quizTitle, results_box);
 
         // let pictureFinish = document.createElement("div");
         // pictureFinish.id = "Finish-logo";
@@ -209,22 +217,24 @@ function playQuiz() {
         // show_current_balance2();
 
         function winningFunc() {
-          document.getElementById("question-count").textContent = `
-                GRATTIS!
-                Ni lyckades rädda familjen etc...
+          document.getElementById("quiz-title").innerHTML = "GRATTIS!";
+          document.getElementById('results_box').innerText = `
+                Ni svarade rätt på tillräckligt många frågor och klarade er över budgeten på 50 000 framtidskronor. Ni räddade familjen från att bli ruinerade och kan gå och lägga dig ännu en dag för att vakna i familjehemmet. Hoppas inte skuldindrivarna kommer tillbaka inom en snar framtid...
                 `;
           console.log("win2");
         }
 
         function losingFunc() {
-          document.getElementById("question-count").textContent = `
-                ÅHNEJ
-                Det gick inget bra etc...
+          document.getElementById("quiz-title").innerHTML = "ÅHNEJ!";
+          document.getElementById('results_box').innerText = `
+                Ni lyckades inte komma över skuldindrivarnas gräns på 50 000 framtidskronor. Familjehemmet tändes fyr på redan samma kväll och alla minnen, möbler och leksaker försvann upp i lågor. Nu får familjen streta vidare, kanske hittar ni ett nytt hem bland ruinerna? Vem vet...
                 `;
           console.log("lose2");
         }
 
         async function myFunction() {
+          questionCount.style.display = 'none';
+          infoQuiz.classList.add('customBg');
           console.log(userScore + " hej");
           try {
             await add_custom_balance_final(userScore * 1000);
@@ -239,14 +249,14 @@ function playQuiz() {
               losingFunc();
               console.log("lose");
             }
-            console.log(userScore +" annas förslag");
+            console.log(userScore + " annas förslag");
             // Use the value of saldo in your code
           } catch (error) {
             console.log(error); // Handle any errors that occur within show_current_balance2
           }
         }
 
-        myFunction();
+        await myFunction();
 
         // async function processBalance() {
         //   // try {
@@ -275,10 +285,11 @@ function playQuiz() {
         let backToMenu = document.createElement("button");
         backToMenu.id = "back-menu";
         backToMenu.innerHTML = "Back to menu";
-        infoQuiz.appendChild(backToMenu);
+        infoQuiz.append(backToMenu);
 
         backToMenu.addEventListener("click", () => {
-          location.href = "../html/final.html";
+          // location.href = "../html/final.html";
+          endGame();
         });
       });
     }
@@ -360,7 +371,7 @@ async function getQuizQuestion() {
 // Show the question from the local API with questions
 function showQuestion() {
   let questionCounter = document.getElementById("question-count");
-  questionCounter.innerText = `${questionNumber}` + "/" + `${data.length}`;
+  questionCounter.innerText = `Fråga ${questionNumber}` + " av " + `${data.length}`;
 
   let question = document.getElementById("question");
   question.innerHTML = data[questionNumber - 1].question;

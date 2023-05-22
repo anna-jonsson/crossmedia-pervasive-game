@@ -172,6 +172,7 @@ function revealWord(guess) {
 
       //Sending feedback to the user based on the input (correct/incorrect)
       let p = document.createElement("p");
+      p.textContent=`Tyvärr gissade ni inte rätt och missade chansen att tjäna pengarna. Ordet var: ${state.secret.toUpperCase()}`
       let newDiv = document.createElement("div");
       newDiv.classList.add("feedbackPopup");
       let mapButton = document.createElement("button");

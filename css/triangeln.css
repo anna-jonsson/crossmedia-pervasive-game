@@ -1,17 +1,17 @@
 /* Import Google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap'); */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Play', sans-serif;
 }
 .snakeContain {
   display: flex;
   align-items: center;
   justify-content: center;
   /* min-height: 100vh; */
-  background: #E3F2FD;
+  background: #e3f2fd;
 }
 #snakeWrapper.wrapper.snake_game {
   width: 350px;
@@ -27,7 +27,7 @@
 .game-details.snake_game {
   display: flex;
   flex-direction: row;
-  color: #B8C6DC;
+  color: #b8c6dc;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 20px 27px;
@@ -44,10 +44,10 @@
   align-items: initial;
 }
 .play-board .food {
-  background: #FF003D;
+  background: #ff003d;
 }
 .play-board .head {
-  background: #60CBFF;
+  background: #60cbff;
 }
 
 /* .controls {
@@ -58,7 +58,7 @@
   /* padding: 25px 0; */
 
 /* @media screen and (max-width: 800px) { */
-  /* .wrapper {
+/* .wrapper {
     width: 90vmin;
     height: 115vmin;
   }
@@ -66,23 +66,23 @@
     font-size: 1rem;
     padding: 15px 27px;
   } */
-  .controls.snake_game {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-  }
-  .controls i {
+.controls.snake_game {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.controls i {
   padding: 15px 0;
   text-align: center;
-  color: #B8C6DC;
+  color: #b8c6dc;
   width: calc(100% / 4);
   cursor: pointer;
-  border-right: 1px solid #171B26;
-  font-size:30px;
-  }
+  border-right: 1px solid #171b26;
+  font-size: 30px;
+}
 
-  .finished {
-    color: yellow;
-  }
+.finished {
+  color: yellow;
+}
 /* } */

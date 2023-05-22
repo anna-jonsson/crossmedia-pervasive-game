@@ -17,8 +17,8 @@ body {
   background-color: #543e3e;
   /* font-family: "Varela Round", sans-serif; */
   width: 400px;
-height: 600px;
-/* overflow: revert-layer; */
+  height: 800px;
+  overflow: hidden;
 }
 
 #wrapAll {
@@ -31,7 +31,7 @@ height: 600px;
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 800px;
   width: 100%;
 }
 
@@ -261,7 +261,6 @@ span.memory {
   font-size: 1.5rem;
   font-weight: bolder;
   /* font-family: "Varela Round", sans-serif; */
-  margin-top: 15px;
   color: var(--white);
 }
 
@@ -582,4 +581,12 @@ button:active {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  margin: 0;
+}
+
+.balance-final {
+  margin-bottom: 20px;
+  background: var(--wheat);
+  padding: 15px;
+  border-radius: 20px;
 }

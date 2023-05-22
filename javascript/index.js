@@ -173,6 +173,7 @@ function user_feedback(response, location_name) {
   let triangeln_highscore = `Bra jobbat! Din högsta poäng blev: ${localStorage.getItem(
     "high-score"
   )}`;
+  let triangeln_test = "FEL! ORDET VAR BLABLABLA"
 
   let intro = "Klicka på platsikonen \n för att läsa mer om platsen.";
   let p = document.createElement("p");
@@ -191,9 +192,12 @@ function user_feedback(response, location_name) {
           ? correct_input
           : response == 400
           ? wrong_input
+          : response = 405
+          ? triangeln_test
           : response == 500
           ? server_error
           : default_error;
+    
     }
   }
 
@@ -211,7 +215,7 @@ function user_feedback(response, location_name) {
     newSpan.onclick = function () {
       newDiv.style.display = "none";
     };
-  }
+  } 
 
   newDiv.appendChild(p);
   document.body.appendChild(newDiv);

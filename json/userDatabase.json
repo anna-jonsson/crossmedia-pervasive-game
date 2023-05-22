@@ -13,7 +13,7 @@
             {
                 "location_name": "triangeln",
                 "checked_in": true,
-                "checked_out": false
+                "checked_out": true
             },
             {
                 "location_name": "knarkrondellen",
@@ -27,8 +27,8 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
@@ -70,8 +70,8 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
@@ -132,7 +132,7 @@
         "user_id": 3,
         "username": "tekniksson",
         "password": "whiteboard13",
-        "current_balance": 0,
+        "current_balance": 4000,
         "locations": [
             {
                 "location_name": "introduction",
@@ -156,8 +156,8 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             },
             {
                 "location_name": "folkets park",
@@ -166,8 +166,8 @@
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": false,
-                "checked_out": false
+                "checked_in": true,
+                "checked_out": true
             }
         ]
     },

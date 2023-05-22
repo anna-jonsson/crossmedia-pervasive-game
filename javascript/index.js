@@ -76,10 +76,6 @@ async function fill_content(placeName, div_id, type) {
 
           document.getElementById("game").style.flexDirection = "column-reverse";
 
-          // document.getElementById("game").innerHTML =`
-          // <h1>Hej</h1>
-          // `;
-
           const boxes = document.querySelectorAll(".box");
           boxes.forEach((box) => {
             box.style.visibility = "visible";

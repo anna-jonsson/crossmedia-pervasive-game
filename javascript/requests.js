@@ -1,6 +1,4 @@
-// export {test}
-
-//GET
+//-----GET------
 //PLACE REQUEST
 //Getter for all of the places in the array (all objects)
 async function all_places_request() {
@@ -21,6 +19,7 @@ async function place_user(placeName) {
   return placeRsc;
 }
 
+//Getter for one place / location with parameter location_name
 async function place_request(placeName) {
   const placeRequest = new Request("../php/get_location.php?location_name=" + placeName);
   const placeResp = await fetch(placeRequest);
@@ -28,6 +27,7 @@ async function place_request(placeName) {
   return placeRsc;
 }
 
+//Getter for all of the users
 async function get_all_users() {
   const usersRequest = new Request("../php/all_users.php?all_users");
   const usersResponse = await fetch(usersRequest);
@@ -36,6 +36,7 @@ async function get_all_users() {
   return usersResource;
 }
 
+//Getter for one user with parameter user_id
 async function get_one_user(user_id) {
   const oneUserReq = new Request("../php/one_user.php?user_id=" + user_id);
   const OneUserResp = await fetch(oneUserReq);
@@ -52,7 +53,6 @@ async function get_finale_questions() {
   return questionResource;
 }
 
-//CHECK PASSWORD
 //getter for the password for the location.
 async function check_password(placeName, password) {
   const passwordRequest = new Request(
@@ -63,7 +63,7 @@ async function check_password(placeName, password) {
   return passwordResp.status;
 }
 
-//PATCH
+//-----PATCH------
 //CHECKING IN
 async function checked_in(userID, placeName, checked_status) {
   const checked_in_request = new Request("../php/checked_in_out.php");
@@ -111,7 +111,7 @@ async function patch_balance(userId, balance) {
   return balance_resource;
 }
 
-//POST
+//-----POST------
 //Post_request for logIn
 async function logIn_request(username, password) {
   const logInRequest = new Request("../php/logIn.php");

@@ -286,7 +286,7 @@ function playQuiz() {
 
         let backToMenu = document.createElement("button");
         backToMenu.id = "back-menu";
-        backToMenu.innerHTML = "Back to menu";
+        backToMenu.innerHTML = "Till Scoreboard";
         infoQuiz.append(backToMenu);
 
         backToMenu.addEventListener("click", () => {

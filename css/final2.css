@@ -262,6 +262,9 @@ span.memory {
   font-weight: bolder;
   /* font-family: "Varela Round", sans-serif; */
   color: var(--white);
+  margin-top: 5%;
+  text-decoration: underline;
+  text-align: center;
 }
 
 #question {
@@ -289,6 +292,7 @@ span.memory {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0px 0px 4px 1px;
 }
 
 .box-answer > input {
@@ -341,6 +345,7 @@ label {
   color: var(--white);
   /* border: 1px solid black; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
 }
 
 .time_left_txt {
@@ -387,9 +392,10 @@ label {
   /*! position: absolute; */
   /*! bottom: 45vh; */
   height: 8vh;
-  width: 15vh;
+  width: 25vh;
   border-radius: 10px 10px 10px 10px;
   margin-top: 10%;
+  
 }
 
 #back-menu:hover {
@@ -431,6 +437,8 @@ label {
   border-radius: 10px 10px 10px 10px;
   position: relative;
   left: 50%;
+  display: flex;
+  align-items: center;
 }
 
 #next-question:active {
@@ -501,6 +509,7 @@ a:hover {
 #endWrapper {
   background-color: #543e3e7a;
   padding: 10%;
+ text-align: center;
 }
 
 #endWrapper > p,
@@ -557,6 +566,10 @@ button {
 #btn-play > button#btnPlayQuiz, 
 #next-question, #back-menu {
   line-height: normal;
+    display: flex;
+    align-items: center;
+   
+   
 }
 
 button:active {
@@ -585,8 +598,35 @@ button:active {
 }
 
 .balance-final {
-  margin-bottom: 20px;
   background: var(--wheat);
   padding: 15px;
   border-radius: 20px;
+  color: #feda40;
+  background-color: var(--brown);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 45%;
+  background-color: #000;
+padding: 21px;
+border-radius: 5px;
+width: 56%;
+align-items: center;
+justify-content: center;
+  position: absolute;
+  top: 24%;
+  border-radius: 84px;
+  /*! width: fit-content; */
 }
+
+.saldoP {
+  /*! font-size: inherit; */font-weight: bold;
+  font-size: 15px;
+ }
+
+ #scoreWrapper > h2:nth-child(1) {
+  text-align: center;
+ }
+ 

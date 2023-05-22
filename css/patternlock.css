@@ -4,7 +4,11 @@
     --wheat: #f5deb3;
     --white: #d9d9d9;
     --red: #A41919;
-  }  
+}
+
+*{
+	font-family: 'Play', sans-serif;
+}
 
 body{
 	background-color: var(--brown);

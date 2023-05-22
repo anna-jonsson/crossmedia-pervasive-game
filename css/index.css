@@ -3,15 +3,16 @@
   --brown: #543e3e;
   --wheat: #f5deb3;
   --white: #d9d9d9;
-  --red: #A41919;
-
+  --red: #a41919;
 }
 * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Play', sans-serif;
 }
+
 body {
   background-color: #543e3e;
 }
@@ -51,8 +52,9 @@ body {
 }
 
 .location {
-  background-color: #543e3e7a;
+  background-color: #543e3ede;
   margin: 20px;
+  border-radius: 5px;
 }
 
 .locationText {
@@ -61,8 +63,9 @@ body {
 }
 
 .task {
-  background-color: #543e3e7a;
+  background-color: #543e3ede;
   margin: 20px;
+  border-radius: 5px;
 }
 
 .taskTextIntro {

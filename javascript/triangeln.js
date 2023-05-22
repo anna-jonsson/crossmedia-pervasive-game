@@ -25,17 +25,17 @@ function countDown(elementName, minutes, seconds, interval_id, highScoreElm) {
             totalScore = localStorage.getItem("high-score");
             if (totalScore > 30) {
                 console.log("Your highest score was: " + totalScore);
-                add_custom_balance("triangeln", 1200, "1234");
+                add_custom_balance("triangeln", 5000, "1234");
             }
             else if (totalScore <= 30 && totalScore >= 20) {
                 console.log("Your highest score was: " + totalScore);
-                add_custom_balance("triangeln", 1000, "1234");
+                add_custom_balance("triangeln", 3500, "1234");
             } else if (totalScore < 20 && totalScore >= 10) {
                 console.log("Your highest score was: " + totalScore);
-                add_custom_balance("triangeln", 600, "1234");
+                add_custom_balance("triangeln", 2500, "1234");
             } else {
                 console.log("Your highest score was: " + totalScore);
-                add_custom_balance("triangeln", 300, "1234");
+                add_custom_balance("triangeln", 1000, "1234");
             }
             setTimeout(() => {
                 user_feedback(200, "triangeln");
@@ -222,7 +222,7 @@ function init_snake_game() {
 
     updateFoodPosition();
     setIntervalId = setInterval(initGame, t);
-    countDown("countdown", 0, 10, setIntervalId, highScoreElement);
+    countDown("countdown", 2, 30, setIntervalId, highScoreElement);
     document.addEventListener("keyup", changeDirection);
 };
 

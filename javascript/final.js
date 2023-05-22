@@ -235,17 +235,19 @@ function playQuiz() {
         async function myFunction() {
           questionCount.style.display = 'none';
           infoQuiz.classList.add('customBg');
+          document.getElementById("balance").classList.add("balance-final");
           console.log(userScore + " hej");
           try {
-            await add_custom_balance_final(userScore * 1000);
+            // await add_custom_balance_final(userScore * 1000);
+            await add_custom_balance_final(userScore);
             console.log(userScore + " yte");
             const saldo = await get_current_balance();
             let saldo2 = parseInt(saldo);
 
-            if (saldo2 >= 43000) {
+            if (saldo2 >= 50000) {
               winningFunc();
               console.log("win");
-            } else if (saldo2 < 43000) {
+            } else if (saldo2 < 50000) {
               losingFunc();
               console.log("lose");
             }

@@ -12,8 +12,8 @@ async function startpage(userId, placeName, div_id, response) {
   wrapper.style.height = "600px";
 
   wrapper.innerHTML = `
+  <h2 style="font-family:'Game Of Squids';font-weight:normal;font-size:42px"">family business</h2>
   <div id ="logInWrapper" class='locationText'>
-  <h2>VÄLKOMMEN!</h2>
   <p>Använd ditt familjenamn och <br> lösenord för att logga in.</p>
   <input class = "username_input" type=text placeholder = "username"></input>
   <input class = "logIn_PW" type=password placeholder = "password"></input>

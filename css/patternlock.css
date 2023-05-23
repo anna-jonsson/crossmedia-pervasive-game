@@ -19,13 +19,18 @@ body{
     align-items: center;
 }
 
-.h4_style{
+.h4_style {
     width: 300px;
     margin: 60px;
+    background-color: #000000e0;
+    padding: 1%;
+    border-radius: 15px;
 }
 
 .form_style {
     height: 571px;
+    background-image: url(../images/friisgatan_bild.png);
+    background-size: cover;
 }
 
 #balance {

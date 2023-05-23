@@ -56,7 +56,7 @@ async function finalPin(parent) {
   document.querySelector("#pin_final").addEventListener("click", async function () {
     //-----------------FINALE CODE HERE!---------------------
     //When clicking - goes to the final page in html
-    window.location.href = "../html/final.html";
+    fill_content("finalen", "mainContent", "password");
 
     //-----------------FINALE CODE HERE!---------------------
   });
@@ -112,10 +112,11 @@ async function scoreBoard() {
   `;
 
 
-  document.querySelector(".exit_button").addEventListener("click", async function(){
+  document.querySelector(".exit_button").addEventListener("click", async function () {
+
     console.log("test");
     await scoreBoard();
-  })
+  });
   //Loops the users and adds the name + score /current balance to an li element
   allUsers.forEach((user) => {
     let item = document.createElement("li");
@@ -124,8 +125,8 @@ async function scoreBoard() {
     </div>
     `;
 
-    if(user.user_id == localStorage.getItem("user_id")) {
-      if(item.innerText.includes(user.username.toUpperCase())) {
+    if (user.user_id == localStorage.getItem("user_id")) {
+      if (item.innerText.includes(user.username.toUpperCase())) {
         item.classList.add('current_user');
         console.log(item);
       }

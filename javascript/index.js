@@ -7,23 +7,53 @@ async function fill_content(placeName, div_id, type) {
 
   let wrapper = document.getElementById(div_id);
 
-  wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
   wrapper.style.backgroundSize = "cover";
   wrapper.style.width = "400px";
   wrapper.style.height = "600px";
   wrapper.style.backgroundSize = "cover";
-  wrapper.style.backgroundPosition="center"
+  wrapper.style.backgroundPosition = "center";
 
-  wrapper.innerHTML = `
+  if (placeName == "finalen") {
+    wrapper.style.backgroundImage = 'url(../images/startpage.jpeg)';
+    wrapper.innerHTML = `
+    <div class='location' id='styling_${placeName}'>
+        <div class='locationText'>Ni möts av ett meddelande som ljuder ur informationssystemet i staden: "Vänligen bege er mot startplatsen, där ni började dagen, för att erhålla lösenordet till finalen"...</div>
+        <button class='nextBtn'>Vi är på startplatsen</button>
+    </div>
+`;
+
+    let btnNext = document.querySelector(".nextBtn");
+    btnNext.addEventListener("click", function () {
+      wrapper.innerHTML = `
+        <div class='finalPW'>
+            <input type="password"></input>
+            <button class='final_pw_btn'>Skicka</button>
+        </div>
+    `;
+      let btnFinalPW = document.querySelector('.final_pw_btn');
+      console.log(btnFinalPW);
+      btnFinalPW.addEventListener('click', function () {
+        if (document.querySelector('.finalPW input').value == "anarki") {
+          window.location.href = "../html/final.html";
+        } else {
+          user_feedback(400, "finalen");
+        }
+      });
+    });
+
+
+  } else {
+    wrapper.style.backgroundImage = `url(../images/${location.background_picture})`;
+    wrapper.innerHTML = `
         <div class='location' id='styling_${placeName}'>
             <div class='locationText'>${location.intro_text}</div>
             <button class='nextBtn'>Gå vidare</button>
         </div>
     `;
 
-  //Button for the riddle, showing the riddle text when clicking it
-  let btnRiddle = document.querySelector(".nextBtn").addEventListener("click", function () {
-    wrapper.innerHTML = `
+    //Button for the riddle, showing the riddle text when clicking it
+    let btnRiddle = document.querySelector(".nextBtn").addEventListener("click", function () {
+      wrapper.innerHTML = `
             <div class='riddle'>
                 <div class='riddleText'>${location.riddle_text}</div>
                 <button class='taskBtn'>Jag har hittat dit!</button>
@@ -31,11 +61,11 @@ async function fill_content(placeName, div_id, type) {
             </div>
         `;
 
-    // Button for giving up and returning to the map
-    let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
-      let popup = document.createElement("div");
-      popup.className = "popup";
-      popup.innerHTML = `
+      // Button for giving up and returning to the map
+      let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+        let popup = document.createElement("div");
+        popup.className = "popup";
+        popup.innerHTML = `
       <div class="feedbackPopup">
         <p>Är du säker att du vill ge upp?</p>
         <div class="popup-buttons">
@@ -45,51 +75,52 @@ async function fill_content(placeName, div_id, type) {
       </div>
     `;
 
-      let confirmBtn = popup.querySelector(".popup-confirm");
-      let cancelBtn = popup.querySelector(".popup-cancel");
+        let confirmBtn = popup.querySelector(".popup-confirm");
+        let cancelBtn = popup.querySelector(".popup-cancel");
 
-      confirmBtn.addEventListener("click", function () {
-        popup.remove();
-        let userId = localStorage.getItem("user_id");
-        checked_out(userId, placeName, true);
-        show_map();
-      });
-
-      cancelBtn.addEventListener("click", function () {
-        popup.remove();
-      });
-
-      document.body.appendChild(popup);
-    });
-
-    //Button for showing the task text with the type (password, checkbox etc.)
-    let btnTask = document.querySelector(".taskBtn").addEventListener("click", async function () {
-      if (placeName == "möllan") {
-        wrapper.innerHTML = "";
-        startup();
-
-        document.getElementById("wordleBtn").addEventListener("click", function () {
-          document.querySelector(".grid").style.backgroundColor = "black";
-          document.querySelector(".grid").style.backgroundImage = "none";
-
-          document.getElementById("keyboard-cont").style.display = "flex";
-
-          document.getElementById("wordleBtn").style.display = "none";
-
-          document.getElementById("game").style.flexDirection = "column-reverse";
-
-          const boxes = document.querySelectorAll(".box");
-          boxes.forEach((box) => {
-            box.style.visibility = "visible";
-          });
+        confirmBtn.addEventListener("click", function () {
+          popup.remove();
+          let userId = localStorage.getItem("user_id");
+          checked_out(userId, placeName, true);
+          show_map();
         });
-      } else if (placeName == "triangeln") {
-        document.querySelector("#mainContent").classList.add("snakeContain");
-        init_snake_game();
-      } else if (placeName == "friisgatan") {
-        window.location.href = "../html/pattern.html";
-      } else {
-        wrapper.innerHTML = ` 
+
+        cancelBtn.addEventListener("click", function () {
+          popup.remove();
+        });
+
+        document.body.appendChild(popup);
+
+      });
+
+      //Button for showing the task text with the type (password, checkbox etc.)
+      let btnTask = document.querySelector(".taskBtn").addEventListener("click", async function () {
+        if (placeName == "möllan") {
+          wrapper.innerHTML = "";
+          startup();
+
+          document.getElementById("wordleBtn").addEventListener("click", function () {
+            document.querySelector(".grid").style.backgroundColor = "black";
+            document.querySelector(".grid").style.backgroundImage = "none";
+
+            document.getElementById("keyboard-cont").style.display = "flex";
+
+            document.getElementById("wordleBtn").style.display = "none";
+
+            document.getElementById("game").style.flexDirection = "column-reverse";
+
+            const boxes = document.querySelectorAll(".box");
+            boxes.forEach((box) => {
+              box.style.visibility = "visible";
+            });
+          });
+        } else if (placeName == "triangeln") {
+          document.querySelector("#mainContent").classList.add("snakeContain");
+          init_snake_game();
+        } else if (placeName == "friisgatan") {
+          window.location.href = "../html/pattern.html";
+        } else {
+          wrapper.innerHTML = ` 
               <div class='task' >
                   <div class='taskText'>${location.task_text}</div>
                   <input class='pw_input' type=${type}></input>
@@ -97,11 +128,11 @@ async function fill_content(placeName, div_id, type) {
                   <button class='giveUpBtn'>Jag ger upp</button>
               </div>
               `;
-        // Button for giving up and returning to the map
-        let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
-          let popup = document.createElement("div");
-          popup.className = "popup";
-          popup.innerHTML = `
+          // Button for giving up and returning to the map
+          let btnGiveUp = document.querySelector(".giveUpBtn").addEventListener("click", function () {
+            let popup = document.createElement("div");
+            popup.className = "popup";
+            popup.innerHTML = `
       <div class="feedbackPopup">
         <p>Är du säker att du vill ge upp?</p>
         <div class="popup-buttons">
@@ -111,59 +142,60 @@ async function fill_content(placeName, div_id, type) {
       </div>
     `;
 
-          let confirmBtn = popup.querySelector(".popup-confirm");
-          let cancelBtn = popup.querySelector(".popup-cancel");
+            let confirmBtn = popup.querySelector(".popup-confirm");
+            let cancelBtn = popup.querySelector(".popup-cancel");
 
-          confirmBtn.addEventListener("click", function () {
-            popup.remove();
-            let userId = localStorage.getItem("user_id");
-            checked_out(userId, placeName, true);
-            show_map();
+            confirmBtn.addEventListener("click", function () {
+              popup.remove();
+              let userId = localStorage.getItem("user_id");
+              checked_out(userId, placeName, true);
+              show_map();
+            });
+
+            cancelBtn.addEventListener("click", function () {
+              popup.remove();
+            });
+
+            document.body.appendChild(popup);
           });
 
-          cancelBtn.addEventListener("click", function () {
-            popup.remove();
-          });
+          if (placeName != "knarkrondellen") {
+            //Checking that the password for the task is correct with funciton check_password.
+            let btnPassword = document.querySelector(".pwBtn");
+            btnPassword.addEventListener("click", async function () {
+              let password = document.querySelector(".pw_input").value;
 
-          document.body.appendChild(popup);
-        });
+              let passwordCheck = await check_password(placeName, password);
+              //Sending feedback to the user based on the input (correct/incorrect)
+              user_feedback(passwordCheck, placeName);
 
-        if (placeName != "knarkrondellen") {
-          //Checking that the password for the task is correct with funciton check_password.
-          let btnPassword = document.querySelector(".pwBtn");
-          btnPassword.addEventListener("click", async function () {
-            let password = document.querySelector(".pw_input").value;
-
-            let passwordCheck = await check_password(placeName, password);
-            //Sending feedback to the user based on the input (correct/incorrect)
-            user_feedback(passwordCheck, placeName);
-
-            await add_to_balance(placeName, password);
-          });
-        } else {
-          document.querySelector("#mainContent");
-          // input_fields();
-          document.querySelector(".pw_input").style.display = "none";
-          await createInputs();
-          await input_fields();
-
-          let btnPassword = document.querySelector(".pwBtn");
-          btnPassword.addEventListener("click", async function () {
-            // document.querySelector("#input_wrapper").innerHTML = "";
+              await add_to_balance(placeName, password);
+            });
+          } else {
+            document.querySelector("#mainContent");
+            // input_fields();
+            document.querySelector(".pw_input").style.display = "none";
+            await createInputs();
             await input_fields();
 
-            let password = localStorage.getItem("knarkrondellen");
-            console.log(password);
-            let passwordCheck = await check_password(placeName, password);
-            //Sending feedback to the user based on the input (correct/incorrect)
-            user_feedback(passwordCheck, placeName);
+            let btnPassword = document.querySelector(".pwBtn");
+            btnPassword.addEventListener("click", async function () {
+              // document.querySelector("#input_wrapper").innerHTML = "";
+              await input_fields();
 
-            await add_to_balance(placeName, password);
-          });
+              let password = localStorage.getItem("knarkrondellen");
+              console.log(password);
+              let passwordCheck = await check_password(placeName, password);
+              //Sending feedback to the user based on the input (correct/incorrect)
+              user_feedback(passwordCheck, placeName);
+
+              await add_to_balance(placeName, password);
+            });
+          }
         }
-      }
+      });
     });
-  });
+  }
 }
 
 //Function for user feedback based on the response status connected to the location name.
@@ -192,11 +224,11 @@ function user_feedback(response, location_name) {
         response == 200
           ? correct_input
           : response == 400
-          ? wrong_input
-          : response == 500
-          ? server_error
-          : default_error;
-    
+            ? wrong_input
+            : response == 500
+              ? server_error
+              : default_error;
+
     }
   }
 
@@ -214,7 +246,7 @@ function user_feedback(response, location_name) {
     newSpan.onclick = function () {
       newDiv.style.display = "none";
     };
-  } 
+  }
 
   newDiv.appendChild(p);
   document.body.appendChild(newDiv);

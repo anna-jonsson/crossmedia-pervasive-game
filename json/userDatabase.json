@@ -3,7 +3,7 @@
         "user_id": 0,
         "username": "Cyberstrand",
         "password": "telefon10",
-        "current_balance": 35900,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -12,33 +12,33 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             }
         ]
     },
@@ -46,7 +46,7 @@
         "user_id": 1,
         "username": "Hyperlund",
         "password": "vattenflaska11",
-        "current_balance": 16300,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -55,12 +55,12 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": true,
+                "checked_in": false,
                 "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": true,
+                "checked_in": false,
                 "checked_out": false
             },
             {
@@ -70,13 +70,13 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "magistratsparken",
@@ -132,7 +132,7 @@
         "user_id": 3,
         "username": "Tekniksson",
         "password": "whiteboard13",
-        "current_balance": 9300,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -156,7 +156,7 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
+                "checked_in": false,
                 "checked_out": false
             },
             {
@@ -166,8 +166,8 @@
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             }
         ]
     },
@@ -175,7 +175,7 @@
         "user_id": 4,
         "username": "Framtidsson",
         "password": "v\u00e4ska14",
-        "current_balance": 55000,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -184,33 +184,33 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             }
         ]
     },
@@ -218,7 +218,7 @@
         "user_id": 5,
         "username": "Cybergren",
         "password": "pelare15",
-        "current_balance": 50000,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -227,33 +227,33 @@
             },
             {
                 "location_name": "triangeln",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "m\u00f6llan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             }
         ]
     },
@@ -261,7 +261,7 @@
         "user_id": 6,
         "username": "Teknoberg",
         "password": "metall16",
-        "current_balance": 35000,
+        "current_balance": 0,
         "locations": [
             {
                 "location_name": "introduction",
@@ -275,8 +275,8 @@
             },
             {
                 "location_name": "knarkrondellen",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "m\u00f6llan",
@@ -285,18 +285,18 @@
             },
             {
                 "location_name": "friisgatan",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "folkets park",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": true,
-                "checked_out": true
+                "checked_in": false,
+                "checked_out": false
             }
         ]
     }

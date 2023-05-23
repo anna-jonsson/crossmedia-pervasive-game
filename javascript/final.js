@@ -244,7 +244,7 @@ function playQuiz() {
           console.log(userScore + " hej");
           try {
            await add_custom_balance_final(userScore * 7500);
-            await add_custom_balance_final(userScore);
+            
             console.log(userScore + " yte");
             const saldo = await get_current_balance();
             let saldo2 = parseInt(saldo);

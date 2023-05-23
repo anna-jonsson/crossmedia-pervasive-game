@@ -52,13 +52,13 @@
 
     },
      {
-        "location_name": "magisterparken",
-        "question": "Inte lagt till något ännu!",
-        "correctAnswer": "",
-        "incorrectAnswer1": "",
-        "incorrectAnswer2": "",
-        "incorrectAnswer3": "",
-        "incorrectAnswer4": "3",
-        "incorrectAnswer5": "4"
+        "location_name": "magistratsparken",
+        "question": "Vilken färg har blommorna i rabatten bredvid trädet med uppgiften?",
+        "correctAnswer": "Lila",
+        "incorrectAnswer1": "Röd",
+        "incorrectAnswer2": "Gul",
+        "incorrectAnswer3": "Vit",
+        "incorrectAnswer4": "Grön",
+        "incorrectAnswer5": "Orange"
     }
 ]

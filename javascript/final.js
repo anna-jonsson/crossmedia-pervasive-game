@@ -45,6 +45,7 @@ function playQuiz() {
   document.getElementById("wrapper-category").style.display = "none";
   document.getElementById("input-fields").style.display = "none";
   // document.getElementById("button-play").style.display = "none";
+  document.getElementById("info-quiz").style.display="none";
 
   let clockDiv = document.getElementById("clock");
   let clock = document.createElement("SPAN");
@@ -60,6 +61,7 @@ function playQuiz() {
     if (timeLeft > 0) {
       setTimeout(countdown, 1000);
     } else if (timeLeft == 0) {
+      document.getElementById("info-quiz").style.display="grid";
       document.getElementById("clock").style.display = "none";
       let overviewQuiz = document.getElementById("wrapper-quiz");
       let infoQuiz = document.getElementById("info-quiz");
@@ -177,6 +179,7 @@ function playQuiz() {
 
 
       showResults.addEventListener("click", async () => {
+        document.getElementById("info-quiz").style.display="flex";
         console.log(userScore + "ds");
         let hiddenTimer = document.getElementsByClassName("timer");
         hiddenTimer[0].style.visibility = "hidden";
@@ -241,7 +244,7 @@ function playQuiz() {
           console.log(userScore + " hej");
           try {
            await add_custom_balance_final(userScore * 7500);
-            await add_custom_balance_final(userScore);
+            
             console.log(userScore + " yte");
             const saldo = await get_current_balance();
             let saldo2 = parseInt(saldo);

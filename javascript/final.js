@@ -222,6 +222,7 @@ function playQuiz() {
                 Ni svarade rätt på tillräckligt många frågor och klarade er över budgeten på 50 000 framtidskronor. Ni räddade familjen från att bli ruinerade och kan gå och lägga dig ännu en dag för att vakna i familjehemmet. Hoppas inte skuldindrivarna kommer tillbaka inom en snar framtid...
                 `;
           console.log("win2");
+          document.querySelector(".balance-final").style.backgroundColor="#044404";
         }
 
         function losingFunc() {
@@ -230,6 +231,7 @@ function playQuiz() {
                 Ni lyckades inte komma över skuldindrivarnas gräns på 50 000 framtidskronor. Familjehemmet tändes fyr på redan samma kväll och alla minnen, möbler och leksaker försvann upp i lågor. Nu får familjen streta vidare, kanske hittar ni ett nytt hem bland ruinerna? Vem vet...
                 `;
           console.log("lose2");
+          document.querySelector(".balance-final").style.backgroundColor="#620606"
         }
 
         async function myFunction() {

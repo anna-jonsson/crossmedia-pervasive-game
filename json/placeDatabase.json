@@ -41,7 +41,7 @@
         "intro_text": "V\u00e4lkommen till Magistratsparken!",
         "riddle_text": "\u00d6ver 100 \u00e5r gammal jag \u00e4r. Rotad jag alltid st\u00e5r h\u00e4r. Det som skiljer mig från parkens gäng, är garanterat mitt häng. Kring mig flockas m\u00e5nga underliga ting. Ta en titt och se er omkring",
         "task_text": "\u201cHidden in plain sight\u201d. Hitta de g\u00f6mda objekten (5 st) som alla har en bokstav p\u00e5 sig. Anv\u00e4nd bokst\u00e4verna till att sammanst\u00e4lla l\u00f6senordet. Som hjälp får ni här en av de 6 bokstäverna till lösenordet - O",
-        "background_picture": ".\/images\/213"
+        "background_picture": "../images/magistrats_bild.png"
     },
     {
         "id": 2,
@@ -50,7 +50,7 @@
         "intro_text": "V\u00e4lkommen till knarkrondellen!",
         "riddle_text": "5 av mig \u00e4r viktigare \u00e4n de andra. P\u00e5 dessa finns b\u00e5de  tv\u00e5benta, fyrbenta och bevingade.",
         "task_text": "Totalen av oss p\u00e5 de viktiga pelarna ger er koden f\u00f6r att klara uppgiften. R\u00e4kna oss och t\u00e4nk p\u00e5 att \u00e5ldern inte \u00e4r relevant f\u00f6r att r\u00e4knas.",
-        "background_picture": ".\/images\/213",
+        "background_picture": "../images/knarkis.png",
         "checked_in": true,
         "current_balance": 1000
     },
@@ -61,7 +61,7 @@
         "intro_text": "V\u00e4lkommen till Friis Sommargata!",
         "riddle_text": "P\u00e5 denna plats hittas v\u00e5r allas King of rock.I formen han var, \u00e4r inte fallet dock. Ligger i marken de numera b\u00e5da g\u00f6r.Lyfta blicken ni d\u00e4rf\u00f6r inte b\u00f6r.",
         "task_text": "Anv\u00e4nda en analog mall f\u00f6r att hitta \u201cC\u201d p\u00e5 mosaik-objektets tr\u00f6ja. C-et \u00e4r sedan den r\u00f6relsen som beh\u00f6ver utf\u00f6ras p\u00e5 lock-upen.",
-        "background_picture": ".\/images\/213",
+        "background_picture": "../images/friisgatan_bild.png",
         "checked_in": true,
         "checked_out": true,
         "current_balance": 1000

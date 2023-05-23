@@ -35,7 +35,10 @@ padding-top: 2%;
 
 #mainContent {
   font-size: smaller;
+  background-size: auto;
 }
+
+ 
 
 @font-face {
   font-family: 'Game Of Squids';
@@ -351,7 +354,7 @@ button:active {
   color: white;
   gap: 25px;
   text-align: left;
-  background-color: rgba(62, 84, 84, 0.7);
+  background-color: rgba(62, 84, 84, 0.85);
   border-radius: 5%;
 }
 

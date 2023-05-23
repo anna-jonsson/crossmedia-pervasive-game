@@ -383,7 +383,6 @@ button:active {
   font-size:48px;
   text-align: center;
   color: white;
-  /*! text-decoration: dotted; */text-decoration: underline;
   /*! border: solid yellow 5px; */background-color: #00000047;
   /*! border-radius: 19%; */margin-bottom: 8%;
  }

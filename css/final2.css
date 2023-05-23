@@ -524,7 +524,7 @@ h2 {
 } */
 
 #scoreWrapper {
-  background-color: #543e3e7a;
+  background-color: #543e3e98;
   padding: 10%;
   width: 70%;
   /* height: 100%; */
@@ -629,4 +629,19 @@ justify-content: center;
  #scoreWrapper > h2:nth-child(1) {
   text-align: center;
  }
+
+span.scoreSpan {
+  font-size: 15.3333px;
+  padding: 0;
+  margin: 0;
+  display: contents;
+  width: 0;
+  font-weight: bolder;
+  font-weight: 200;
+  color: #f8e284;
+  }
+
+  li.current_user span.scoreSpan {
+    color: yellow;
+  }
  

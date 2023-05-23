@@ -105,16 +105,28 @@ async function scoreBoard() {
   <div id ="scoreWrapper" class='locationText logInWrapper'>
   <h2>SCOREBOARD</h2>
   <ol type = "1"></ol>
-  <button class='exit_button'>Exit</button>
+  <button class='exit_button'>Uppdatera scoreboard</button>
   </div>
   `;
+
+  document.querySelector(".exit_button").addEventListener("click", async function(){
+    console.log("test");
+    await scoreBoard();
+  })
   //Loops the users and adds the name + score /current balance to an li element
   allUsers.forEach((user) => {
     let item = document.createElement("li");
     item.innerHTML = `
-    <div><h4> Team: ${user.username}   Score: ${user.current_balance}<h4>
+    <div><h4> Team: <span class='scoreSpan'>${user.username.toUpperCase()}</span> <br> Score: <span class='scoreSpan'>${user.current_balance}</span><h4>
     </div>
     `;
+
+    if(user.user_id == localStorage.getItem("user_id")) {
+      if(item.innerText.includes(user.username.toUpperCase())) {
+        item.classList.add('current_user');
+        console.log(item);
+      }
+    }
 
     ///Appends it to parent (ol)
     document.querySelector("ol").append(item);

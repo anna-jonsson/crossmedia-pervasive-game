@@ -132,7 +132,7 @@
         "user_id": 3,
         "username": "Tekniksson",
         "password": "whiteboard13",
-        "current_balance": 5300,
+        "current_balance": 9300,
         "locations": [
             {
                 "location_name": "introduction",
@@ -166,7 +166,7 @@
             },
             {
                 "location_name": "magistratsparken",
-                "checked_in": false,
+                "checked_in": true,
                 "checked_out": false
             }
         ]

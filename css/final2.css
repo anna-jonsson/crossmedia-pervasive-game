@@ -19,6 +19,9 @@ body {
   width: 400px;
   height: 800px;
   overflow: hidden;
+  background-image: url(../images/folketspark.png);
+  background-size: cover;
+  background-position: center;
 }
 
 #wrapAll {
@@ -311,8 +314,9 @@ span.memory {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   margin-top: 3vh;
+  background-color: #000000c9;
+  padding: 2%;
 }
-
 label {
   /*! display: block; */
   /*! margin-bottom: 2vh; */

@@ -81,6 +81,8 @@ async function endGame() {
     </div>
   `;
 
+  document.querySelector("body").style.backgroundImage="url(../images/startpage.jpeg)"
+
   //Score button event
   document.querySelector(".score_button").addEventListener("click", async function () {
     //SCOREBOARD FUNCTION
@@ -108,6 +110,7 @@ async function scoreBoard() {
   <button class='exit_button'>Uppdatera scoreboard</button>
   </div>
   `;
+
 
   document.querySelector(".exit_button").addEventListener("click", async function(){
     console.log("test");

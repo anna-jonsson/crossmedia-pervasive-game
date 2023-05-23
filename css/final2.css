@@ -18,10 +18,10 @@ body {
   /* font-family: "Varela Round", sans-serif; */
   width: 400px;
   height: 800px;
-  /* overflow: hidden; */
-  /* background-image: url(../images/folketspark.png);
+  overflow: hidden;
+  background-image: url(../images/folketspark.png);
   background-size: cover;
-  background-position: center; */
+  background-position: center;
 }
 
 #wrapAll {

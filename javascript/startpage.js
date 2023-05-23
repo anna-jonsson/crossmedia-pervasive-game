@@ -25,7 +25,11 @@ async function startpage(userId, placeName, div_id, response) {
     let username = document.querySelector(".username_input").value;
     let logIn_PW = document.querySelector(".logIn_PW").value;
 
-    let logInCheck = await logIn_request(username, logIn_PW);
+    username = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
+
+    console.log(username);
+
+    let logInCheck = await logIn_request(username.trim(), logIn_PW);
 
     if (logInCheck == 200) {
       balance.style.display = "flex";
@@ -50,6 +54,7 @@ async function startpage(userId, placeName, div_id, response) {
           let passwordCheck = await check_password(placeName, password);
 
           if (response != 200) {
+            console.log(username);
             user_feedback(passwordCheck, placeName);
           } else {
             await show_current_balance(); // Show balance after successful login

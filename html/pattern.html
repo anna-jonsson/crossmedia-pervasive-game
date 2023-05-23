@@ -8,9 +8,12 @@
     />
     <title>Pattern Lock</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" type="text/css" href="../css/patternlock.css" />
     <script src="../javascript/patternlock.js"></script>
@@ -19,6 +22,25 @@
 
     <script src="../javascript/map.js"></script>
     <script src="../javascript/index.js"></script>
+  </head>
+
+  <body>
+    <form class="form_style" method="post" onsubmit="return submitform()">
+      <h4 class="h4_style">
+        Använd mallen i kuvertet för att få fram det ni behöver för att lösa
+        uppgiften. Objektets tredje bokstav hjälper er att dra rätt linje.
+      </h4>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="patternlock"
+        />
+        <input type="submit" value="login" />
+      </div>
+    </form>
+    <div id="balance"></div>
 
     <script>
       function submitform() {
@@ -29,17 +51,17 @@
           let mapButton = document.createElement('button')
           newDiv.appendChild(p)
           document.body.appendChild(newDiv)
-          p.innerText = "Det va helt rätt, gå tillbaka till kartan och fortsätt med uppgifterna.";
+          p.innerText =
+            'Det va helt rätt, gå tillbaka till kartan och fortsätt med uppgifterna.'
           mapButton.innerHTML = 'Till kartan'
           mapButton.addEventListener('click', async function () {
-        
             localStorage.setItem(
               'friisgatan',
               document.getElementById('password').value
             )
             let userID = localStorage.getItem('user_id')
             checked_out(userID, 'friisgatan', true)
-            document.getElementById("balance").style.display = "flex";
+            document.getElementById('balance').style.display = 'flex'
             await add_to_balance(
               'friisgatan',
               document.getElementById('password').value
@@ -53,23 +75,47 @@
         }
         return true
       }
-    </script>
-  </head>
 
-  <body>
-    <form class="form_style" method="post" onsubmit="return submitform()">
-      <h4 class="h4_style">Använd mallen i kuvertet för att få fram det ni behöver för att lösa uppgiften. 
-        Objektets tredje bokstav hjälper er att dra rätt linje.</h4>
-      <div>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          class="patternlock"
-        />
-        <input type="submit" value="login" />
-      </div>
-    </form>
-    <div id="balance"></div>
+      let divbtnGive = document.createElement('div')
+
+      divbtnGive.innerHTML = `
+      <button class='giveUpBtn'>Jag ger upp</button>
+      `
+
+      document.body.appendChild(divbtnGive)
+
+      let btnGive = document.querySelector('.giveUpBtn')
+
+      btnGive.addEventListener('click', function () {
+        let popup = document.createElement('div')
+        document.body.appendChild(popup)
+
+        popup.className = 'popup'
+        popup.innerHTML = `
+          <div class="feedbackPopup">
+            <p>Är du säker att du vill ge upp?</p>
+            <div class="popup-buttons">
+              <button class="popup-confirm">Ja</button>
+              <button class="popup-cancel">Nej</button>
+            </div>
+          </div>
+        `
+
+        let confirmBtn = popup.querySelector('.popup-confirm')
+        let cancelBtn = popup.querySelector('.popup-cancel')
+
+        confirmBtn.addEventListener('click', function () {
+          popup.remove()
+          localStorage.setItem('friisgatan', '0000')
+          let userID = localStorage.getItem('user_id')
+          checked_out(userID, 'friisgatan', true)
+          window.location.href = '../html/index.html'
+        })
+
+        cancelBtn.addEventListener('click', function () {
+          popup.remove()
+        })
+      })
+    </script>
   </body>
 </html>

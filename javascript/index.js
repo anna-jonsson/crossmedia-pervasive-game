@@ -11,6 +11,8 @@ async function fill_content(placeName, div_id, type) {
   wrapper.style.backgroundSize = "cover";
   wrapper.style.width = "400px";
   wrapper.style.height = "600px";
+  wrapper.style.backgroundSize = "cover";
+  wrapper.style.backgroundPosition="center"
 
   wrapper.innerHTML = `
         <div class='location' id='styling_${placeName}'>
